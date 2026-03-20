@@ -1,0 +1,919 @@
+{
+  "metadata": {
+    "title": "MedPharma Plus - Online Pharmacy",
+    "description": "MedPharma Plus - Your trusted online pharmacy. Buy medications with fast delivery.",
+    "keywords": "pharmacy, medications, online pharmacy, medicines, health"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "all": "All",
+    "none": "None",
+    "yes": "Yes",
+    "no": "No",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "submit": "Submit",
+    "reset": "Reset",
+    "required": "Required",
+    "optional": "Optional",
+    "actions": "Actions",
+    "details": "Details",
+    "view": "View",
+    "viewAll": "View All",
+    "showMore": "Show More",
+    "showLess": "Show Less",
+    "currency": "₾",
+    "outOfStock": "Out of Stock",
+    "inStock": "In Stock",
+    "lowStock": "Low Stock"
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "categories": "Categories",
+    "about": "About Us",
+    "contact": "Contact",
+    "branches": "Branches",
+    "cart": "Cart",
+    "search": "Search products...",
+    "menu": "Menu",
+    "account": "Account"
+  },
+  "header": {
+    "contactPhone": "Hotline",
+    "workingHours": "Mon-Fri: 09:00-20:00, Sat: 10:00-18:00",
+    "freeDelivery": "Free delivery from {amount} ₾",
+    "fastDelivery": "2-hour delivery"
+  },
+  "footer": {
+    "company": "MedPharma Plus LLC",
+    "about": "About Us",
+    "branches": "Pharmacy",
+    "careers": "Careers",
+    "contact": "Contact",
+    "support": "Support",
+    "faq": "FAQ",
+    "shipping": "Shipping",
+    "returns": "Returns",
+    "trackOrder": "Track Order",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "followUs": "Follow Us",
+    "newsletter": "Newsletter",
+    "newsletterPlaceholder": "Your email",
+    "subscribe": "Subscribe",
+    "allRightsReserved": "All rights reserved",
+    "experience": "Personalized Pharmaceutical Care",
+    "workingHours": {
+      "title": "Working Hours",
+      "office": "Office: Mon-Fri 09:00-18:00",
+      "pharmacy": "Pharmacy: Mon-Fri 09:00-20:00, Sat 10:00-18:00",
+      "sunday": "Sunday: Closed"
+    },
+    "delivery": {
+      "title": "Delivery",
+      "info": "Within 2 hours during business hours",
+      "offHours": "Off-hours orders - next business day"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "MedPharma Plus",
+      "subtitle": "Personalized Pharmaceutical Care",
+      "slogan": "Innovation, Quality, Care — A New Standard of Trust in Medicine",
+      "description": "Your trusted partner for health and beauty. 2-hour delivery during business hours.",
+      "shopNow": "Buy Online",
+      "learnMore": "Learn More",
+      "yearsExperience": "30+ Years",
+      "experienceText": "Experience"
+    },
+    "trustBadges": {
+      "isoCertified": "ISO Certified",
+      "fastDelivery": "2-Hour Delivery",
+      "securePayment": "Secure Payment"
+    },
+    "categories": {
+      "title": "Popular Categories",
+      "viewAll": "All Categories",
+      "diabeticNutrition": "Diabetic Nutrition",
+      "diabeticDesc": "Specialized products for diabetic patients",
+      "aesthetics": "Aesthetics",
+      "aestheticsDesc": "Beauty and skincare products",
+      "rareDiseases": "Rare Diseases",
+      "rareDiseasesDesc": "Specific medications for rare conditions",
+      "medicalDevices": "Medical Devices",
+      "medicalDevicesDesc": "High-quality medical equipment"
+    },
+    "featured": {
+      "title": "Featured Products",
+      "subtitle": "Our Best Offers"
+    },
+    "sale": {
+      "title": "On Sale",
+      "subtitle": "Special Offers"
+    },
+    "new": {
+      "title": "New Products",
+      "subtitle": "Recently Added"
+    },
+    "brands": {
+      "title": "Exclusive Brands",
+      "subtitle": "International Partners",
+      "exclusive": "Becton Dickinson, VITAFLO™, Mevalia, Swedish Nutra, Novaproduct, Embecta, Mayali Hane"
+    },
+    "whyUs": {
+      "title": "Why MedPharma Plus?",
+      "quality": {
+        "title": "International Standards",
+        "description": "International quality certificates and European standards"
+      },
+      "delivery": {
+        "title": "Fast Delivery",
+        "description": "Within 2 hours during business hours"
+      },
+      "support": {
+        "title": "Professional Team",
+        "description": "Experienced pharmacists and experts at your service"
+      },
+      "experience": {
+        "title": "Specialty Products",
+        "description": "Diabetic nutrition, rare disease treatments, personalized approach"
+      }
+    },
+    "productBadges": {
+      "topSale": "Top Sale",
+      "new": "New",
+      "popular": "Popular",
+      "recommended": "Recommended"
+    },
+    "cta": {
+      "title": "Together for a Healthier Future!",
+      "subtitle": "Join thousands of satisfied customers",
+      "button": "Start Shopping"
+    }
+  },
+  "category": {
+    "title": "Category",
+    "productsIn": "Products in",
+    "noProducts": "No products found in this category",
+    "subcategories": "Subcategories",
+    "viewAll": "View All",
+    "notFound": "Category Not Found",
+    "notFoundMessage": "The requested category does not exist or has been removed."
+  },
+  "products": {
+    "title": "Products",
+    "searchPlaceholder": "Search for products...",
+    "noResults": "No products found",
+    "tryDifferent": "Try a different search term",
+    "resultsCount": "{count} products found",
+    "viewAllResults": "View all results",
+    "filters": {
+      "title": "Filters",
+      "category": "Category",
+      "price": "Price",
+      "priceRange": "Price Range",
+      "minPrice": "Min",
+      "maxPrice": "Max",
+      "brand": "Brand",
+      "manufacturer": "Manufacturer",
+      "dosageForm": "Dosage Form",
+      "availability": "Availability",
+      "inStockOnly": "In Stock Only",
+      "inStockDescription": "Show products that are available",
+      "prescription": "Prescription",
+      "prescriptionOnly": "Prescription Required",
+      "otcOnly": "Over-the-Counter (OTC)",
+      "clearSelection": "Clear selection",
+      "clearAll": "Clear All",
+      "apply": "Apply",
+      "filter": "Filter",
+      "searchBrand": "Search brands...",
+      "searchManufacturer": "Search manufacturers...",
+      "noResults": "No results found",
+      "showResults": "Show Results"
+    },
+    "sort": {
+      "title": "Sort By",
+      "default": "Default",
+      "priceAsc": "Price: Low to High",
+      "priceDesc": "Price: High to Low",
+      "nameAsc": "Name: A-Z",
+      "nameDesc": "Name: Z-A",
+      "newest": "Newest",
+      "popularity": "Popularity"
+    },
+    "perPage": "Per Page",
+    "pagination": {
+      "page": "Page",
+      "of": "of",
+      "showing": "Showing",
+      "to": "to",
+      "results": "results"
+    }
+  },
+  "product": {
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now",
+    "quantity": "Quantity",
+    "price": "Price",
+    "salePrice": "Sale Price",
+    "originalPrice": "Original Price",
+    "discount": "Discount",
+    "sku": "SKU",
+    "brand": "Brand",
+    "manufacturer": "Manufacturer",
+    "dosageForm": "Dosage Form",
+    "description": "Description",
+    "details": "Details",
+    "usage": "Usage Instructions",
+    "ingredients": "Ingredients",
+    "warnings": "Warnings",
+    "storage": "Storage Conditions",
+    "relatedProducts": "Related Products",
+    "recentlyViewed": "Recently Viewed",
+    "prescription": {
+      "required": "Prescription Required",
+      "notRequired": "No Prescription"
+    },
+    "stock": {
+      "inStock": "In Stock",
+      "outOfStock": "Out of Stock",
+      "lowStock": "Low Stock ({count} left)",
+      "available": "{count} available"
+    },
+    "reviews": {
+      "title": "Reviews",
+      "writeReview": "Write a Review",
+      "noReviews": "No reviews yet"
+    },
+    "disclaimers": {
+      "medication": {
+        "readInstructions": "Read the instructions before use",
+        "consultDoctor": "Consult a doctor about side effects",
+        "doseWarning": "Do not exceed the recommended daily dose",
+        "keepAway": "Keep out of reach of children",
+        "storageConditions": "Follow storage conditions"
+      },
+      "specialFood": {
+        "medicalSupervision": "Use under medical supervision",
+        "notSoleSource": "Do not use as the sole source of nutrition unless otherwise indicated",
+        "specialPurpose": "Special purpose food product",
+        "doctorRecommendation": "Use as recommended by a doctor"
+      },
+      "supplement": {
+        "notMedicine": "This is not a medicinal product"
+      }
+    }
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "emptyDescription": "Add products to cart to continue shopping",
+    "continueShopping": "Continue Shopping",
+    "item": "item",
+    "items": "items",
+    "remove": "Remove",
+    "clear": "Clear Cart",
+    "subtotal": "Subtotal",
+    "delivery": "Delivery",
+    "deliveryFree": "Free",
+    "total": "Total",
+    "checkout": "Checkout",
+    "updateQuantity": "Update Quantity",
+    "itemAdded": "Product added to cart",
+    "itemRemoved": "Product removed from cart",
+    "freeDeliveryThreshold": "Add {amount} ₾ more for free delivery",
+    "stockExceeded": "Cannot add more than available stock"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "steps": {
+      "info": "Personal Info",
+      "delivery": "Delivery",
+      "payment": "Payment",
+      "review": "Review"
+    },
+    "personalInfo": {
+      "title": "Personal Information",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "fullName": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "phonePlaceholder": "+995 5XX XXX XXX"
+    },
+    "deliveryInfo": {
+      "title": "Delivery Information",
+      "city": "City",
+      "selectCity": "Select City",
+      "address": "Address",
+      "addressPlaceholder": "Street, building, apartment",
+      "notes": "Notes for Courier",
+      "notesPlaceholder": "Additional information (optional)"
+    },
+    "paymentMethod": {
+      "title": "Payment Method",
+      "card": "Bank Card",
+      "tbc": "TBC Card",
+      "bog": "BOG / iPay",
+      "cash": "Cash on Delivery"
+    },
+    "review": {
+      "title": "Order Review",
+      "orderSummary": "Order Summary",
+      "deliveryAddress": "Delivery Address",
+      "paymentMethod": "Payment Method",
+      "items": "Items",
+      "confirmOrder": "Confirm Order",
+      "stockError": "Some items in your cart are no longer available in the requested quantity.",
+      "deliveryZoneError": "The selected delivery zone is no longer available. Please choose another zone.",
+      "rateLimitError": "Too many requests. Please wait a moment and try again.",
+      "stockAvailable": "Only {available} available (requested {requested})"
+    },
+    "summary": {
+      "subtotal": "Subtotal",
+      "delivery": "Delivery",
+      "total": "Total"
+    },
+    "placeOrder": "Place Order",
+    "processing": "Processing...",
+    "agreement": "By placing an order, you agree to our",
+    "termsLink": "Terms of Service"
+  },
+  "order": {
+    "success": {
+      "title": "Order Placed Successfully!",
+      "message": "Thank you for your order. You will receive a confirmation email shortly.",
+      "orderNumber": "Order Number",
+      "continueShopping": "Continue Shopping",
+      "trackOrder": "Track Order",
+      "emailSent": "Confirmation email has been sent to your address",
+      "helpText": "If you have any questions about your order, please contact our support team.",
+      "noOrder": "No order information available.",
+      "payOnDelivery": "Pay on Delivery",
+      "paid": "Paid",
+      "paymentPending": "Payment Pending"
+    },
+    "failure": {
+      "title": "Payment Failed",
+      "message": "Unfortunately, the payment could not be processed. Please try again.",
+      "tryAgain": "Try Again",
+      "contactSupport": "Contact Support",
+      "helpText": "If the problem persists, please contact our support team."
+    },
+    "tracking": {
+      "title": "Track Order",
+      "enterOrder": "Enter your order number",
+      "orderNumber": "Order Number",
+      "email": "Email",
+      "track": "Track",
+      "notFound": "Order not found",
+      "status": {
+        "pending": "Pending",
+        "confirmed": "Confirmed",
+        "processing": "Processing",
+        "shipped": "Shipped",
+        "delivered": "Delivered",
+        "cancelled": "Cancelled"
+      }
+    }
+  },
+  "pages": {
+    "about": {
+      "title": "About Us",
+      "subtitle": "30 years by your side"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Get in touch",
+      "form": {
+        "name": "Your Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "send": "Send"
+      },
+      "info": {
+        "address": "Address",
+        "phone": "Phone",
+        "email": "Email",
+        "workingHours": "Working Hours"
+      }
+    },
+    "branches": {
+      "title": "Branches",
+      "subtitle": "Find the nearest branch"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions"
+    }
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "dashboard": {
+      "title": "Dashboard",
+      "welcome": "Welcome back",
+      "todaySales": "Today's Sales",
+      "totalOrders": "Total Orders",
+      "newOrders": "New Orders",
+      "revenue": "Revenue",
+      "topProducts": "Top Products",
+      "recentOrders": "Recent Orders"
+    },
+    "nav": {
+      "dashboard": "Dashboard",
+      "catalog": "Catalog",
+      "sales": "Sales",
+      "content": "Content",
+      "analytics": "Analytics",
+      "orders": "Orders",
+      "products": "Products",
+      "categories": "Categories",
+      "customers": "Customers",
+      "banners": "Banners",
+      "pages": "Pages",
+      "settings": "Settings",
+      "users": "Users",
+      "reports": "Reports",
+      "deliveryZones": "Delivery Zones"
+    },
+    "login": {
+      "title": "Admin Login",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign In",
+      "forgotPassword": "Forgot Password?",
+      "invalidCredentials": "Invalid email or password"
+    },
+    "signOut": "Sign Out",
+    "profile": "Profile",
+    "notifications": "Notifications",
+    "user": "User",
+    "openSidebar": "Open sidebar",
+    "closeSidebar": "Close sidebar",
+    "expandSidebar": "Expand sidebar",
+    "collapseSidebar": "Collapse sidebar",
+    "collapse": "Collapse",
+    "categories": {
+      "title": "Categories",
+      "addCategory": "Add Category",
+      "editCategory": "Edit Category",
+      "deleteCategory": "Delete Category",
+      "createCategory": "Create Category",
+      "updateCategory": "Update Category",
+      "noCategories": "No categories yet",
+      "noDescription": "No description",
+      "productCount": "{count} products",
+      "productCountSingular": "1 product",
+      "active": "Active",
+      "inactive": "Inactive",
+      "rootCategory": "Root Category",
+      "form": {
+        "basicInfo": "Basic Information",
+        "seoInfo": "SEO Information",
+        "slug": "Slug",
+        "slugHint": "URL-friendly identifier (auto-generated from English name)",
+        "nameKa": "Name (Georgian)",
+        "nameEn": "Name (English)",
+        "descKa": "Description (Georgian)",
+        "descEn": "Description (English)",
+        "parent": "Parent Category",
+        "selectParent": "Select parent category",
+        "image": "Image URL",
+        "imagePlaceholder": "Enter image URL",
+        "isActive": "Active",
+        "metaTitleKa": "Meta Title (Georgian)",
+        "metaTitleEn": "Meta Title (English)",
+        "metaDescKa": "Meta Description (Georgian)",
+        "metaDescEn": "Meta Description (English)"
+      },
+      "delete": {
+        "title": "Delete Category",
+        "message": "Are you sure you want to delete this category?",
+        "warning": "This action cannot be undone. Child categories will become root categories.",
+        "hasProducts": "This category has {count} products. Products will remain but will no longer belong to this category.",
+        "confirm": "Yes, delete",
+        "cancel": "Cancel"
+      },
+      "messages": {
+        "created": "Category created successfully",
+        "updated": "Category updated successfully",
+        "deleted": "Category deleted successfully",
+        "reordered": "Categories reordered successfully",
+        "error": "An error occurred",
+        "loadError": "Failed to load categories",
+        "createError": "Failed to create category",
+        "updateError": "Failed to update category",
+        "deleteError": "Failed to delete category",
+        "reorderError": "Failed to reorder categories",
+        "slugExists": "Category with this slug already exists",
+        "circularReference": "Cannot set a descendant category as parent",
+        "selfParent": "Category cannot be its own parent"
+      },
+      "tree": {
+        "expand": "Expand",
+        "collapse": "Collapse",
+        "dragToReorder": "Drag to reorder or change parent"
+      }
+    },
+    "products": {
+      "title": "Products",
+      "subtitle": "Manage your product catalog",
+      "addProduct": "Add Product",
+      "importProducts": "Import",
+      "export": {
+        "title": "Export",
+        "exporting": "Exporting...",
+        "format": "Select Format",
+        "csvBasic": "CSV (Basic Fields)",
+        "csvFull": "CSV (All Fields)",
+        "excelBasic": "Excel (Basic Fields)",
+        "excelFull": "Excel (All Fields)",
+        "hint": "Basic: SKU, names, price, stock. Full: All product fields."
+      },
+      "editProduct": "Edit Product",
+      "searchPlaceholder": "Search by name, SKU, brand...",
+      "filters": "Filters",
+      "noProducts": "No products found",
+      "filterPanel": {
+        "category": "Category",
+        "allCategories": "All Categories",
+        "stockStatus": "Stock Status",
+        "allStock": "All Stock",
+        "inStock": "In Stock",
+        "lowStock": "Low Stock",
+        "outOfStock": "Out of Stock",
+        "status": "Status",
+        "allStatus": "All Status",
+        "active": "Active",
+        "inactive": "Inactive",
+        "sortBy": "Sort By",
+        "newest": "Newest First",
+        "oldest": "Oldest First",
+        "nameAZ": "Name A-Z",
+        "nameZA": "Name Z-A",
+        "priceLowHigh": "Price: Low to High",
+        "priceHighLow": "Price: High to Low",
+        "stockLowHigh": "Stock: Low to High",
+        "stockHighLow": "Stock: High to Low",
+        "clearAll": "Clear Filters",
+        "showing": "Showing {count, plural, =0 {no products} =1 {1 product} other {# products}}",
+        "previous": "Previous",
+        "next": "Next",
+        "pageOf": "Page {page} of {totalPages}",
+        "showingRange": "Showing {from}-{to} of {total}"
+      },
+      "table": {
+        "image": "Image",
+        "product": "Product",
+        "sku": "SKU",
+        "category": "Category",
+        "price": "Price",
+        "stock": "Stock",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "form": {
+        "addProduct": "Add Product",
+        "editProduct": "Edit Product",
+        "saving": "Saving...",
+        "save": "Save Product",
+        "cancel": "Cancel",
+        "tabs": {
+          "basic": "Basic Info",
+          "images": "Images",
+          "details": "Product Details",
+          "inventory": "Inventory & Pricing",
+          "seo": "SEO"
+        },
+        "fields": {
+          "sku": "SKU",
+          "slug": "Slug",
+          "nameKa": "Name (Georgian)",
+          "nameEn": "Name (English)",
+          "shortDescKa": "Short Description (Georgian)",
+          "shortDescEn": "Short Description (English)",
+          "descKa": "Description (Georgian)",
+          "descEn": "Description (English)",
+          "category": "Category",
+          "selectCategory": "Select category",
+          "brand": "Brand",
+          "manufacturer": "Manufacturer",
+          "dosageForm": "Dosage Form",
+          "selectDosageForm": "Select dosage form",
+          "dosage": "Dosage",
+          "activeIngredient": "Active Ingredient",
+          "weight": "Weight (kg)",
+          "barcode": "Barcode",
+          "apexId": "APEX ERP ID",
+          "price": "Price (₾)",
+          "salePrice": "Sale Price (₾)",
+          "costPrice": "Cost Price (₾)",
+          "stock": "Stock",
+          "lowStockThreshold": "Low Stock Threshold",
+          "flags": "Product Flags",
+          "requiresPrescription": "Requires Prescription",
+          "isFeatured": "Featured Product",
+          "isActive": "Active",
+          "metaTitleKa": "Meta Title (Georgian)",
+          "metaTitleEn": "Meta Title (English)",
+          "metaDescKa": "Meta Description (Georgian)",
+          "metaDescEn": "Meta Description (English)"
+        }
+      },
+      "delete": {
+        "title": "Delete Product",
+        "message": "Are you sure you want to delete this product?",
+        "warning": "This action cannot be undone.",
+        "confirm": "Delete Product",
+        "cancel": "Cancel",
+        "deleting": "Deleting..."
+      },
+      "images": {
+        "title": "Product Images",
+        "saveFirst": "Please save the product first before uploading images.",
+        "dropzone": "Drag & drop images here",
+        "dropzoneHint": "or click to browse (max 10 images)",
+        "browse": "Browse Files",
+        "uploading": "Uploading...",
+        "setPrimary": "Set as Primary",
+        "primary": "Primary",
+        "delete": "Delete",
+        "altText": "Alt text",
+        "maxImagesReached": "Maximum 10 images allowed",
+        "uploadSuccess": "Images uploaded successfully",
+        "uploadError": "Failed to upload images",
+        "deleteSuccess": "Image deleted successfully",
+        "deleteError": "Failed to delete image",
+        "reorderSuccess": "Images reordered successfully",
+        "reorderError": "Failed to reorder images"
+      },
+      "import": {
+        "title": "Import Products",
+        "subtitle": "Import products from CSV or Excel file",
+        "error": "Error",
+        "steps": {
+          "upload": "Upload",
+          "mapping": "Mapping",
+          "preview": "Preview",
+          "complete": "Complete"
+        },
+        "uploadArea": {
+          "title": "Drop your file here",
+          "subtitle": "Supports CSV and Excel (.xlsx) files"
+        },
+        "downloadTemplate": "Download template:",
+        "parsing": "Parsing file...",
+        "rows": "rows",
+        "missingRequired": "Missing required fields",
+        "csvColumn": "CSV Column",
+        "mapTo": "Map To",
+        "sampleData": "Sample Data",
+        "doNotImport": "-- Do not import --",
+        "back": "Back",
+        "validate": "Validate",
+        "validating": "Validating...",
+        "stats": {
+          "total": "Total Rows",
+          "valid": "Valid",
+          "invalid": "Invalid",
+          "warnings": "Warnings"
+        },
+        "toCreate": "to create",
+        "toUpdate": "to update",
+        "invalidRows": "Invalid Rows",
+        "validRows": "Valid Rows",
+        "table": {
+          "row": "Row",
+          "sku": "SKU",
+          "name": "Name",
+          "action": "Action",
+          "errors": "Errors"
+        },
+        "startImport": "Start Import",
+        "products": "products",
+        "importing": "Importing products...",
+        "pleaseWait": "Please wait, this may take a moment",
+        "importComplete": "Import Complete!",
+        "result": {
+          "created": "Created",
+          "updated": "Updated",
+          "failed": "Failed"
+        },
+        "failedRows": "Failed Rows",
+        "done": "Done"
+      },
+      "bulk": {
+        "title": "Bulk Operations",
+        "description": "Apply changes to {count} selected products",
+        "selected": "{count} selected",
+        "operations": "Bulk Operations",
+        "cancel": "Cancel",
+        "apply": "Apply Changes",
+        "processing": "Processing...",
+        "tabs": {
+          "price": "Price Change",
+          "status": "Status Change"
+        },
+        "price": {
+          "operationType": "Operation Type",
+          "percentage": "Percentage Change",
+          "fixed": "Fixed Amount Change",
+          "set": "Set Fixed Price",
+          "percentageValue": "Percentage (%)",
+          "fixedValue": "Amount (₾)",
+          "setValue": "New Price (₾)",
+          "percentagePlaceholder": "e.g. 10 for +10%, -15 for -15%",
+          "valuePlaceholder": "Enter amount",
+          "percentageHint": "Use positive numbers to increase, negative to decrease prices.",
+          "fixedHint": "Use positive numbers to increase, negative to decrease prices.",
+          "setHint": "All selected products will be set to this price.",
+          "preview": "Preview (first 3 products):",
+          "andMore": "...and {count} more products"
+        },
+        "status": {
+          "operationType": "Select Operation",
+          "activate": "Activate Products",
+          "activateDesc": "Make selected products visible in the store",
+          "deactivate": "Deactivate Products",
+          "deactivateDesc": "Hide selected products from the store",
+          "toggleFeatured": "Toggle Featured Status",
+          "toggleFeaturedDesc": "Featured products will become non-featured and vice versa"
+        },
+        "errors": {
+          "invalidNumber": "Please enter a valid number"
+        },
+        "success": {
+          "title": "Operation Complete",
+          "updated": "{count} products updated successfully",
+          "failed": "{count} products failed to update",
+          "done": "Done"
+        }
+      }
+    },
+    "deliveryZones": {
+      "title": "Delivery Zones",
+      "description": "Manage delivery zones and fees",
+      "addZone": "Add Zone",
+      "editZone": "Edit Zone",
+      "createZone": "Create Zone",
+      "updateZone": "Update Zone",
+      "noZones": "No delivery zones yet",
+      "noZonesDescription": "Create your first delivery zone to enable delivery options",
+      "noResults": "No zones match your search",
+      "searchPlaceholder": "Search zones...",
+      "active": "Active",
+      "inactive": "Inactive",
+      "table": {
+        "name": "Zone Name",
+        "fee": "Delivery Fee",
+        "minOrder": "Min. Order",
+        "freeAbove": "Free Above",
+        "orders": "Orders",
+        "status": "Status"
+      },
+      "form": {
+        "zoneInfo": "Zone Information",
+        "pricingInfo": "Pricing Settings",
+        "nameKa": "Name (Georgian)",
+        "nameEn": "Name (English)",
+        "fee": "Delivery Fee",
+        "feeHint": "Standard delivery fee for this zone",
+        "minOrder": "Minimum Order",
+        "minOrderHint": "Minimum order amount required for delivery (leave empty for no minimum)",
+        "freeAbove": "Free Delivery Above",
+        "freeAboveHint": "Free delivery for orders above this amount (leave empty to disable)",
+        "isActive": "Active Zone",
+        "isActiveHint": "Inactive zones won't be available during checkout",
+        "optional": "Optional",
+        "nameRequired": "Both Georgian and English names are required",
+        "feeNonNegative": "Delivery fee must be a non-negative number"
+      },
+      "delete": {
+        "title": "Delete Delivery Zone",
+        "message": "Are you sure you want to delete this delivery zone?",
+        "warning": "This action cannot be undone.",
+        "fee": "Delivery fee",
+        "hasOrders": "This zone has {count} orders. Please deactivate instead of deleting.",
+        "confirm": "Delete Zone",
+        "cancel": "Cancel"
+      },
+      "messages": {
+        "created": "Delivery zone created successfully",
+        "updated": "Delivery zone updated successfully",
+        "deleted": "Delivery zone deleted successfully",
+        "error": "An error occurred",
+        "loadError": "Failed to load delivery zones",
+        "deleteError": "Failed to delete delivery zone"
+      }
+    }
+  },
+  "validation": {
+    "required": "{field} is required",
+    "email": "Please enter a valid email",
+    "phone": "Please enter a valid phone number",
+    "minLength": "{field} must be at least {min} characters",
+    "maxLength": "{field} must not exceed {max} characters",
+    "min": "{field} must be at least {min}",
+    "max": "{field} must not exceed {max}",
+    "positive": "{field} must be a positive number"
+  },
+  "errors": {
+    "general": "An error occurred. Please try again.",
+    "notFound": "Page not found",
+    "unauthorized": "Authorization required",
+    "forbidden": "Access denied",
+    "serverError": "Server error",
+    "networkError": "Network error. Check your internet connection.",
+    "timeout": "Request timed out"
+  },
+  "dosageForms": {
+    "tablet": "Tablet",
+    "capsule": "Capsule",
+    "syrup": "Syrup",
+    "injection": "Injection",
+    "cream": "Cream",
+    "ointment": "Ointment",
+    "drops": "Drops",
+    "spray": "Spray",
+    "powder": "Powder",
+    "solution": "Solution",
+    "suspension": "Suspension",
+    "suppository": "Suppository",
+    "patch": "Patch",
+    "gel": "Gel",
+    "lotion": "Lotion",
+    "inhaler": "Inhaler",
+    "other": "Other"
+  },
+  "about": {
+    "meta": {
+      "title": "About Us - MedPharma Plus",
+      "description": "MedPharma Plus LLC - Personalized Pharmaceutical Care"
+    }
+  },
+  "branches": {
+    "meta": {
+      "title": "Pharmacy - MedPharma Plus",
+      "description": "MedPharma Plus pharmacy address and working hours"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact - MedPharma Plus",
+      "description": "Contact us - MedPharma Plus"
+    }
+  },
+  "careers": {
+    "meta": {
+      "title": "Careers - MedPharma Plus",
+      "description": "Join the MedPharma Plus team"
+    }
+  },
+  "faq": {
+    "meta": {
+      "title": "FAQ - MedPharma Plus",
+      "description": "Frequently asked questions and answers"
+    }
+  },
+  "shipping": {
+    "meta": {
+      "title": "Shipping - MedPharma Plus",
+      "description": "Information about delivery terms and times"
+    }
+  },
+  "returns": {
+    "meta": {
+      "title": "Return Policy - MedPharma Plus",
+      "description": "Product return rules and conditions"
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy Policy - MedPharma Plus",
+      "description": "Privacy policy and personal data protection"
+    }
+  },
+  "terms": {
+    "meta": {
+      "title": "Terms of Service - MedPharma Plus",
+      "description": "Terms and conditions of service"
+    }
+  }
+}

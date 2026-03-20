@@ -1,0 +1,90 @@
+{
+  "success": false,
+  "projectPath": "/Users/beqolozi/Desktop/clinic-shop",
+  "baseUrl": "http://localhost:3000",
+  "timestamp": 1773845344251,
+  "duration": 6227,
+  "summary": {
+    "pagesVisited": 3,
+    "pagesPassed": 2,
+    "pagesFailed": 1,
+    "linksChecked": 0,
+    "linksBroken": 0,
+    "formsTested": 0,
+    "formsPassed": 0,
+    "consoleErrors": 0,
+    "consoleWarnings": 0,
+    "screenshotsTaken": 2
+  },
+  "pages": [
+    {
+      "url": "http://localhost:3000",
+      "path": "/",
+      "title": "SpecLang Studio",
+      "status": 200,
+      "loadTime": 687,
+      "hasErrors": false,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "viewport": "desktop",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/home-desktop.png"
+    },
+    {
+      "url": "http://localhost:3000",
+      "path": "/",
+      "title": "SpecLang Studio",
+      "status": 200,
+      "loadTime": 692,
+      "hasErrors": false,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "viewport": "tablet",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/home-tablet.png"
+    },
+    {
+      "url": "http://localhost:3000",
+      "path": "/",
+      "title": "Error",
+      "status": 0,
+      "loadTime": 0,
+      "hasErrors": true,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "viewport": "mobile",
+      "error": "Connection closed."
+    }
+  ],
+  "links": [],
+  "forms": [],
+  "consoleErrors": [],
+  "screenshots": [
+    {
+      "name": "home-desktop.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/home-desktop.png",
+      "url": "http://localhost:3000",
+      "viewport": "desktop",
+      "size": 15356,
+      "timestamp": 1773845341817
+    },
+    {
+      "name": "home-tablet.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/home-tablet.png",
+      "url": "http://localhost:3000",
+      "viewport": "tablet",
+      "size": 10734,
+      "timestamp": 1773845343081
+    }
+  ],
+  "errors": [
+    {
+      "type": "page",
+      "message": "Failed to test page: http://localhost:3000",
+      "url": "http://localhost:3000",
+      "details": "Connection closed."
+    },
+    {
+      "type": "unknown",
+      "message": "Connection closed."
+    }
+  ]
+}

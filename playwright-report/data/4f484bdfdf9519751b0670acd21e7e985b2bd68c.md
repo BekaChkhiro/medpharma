@@ -1,0 +1,183 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - 'link "ცხელი ხაზი: +995 32 200 00 00" [ref=e8] [cursor=pointer]':
+            - /url: tel:+995322000000
+            - img [ref=e9]
+            - generic [ref=e11]: "ცხელი ხაზი: +995 32 200 00 00"
+          - generic [ref=e12]:
+            - img [ref=e13]
+            - generic [ref=e15]: 10:00 - 22:00
+        - generic [ref=e16]:
+          - img [ref=e17]
+          - generic [ref=e19]: უფასო მიწოდება 100 ₾-დან
+      - generic [ref=e22]:
+        - link "მედფარმა პლუსი" [ref=e24] [cursor=pointer]:
+          - /url: /
+          - img [ref=e25]
+          - generic [ref=e28]: მედფარმა პლუსი
+        - generic [ref=e31]:
+          - generic:
+            - img
+          - searchbox "პროდუქტის ძებნა..." [active] [ref=e32]: ვიტამინი
+          - button "Clear search" [ref=e33]:
+            - img [ref=e34]
+        - generic [ref=e36]:
+          - button "🇬🇪 ქართული" [ref=e38]:
+            - generic [ref=e39]: 🇬🇪
+            - generic [ref=e40]: ქართული
+            - img [ref=e41]
+          - link "კალათა (0 items)" [ref=e43] [cursor=pointer]:
+            - /url: /cart
+            - img [ref=e44]
+      - navigation [ref=e46]:
+        - list [ref=e48]:
+          - listitem [ref=e49]:
+            - link "მთავარი" [ref=e50] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e51]:
+            - link "პროდუქცია" [ref=e52] [cursor=pointer]:
+              - /url: /products
+          - listitem [ref=e53]:
+            - link "კატეგორიები" [ref=e54] [cursor=pointer]:
+              - /url: /categories
+          - listitem [ref=e55]:
+            - link "ჩვენს შესახებ" [ref=e56] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e57]:
+            - link "ფილიალები" [ref=e58] [cursor=pointer]:
+              - /url: /branches
+          - listitem [ref=e59]:
+            - link "კონტაქტი" [ref=e60] [cursor=pointer]:
+              - /url: /contact
+    - main [ref=e61]:
+      - generic [ref=e64]:
+        - heading "მედფარმა პლუსი" [level=1] [ref=e65]
+        - paragraph [ref=e66]: თქვენი სანდო ონლაინ აფთიაქი
+        - paragraph [ref=e67]: შეიძინეთ მედიკამენტები მარტივად, სწრაფი მიწოდებით თქვენს კარამდე
+        - generic [ref=e68]:
+          - link "შეიძინეთ ახლავე" [ref=e69] [cursor=pointer]:
+            - /url: /products
+          - link "გაიგეთ მეტი" [ref=e70] [cursor=pointer]:
+            - /url: /about
+      - generic [ref=e72]:
+        - heading "რატომ მედფარმა პლუსი?" [level=2] [ref=e73]
+        - generic [ref=e74]:
+          - generic [ref=e75]:
+            - img [ref=e77]
+            - heading "ხარისხიანი პროდუქცია" [level=3] [ref=e79]
+            - paragraph [ref=e80]: მხოლოდ სერტიფიცირებული მედიკამენტები
+          - generic [ref=e81]:
+            - img [ref=e83]
+            - heading "სწრაფი მიწოდება" [level=3] [ref=e85]
+            - paragraph [ref=e86]: მიწოდება თბილისში 2-4 საათში
+          - generic [ref=e87]:
+            - img [ref=e89]
+            - heading "24/7 მხარდაჭერა" [level=3] [ref=e91]
+            - paragraph [ref=e92]: ჩვენი გუნდი ყოველთვის თქვენს გვერდითაა
+          - generic [ref=e93]:
+            - img [ref=e95]
+            - heading "30 წლიანი გამოცდილება" [level=3] [ref=e97]
+            - paragraph [ref=e98]: ვემსახურებით მომხმარებელს 1994 წლიდან
+      - generic [ref=e101]:
+        - heading "პოპულარული კატეგორიები" [level=2] [ref=e102]
+        - paragraph [ref=e103]: ჩვენი საუკეთესო შეთავაზებები
+        - link "ყველა კატეგორია" [ref=e104] [cursor=pointer]:
+          - /url: /products
+    - contentinfo [ref=e105]:
+      - generic [ref=e108]:
+        - generic [ref=e109]:
+          - link "მედფარმა პლუსი" [ref=e110] [cursor=pointer]:
+            - /url: /
+            - img [ref=e111]
+            - generic [ref=e114]: მედფარმა პლუსი
+          - paragraph [ref=e115]: 30 წელი გამოცდილება
+          - generic [ref=e116]:
+            - paragraph [ref=e117]: გამოგვყევით
+            - generic [ref=e118]:
+              - link "Facebook" [ref=e119] [cursor=pointer]:
+                - /url: https://facebook.com/medpharmaplus
+                - img [ref=e120]
+              - link "Instagram" [ref=e122] [cursor=pointer]:
+                - /url: https://instagram.com/medpharmaplus
+                - img [ref=e123]
+              - link "YouTube" [ref=e125] [cursor=pointer]:
+                - /url: https://youtube.com/medpharmaplus
+                - img [ref=e126]
+        - generic [ref=e128]:
+          - heading "კომპანია" [level=3] [ref=e129]
+          - list [ref=e130]:
+            - listitem [ref=e131]:
+              - link "ჩვენს შესახებ" [ref=e132] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e133]:
+              - link "ფილიალები" [ref=e134] [cursor=pointer]:
+                - /url: /branches
+            - listitem [ref=e135]:
+              - link "ვაკანსიები" [ref=e136] [cursor=pointer]:
+                - /url: /careers
+            - listitem [ref=e137]:
+              - link "კონტაქტი" [ref=e138] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e139]:
+          - heading "დახმარება" [level=3] [ref=e140]
+          - list [ref=e141]:
+            - listitem [ref=e142]:
+              - link "ხშირად დასმული კითხვები" [ref=e143] [cursor=pointer]:
+                - /url: /faq
+            - listitem [ref=e144]:
+              - link "მიწოდება" [ref=e145] [cursor=pointer]:
+                - /url: /shipping
+            - listitem [ref=e146]:
+              - link "დაბრუნება" [ref=e147] [cursor=pointer]:
+                - /url: /returns
+            - listitem [ref=e148]:
+              - link "პირობები" [ref=e149] [cursor=pointer]:
+                - /url: /track-order
+        - generic [ref=e150]:
+          - heading "იურიდიული" [level=3] [ref=e151]
+          - list [ref=e152]:
+            - listitem [ref=e153]:
+              - link "კონფიდენციალურობის პოლიტიკა" [ref=e154] [cursor=pointer]:
+                - /url: /privacy
+            - listitem [ref=e155]:
+              - link "მომსახურების პირობები" [ref=e156] [cursor=pointer]:
+                - /url: /terms
+        - generic [ref=e157]:
+          - heading "კონტაქტი" [level=3] [ref=e158]
+          - list [ref=e159]:
+            - listitem [ref=e160]:
+              - img [ref=e161]
+              - generic [ref=e164]: თბილისი, რუსთაველის გამზ. 12
+            - listitem [ref=e165]:
+              - img [ref=e166]
+              - link "+995 32 200 00 00" [ref=e168] [cursor=pointer]:
+                - /url: tel:+995322000000
+            - listitem [ref=e169]:
+              - img [ref=e170]
+              - link "info@medpharma.ge" [ref=e172] [cursor=pointer]:
+                - /url: mailto:info@medpharma.ge
+            - listitem [ref=e173]:
+              - img [ref=e174]
+              - generic [ref=e176]: 10:00 - 22:00
+      - generic [ref=e179]:
+        - paragraph [ref=e180]: © 2026 მედფარმა პლუსი. ყველა უფლება დაცულია.
+        - generic [ref=e182]:
+          - generic [ref=e183]: "Payment:"
+          - generic [ref=e184]:
+            - img [ref=e186]
+            - img [ref=e189]
+  - button "Open Next.js Dev Tools" [ref=e198] [cursor=pointer]:
+    - generic [ref=e201]:
+      - text: Compiling
+      - generic [ref=e202]:
+        - generic [ref=e203]: .
+        - generic [ref=e204]: .
+        - generic [ref=e205]: .
+  - alert [ref=e206]
+```

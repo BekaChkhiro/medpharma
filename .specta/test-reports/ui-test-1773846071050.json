@@ -1,0 +1,2014 @@
+{
+  "success": false,
+  "projectPath": "/Users/beqolozi/Desktop/clinic-shop",
+  "baseUrl": "http://localhost:5175",
+  "timestamp": 1773846071050,
+  "duration": 142822,
+  "summary": {
+    "pagesVisited": 48,
+    "pagesPassed": 9,
+    "pagesFailed": 39,
+    "linksChecked": 38,
+    "linksBroken": 11,
+    "formsTested": 9,
+    "formsPassed": 9,
+    "consoleErrors": 90,
+    "consoleWarnings": 0,
+    "screenshotsTaken": 48
+  },
+  "pages": [
+    {
+      "url": "http://localhost:5175",
+      "path": "/",
+      "title": "MedPharma Plus - Online Pharmacy",
+      "status": 200,
+      "loadTime": 1042,
+      "hasErrors": false,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "viewport": "desktop",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/home-desktop.png"
+    },
+    {
+      "url": "http://localhost:5175",
+      "path": "/",
+      "title": "MedPharma Plus - Online Pharmacy",
+      "status": 200,
+      "loadTime": 698,
+      "hasErrors": false,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "viewport": "tablet",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/home-tablet.png"
+    },
+    {
+      "url": "http://localhost:5175",
+      "path": "/",
+      "title": "MedPharma Plus - Online Pharmacy",
+      "status": 200,
+      "loadTime": 675,
+      "hasErrors": false,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "viewport": "mobile",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/home-mobile.png"
+    },
+    {
+      "url": "http://localhost:5175/en",
+      "path": "/en",
+      "title": "MedPharma Plus - Online Pharmacy",
+      "status": 200,
+      "loadTime": 676,
+      "hasErrors": false,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "viewport": "desktop",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-desktop.png"
+    },
+    {
+      "url": "http://localhost:5175/en",
+      "path": "/en",
+      "title": "MedPharma Plus - Online Pharmacy",
+      "status": 200,
+      "loadTime": 672,
+      "hasErrors": false,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "viewport": "tablet",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-tablet.png"
+    },
+    {
+      "url": "http://localhost:5175/en",
+      "path": "/en",
+      "title": "MedPharma Plus - Online Pharmacy",
+      "status": 200,
+      "loadTime": 681,
+      "hasErrors": false,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "viewport": "mobile",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-mobile.png"
+    },
+    {
+      "url": "http://localhost:5175/en/cart",
+      "path": "/en/cart",
+      "title": "MedPharma Plus - Online Pharmacy",
+      "status": 200,
+      "loadTime": 772,
+      "hasErrors": true,
+      "consoleErrors": 2,
+      "consoleWarnings": 0,
+      "viewport": "desktop",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-cart-desktop.png"
+    },
+    {
+      "url": "http://localhost:5175/en/cart",
+      "path": "/en/cart",
+      "title": "MedPharma Plus - Online Pharmacy",
+      "status": 200,
+      "loadTime": 776,
+      "hasErrors": true,
+      "consoleErrors": 2,
+      "consoleWarnings": 0,
+      "viewport": "tablet",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-cart-tablet.png"
+    },
+    {
+      "url": "http://localhost:5175/en/cart",
+      "path": "/en/cart",
+      "title": "MedPharma Plus - Online Pharmacy",
+      "status": 200,
+      "loadTime": 815,
+      "hasErrors": true,
+      "consoleErrors": 2,
+      "consoleWarnings": 0,
+      "viewport": "mobile",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-cart-mobile.png"
+    },
+    {
+      "url": "http://localhost:5175/en/products",
+      "path": "/en/products",
+      "title": "Products | MedPharma Plus | MedPharma Plus",
+      "status": 200,
+      "loadTime": 2894,
+      "hasErrors": true,
+      "consoleErrors": 22,
+      "consoleWarnings": 0,
+      "viewport": "desktop",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-products-desktop.png"
+    },
+    {
+      "url": "http://localhost:5175/en/products",
+      "path": "/en/products",
+      "title": "Products | MedPharma Plus | MedPharma Plus",
+      "status": 200,
+      "loadTime": 5154,
+      "hasErrors": true,
+      "consoleErrors": 17,
+      "consoleWarnings": 0,
+      "viewport": "tablet",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-products-tablet.png"
+    },
+    {
+      "url": "http://localhost:5175/en/products",
+      "path": "/en/products",
+      "title": "Products | MedPharma Plus | MedPharma Plus",
+      "status": 200,
+      "loadTime": 1892,
+      "hasErrors": true,
+      "consoleErrors": 12,
+      "consoleWarnings": 0,
+      "viewport": "mobile",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-products-mobile.png"
+    },
+    {
+      "url": "http://localhost:5175/en/categories",
+      "path": "/en/categories",
+      "title": "",
+      "status": 404,
+      "loadTime": 656,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "desktop",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-categories-desktop.png"
+    },
+    {
+      "url": "http://localhost:5175/en/categories",
+      "path": "/en/categories",
+      "title": "",
+      "status": 404,
+      "loadTime": 655,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "tablet",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-categories-tablet.png"
+    },
+    {
+      "url": "http://localhost:5175/en/categories",
+      "path": "/en/categories",
+      "title": "",
+      "status": 404,
+      "loadTime": 653,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "mobile",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-categories-mobile.png"
+    },
+    {
+      "url": "http://localhost:5175/en/about",
+      "path": "/en/about",
+      "title": "",
+      "status": 404,
+      "loadTime": 659,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "desktop",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-about-desktop.png"
+    },
+    {
+      "url": "http://localhost:5175/en/about",
+      "path": "/en/about",
+      "title": "",
+      "status": 404,
+      "loadTime": 662,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "tablet",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-about-tablet.png"
+    },
+    {
+      "url": "http://localhost:5175/en/about",
+      "path": "/en/about",
+      "title": "",
+      "status": 404,
+      "loadTime": 656,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "mobile",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-about-mobile.png"
+    },
+    {
+      "url": "http://localhost:5175/en/branches",
+      "path": "/en/branches",
+      "title": "",
+      "status": 404,
+      "loadTime": 659,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "desktop",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-branches-desktop.png"
+    },
+    {
+      "url": "http://localhost:5175/en/branches",
+      "path": "/en/branches",
+      "title": "",
+      "status": 404,
+      "loadTime": 654,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "tablet",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-branches-tablet.png"
+    },
+    {
+      "url": "http://localhost:5175/en/branches",
+      "path": "/en/branches",
+      "title": "",
+      "status": 404,
+      "loadTime": 653,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "mobile",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-branches-mobile.png"
+    },
+    {
+      "url": "http://localhost:5175/en/contact",
+      "path": "/en/contact",
+      "title": "",
+      "status": 404,
+      "loadTime": 654,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "desktop",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-contact-desktop.png"
+    },
+    {
+      "url": "http://localhost:5175/en/contact",
+      "path": "/en/contact",
+      "title": "",
+      "status": 404,
+      "loadTime": 649,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "tablet",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-contact-tablet.png"
+    },
+    {
+      "url": "http://localhost:5175/en/contact",
+      "path": "/en/contact",
+      "title": "",
+      "status": 404,
+      "loadTime": 655,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "mobile",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-contact-mobile.png"
+    },
+    {
+      "url": "http://localhost:5175/en/careers",
+      "path": "/en/careers",
+      "title": "",
+      "status": 404,
+      "loadTime": 642,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "desktop",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-careers-desktop.png"
+    },
+    {
+      "url": "http://localhost:5175/en/careers",
+      "path": "/en/careers",
+      "title": "",
+      "status": 404,
+      "loadTime": 650,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "tablet",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-careers-tablet.png"
+    },
+    {
+      "url": "http://localhost:5175/en/careers",
+      "path": "/en/careers",
+      "title": "",
+      "status": 404,
+      "loadTime": 656,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "mobile",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-careers-mobile.png"
+    },
+    {
+      "url": "http://localhost:5175/en/faq",
+      "path": "/en/faq",
+      "title": "",
+      "status": 404,
+      "loadTime": 676,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "desktop",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-faq-desktop.png"
+    },
+    {
+      "url": "http://localhost:5175/en/faq",
+      "path": "/en/faq",
+      "title": "",
+      "status": 404,
+      "loadTime": 655,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "tablet",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-faq-tablet.png"
+    },
+    {
+      "url": "http://localhost:5175/en/faq",
+      "path": "/en/faq",
+      "title": "",
+      "status": 404,
+      "loadTime": 654,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "mobile",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-faq-mobile.png"
+    },
+    {
+      "url": "http://localhost:5175/en/shipping",
+      "path": "/en/shipping",
+      "title": "",
+      "status": 404,
+      "loadTime": 638,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "desktop",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-shipping-desktop.png"
+    },
+    {
+      "url": "http://localhost:5175/en/shipping",
+      "path": "/en/shipping",
+      "title": "",
+      "status": 404,
+      "loadTime": 654,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "tablet",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-shipping-tablet.png"
+    },
+    {
+      "url": "http://localhost:5175/en/shipping",
+      "path": "/en/shipping",
+      "title": "",
+      "status": 404,
+      "loadTime": 653,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "mobile",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-shipping-mobile.png"
+    },
+    {
+      "url": "http://localhost:5175/en/returns",
+      "path": "/en/returns",
+      "title": "",
+      "status": 404,
+      "loadTime": 654,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "desktop",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-returns-desktop.png"
+    },
+    {
+      "url": "http://localhost:5175/en/returns",
+      "path": "/en/returns",
+      "title": "",
+      "status": 404,
+      "loadTime": 653,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "tablet",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-returns-tablet.png"
+    },
+    {
+      "url": "http://localhost:5175/en/returns",
+      "path": "/en/returns",
+      "title": "",
+      "status": 404,
+      "loadTime": 653,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "mobile",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-returns-mobile.png"
+    },
+    {
+      "url": "http://localhost:5175/en/track-order",
+      "path": "/en/track-order",
+      "title": "",
+      "status": 404,
+      "loadTime": 653,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "desktop",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-track-order-desktop.png"
+    },
+    {
+      "url": "http://localhost:5175/en/track-order",
+      "path": "/en/track-order",
+      "title": "",
+      "status": 404,
+      "loadTime": 651,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "tablet",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-track-order-tablet.png"
+    },
+    {
+      "url": "http://localhost:5175/en/track-order",
+      "path": "/en/track-order",
+      "title": "",
+      "status": 404,
+      "loadTime": 651,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "mobile",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-track-order-mobile.png"
+    },
+    {
+      "url": "http://localhost:5175/en/privacy",
+      "path": "/en/privacy",
+      "title": "",
+      "status": 404,
+      "loadTime": 652,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "desktop",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-privacy-desktop.png"
+    },
+    {
+      "url": "http://localhost:5175/en/privacy",
+      "path": "/en/privacy",
+      "title": "",
+      "status": 404,
+      "loadTime": 653,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "tablet",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-privacy-tablet.png"
+    },
+    {
+      "url": "http://localhost:5175/en/privacy",
+      "path": "/en/privacy",
+      "title": "",
+      "status": 404,
+      "loadTime": 654,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "mobile",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-privacy-mobile.png"
+    },
+    {
+      "url": "http://localhost:5175/en/terms",
+      "path": "/en/terms",
+      "title": "",
+      "status": 404,
+      "loadTime": 648,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "desktop",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-terms-desktop.png"
+    },
+    {
+      "url": "http://localhost:5175/en/terms",
+      "path": "/en/terms",
+      "title": "",
+      "status": 404,
+      "loadTime": 653,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "tablet",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-terms-tablet.png"
+    },
+    {
+      "url": "http://localhost:5175/en/terms",
+      "path": "/en/terms",
+      "title": "",
+      "status": 404,
+      "loadTime": 654,
+      "hasErrors": true,
+      "consoleErrors": 1,
+      "consoleWarnings": 0,
+      "viewport": "mobile",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-terms-mobile.png"
+    },
+    {
+      "url": "http://localhost:5175/",
+      "path": "/",
+      "title": "MedPharma Plus - Online Pharmacy",
+      "status": 200,
+      "loadTime": 678,
+      "hasErrors": false,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "viewport": "desktop",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/home-desktop.png"
+    },
+    {
+      "url": "http://localhost:5175/",
+      "path": "/",
+      "title": "MedPharma Plus - Online Pharmacy",
+      "status": 200,
+      "loadTime": 686,
+      "hasErrors": false,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "viewport": "tablet",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/home-tablet.png"
+    },
+    {
+      "url": "http://localhost:5175/",
+      "path": "/",
+      "title": "MedPharma Plus - Online Pharmacy",
+      "status": 200,
+      "loadTime": 686,
+      "hasErrors": false,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "viewport": "mobile",
+      "screenshot": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/home-mobile.png"
+    }
+  ],
+  "links": [
+    {
+      "url": "http://localhost:5175/en",
+      "sourceUrl": "http://localhost:5175",
+      "text": "მედფარმა პლუსი",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/cart",
+      "sourceUrl": "http://localhost:5175",
+      "text": "",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products",
+      "sourceUrl": "http://localhost:5175",
+      "text": "Products",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/categories",
+      "sourceUrl": "http://localhost:5175",
+      "text": "Categories",
+      "status": 404,
+      "isExternal": false,
+      "isBroken": true
+    },
+    {
+      "url": "http://localhost:5175/en/about",
+      "sourceUrl": "http://localhost:5175",
+      "text": "About Us",
+      "status": 404,
+      "isExternal": false,
+      "isBroken": true
+    },
+    {
+      "url": "http://localhost:5175/en/branches",
+      "sourceUrl": "http://localhost:5175",
+      "text": "Branches",
+      "status": 404,
+      "isExternal": false,
+      "isBroken": true
+    },
+    {
+      "url": "http://localhost:5175/en/contact",
+      "sourceUrl": "http://localhost:5175",
+      "text": "Contact",
+      "status": 404,
+      "isExternal": false,
+      "isBroken": true
+    },
+    {
+      "url": "https://facebook.com/medpharmaplus",
+      "sourceUrl": "http://localhost:5175",
+      "text": "",
+      "status": 301,
+      "isExternal": true,
+      "isBroken": false
+    },
+    {
+      "url": "https://instagram.com/medpharmaplus",
+      "sourceUrl": "http://localhost:5175",
+      "text": "",
+      "status": 301,
+      "isExternal": true,
+      "isBroken": false
+    },
+    {
+      "url": "https://youtube.com/medpharmaplus",
+      "sourceUrl": "http://localhost:5175",
+      "text": "",
+      "status": 301,
+      "isExternal": true,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/careers",
+      "sourceUrl": "http://localhost:5175",
+      "text": "Careers",
+      "status": 404,
+      "isExternal": false,
+      "isBroken": true
+    },
+    {
+      "url": "http://localhost:5175/en/faq",
+      "sourceUrl": "http://localhost:5175",
+      "text": "FAQ",
+      "status": 404,
+      "isExternal": false,
+      "isBroken": true
+    },
+    {
+      "url": "http://localhost:5175/en/shipping",
+      "sourceUrl": "http://localhost:5175",
+      "text": "Shipping",
+      "status": 404,
+      "isExternal": false,
+      "isBroken": true
+    },
+    {
+      "url": "http://localhost:5175/en/returns",
+      "sourceUrl": "http://localhost:5175",
+      "text": "Returns",
+      "status": 404,
+      "isExternal": false,
+      "isBroken": true
+    },
+    {
+      "url": "http://localhost:5175/en/track-order",
+      "sourceUrl": "http://localhost:5175",
+      "text": "Terms",
+      "status": 404,
+      "isExternal": false,
+      "isBroken": true
+    },
+    {
+      "url": "http://localhost:5175/en/privacy",
+      "sourceUrl": "http://localhost:5175",
+      "text": "Privacy Policy",
+      "status": 404,
+      "isExternal": false,
+      "isBroken": true
+    },
+    {
+      "url": "http://localhost:5175/en/terms",
+      "sourceUrl": "http://localhost:5175",
+      "text": "Terms of Service",
+      "status": 404,
+      "isExternal": false,
+      "isBroken": true
+    },
+    {
+      "url": "http://localhost:5175/en/products/antibiotic-amoxicillin-500mg",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/blood-pressure-monitor",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/probiotic-capsules-30ct",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/digital-thermometer",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/baby-fever-syrup-100ml",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/baby-vitamin-d-drops-30ml",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/adhesive-bandages-100ct",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/first-aid-kit-50pc",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/antibacterial-ointment-30g",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/moisturizing-cream-100ml",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/antacid-tablets-mint-100ct",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/nasal-spray-decongestant-15ml",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/vitamin-c-1000mg-tablets",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/omega-3-fish-oil-1000mg",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/multivitamin-complete-formula",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/cold-flu-relief-syrup-200ml",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/paracetamol-500mg-tablets",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/vitamin-d3-5000iu-softgels",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/ibuprofen-400mg-tablets",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/en/products/muscle-relief-gel-100g",
+      "sourceUrl": "http://localhost:5175/en/products",
+      "text": "View",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    },
+    {
+      "url": "http://localhost:5175/",
+      "sourceUrl": "http://localhost:5175/en/categories",
+      "text": "← Go Home",
+      "status": 200,
+      "isExternal": false,
+      "isBroken": false
+    }
+  ],
+  "forms": [
+    {
+      "url": "http://localhost:5175",
+      "formIndex": 0,
+      "action": "http://localhost:5175/en",
+      "method": "GET",
+      "fields": [],
+      "submitted": true,
+      "responseStatus": null,
+      "success": true
+    },
+    {
+      "url": "http://localhost:5175",
+      "formIndex": 0,
+      "action": "http://localhost:5175/en",
+      "method": "GET",
+      "fields": [],
+      "submitted": true,
+      "responseStatus": null,
+      "success": true
+    },
+    {
+      "url": "http://localhost:5175",
+      "formIndex": 0,
+      "action": "http://localhost:5175/en",
+      "method": "GET",
+      "fields": [],
+      "submitted": true,
+      "responseStatus": null,
+      "success": true
+    },
+    {
+      "url": "http://localhost:5175/en",
+      "formIndex": 0,
+      "action": "http://localhost:5175/en",
+      "method": "GET",
+      "fields": [],
+      "submitted": true,
+      "responseStatus": null,
+      "success": true
+    },
+    {
+      "url": "http://localhost:5175/en",
+      "formIndex": 0,
+      "action": "http://localhost:5175/en",
+      "method": "GET",
+      "fields": [],
+      "submitted": true,
+      "responseStatus": null,
+      "success": true
+    },
+    {
+      "url": "http://localhost:5175/en",
+      "formIndex": 0,
+      "action": "http://localhost:5175/en",
+      "method": "GET",
+      "fields": [],
+      "submitted": true,
+      "responseStatus": null,
+      "success": true
+    },
+    {
+      "url": "http://localhost:5175/",
+      "formIndex": 0,
+      "action": "http://localhost:5175/en",
+      "method": "GET",
+      "fields": [],
+      "submitted": true,
+      "responseStatus": null,
+      "success": true
+    },
+    {
+      "url": "http://localhost:5175/",
+      "formIndex": 0,
+      "action": "http://localhost:5175/en",
+      "method": "GET",
+      "fields": [],
+      "submitted": true,
+      "responseStatus": null,
+      "success": true
+    },
+    {
+      "url": "http://localhost:5175/",
+      "formIndex": 0,
+      "action": "http://localhost:5175/en",
+      "method": "GET",
+      "fields": [],
+      "submitted": true,
+      "responseStatus": null,
+      "success": true
+    }
+  ],
+  "consoleErrors": [
+    {
+      "type": "error",
+      "message": "The result of getServerSnapshot should be cached to avoid an infinite loop",
+      "source": "console",
+      "url": "http://localhost:5175/en/cart",
+      "timestamp": 1773845957781
+    },
+    {
+      "type": "error",
+      "message": "Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.",
+      "source": "pageerror",
+      "url": "http://localhost:5175/en/cart",
+      "timestamp": 1773845957851
+    },
+    {
+      "type": "error",
+      "message": "The result of getServerSnapshot should be cached to avoid an infinite loop",
+      "source": "console",
+      "url": "http://localhost:5175/en/cart",
+      "timestamp": 1773845959173
+    },
+    {
+      "type": "error",
+      "message": "Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.",
+      "source": "pageerror",
+      "url": "http://localhost:5175/en/cart",
+      "timestamp": 1773845959245
+    },
+    {
+      "type": "error",
+      "message": "The result of getServerSnapshot should be cached to avoid an infinite loop",
+      "source": "console",
+      "url": "http://localhost:5175/en/cart",
+      "timestamp": 1773845960558
+    },
+    {
+      "type": "error",
+      "message": "Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.",
+      "source": "pageerror",
+      "url": "http://localhost:5175/en/cart",
+      "timestamp": 1773845960644
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963736
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963736
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963736
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963736
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963736
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963736
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963737
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963737
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963737
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963737
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963737
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963737
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963737
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963737
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963737
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963737
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963737
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963737
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963738
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963738
+    },
+    {
+      "type": "error",
+      "message": "The result of getServerSnapshot should be cached to avoid an infinite loop",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845963786
+    },
+    {
+      "type": "error",
+      "message": "Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.",
+      "source": "pageerror",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845964157
+    },
+    {
+      "type": "error",
+      "message": "The result of getServerSnapshot should be cached to avoid an infinite loop",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845966414
+    },
+    {
+      "type": "error",
+      "message": "Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.",
+      "source": "pageerror",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845966709
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845967580
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845967580
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845967583
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845967774
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845968455
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845968481
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845968716
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845968778
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845968893
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845968955
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845969568
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845969608
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845969809
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845969822
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845969956
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845971990
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845971990
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845971990
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845971990
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845971990
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845971991
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845971991
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845971991
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845971991
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845971991
+    },
+    {
+      "type": "error",
+      "message": "The result of getServerSnapshot should be cached to avoid an infinite loop",
+      "source": "console",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845972039
+    },
+    {
+      "type": "error",
+      "message": "Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.",
+      "source": "pageerror",
+      "url": "http://localhost:5175/en/products",
+      "timestamp": 1773845972431
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/categories",
+      "timestamp": 1773845973533
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/categories",
+      "timestamp": 1773845974777
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/categories",
+      "timestamp": 1773845975991
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/about",
+      "timestamp": 1773845977216
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/about",
+      "timestamp": 1773845978437
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/about",
+      "timestamp": 1773845979668
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/branches",
+      "timestamp": 1773845980886
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/branches",
+      "timestamp": 1773845982125
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/branches",
+      "timestamp": 1773845983352
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/contact",
+      "timestamp": 1773845984576
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/contact",
+      "timestamp": 1773845985802
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/contact",
+      "timestamp": 1773845987022
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/careers",
+      "timestamp": 1773845988231
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/careers",
+      "timestamp": 1773845989462
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/careers",
+      "timestamp": 1773845990687
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/faq",
+      "timestamp": 1773845991905
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/faq",
+      "timestamp": 1773845993164
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/faq",
+      "timestamp": 1773845994382
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/shipping",
+      "timestamp": 1773845995580
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/shipping",
+      "timestamp": 1773845996808
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/shipping",
+      "timestamp": 1773845998027
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/returns",
+      "timestamp": 1773845999251
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/returns",
+      "timestamp": 1773846000483
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/returns",
+      "timestamp": 1773846001708
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/track-order",
+      "timestamp": 1773846002921
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/track-order",
+      "timestamp": 1773846004158
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/track-order",
+      "timestamp": 1773846005372
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/privacy",
+      "timestamp": 1773846006585
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/privacy",
+      "timestamp": 1773846007806
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/privacy",
+      "timestamp": 1773846009034
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/terms",
+      "timestamp": 1773846010229
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/terms",
+      "timestamp": 1773846011462
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "console",
+      "url": "http://localhost:5175/en/terms",
+      "timestamp": 1773846012686
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "home-desktop.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/home-desktop.png",
+      "url": "http://localhost:5175",
+      "viewport": "desktop",
+      "size": 266823,
+      "timestamp": 1773845950825
+    },
+    {
+      "name": "home-tablet.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/home-tablet.png",
+      "url": "http://localhost:5175",
+      "viewport": "tablet",
+      "size": 166354,
+      "timestamp": 1773845952093
+    },
+    {
+      "name": "home-mobile.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/home-mobile.png",
+      "url": "http://localhost:5175",
+      "viewport": "mobile",
+      "size": 96442,
+      "timestamp": 1773845953327
+    },
+    {
+      "name": "en-desktop.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-desktop.png",
+      "url": "http://localhost:5175/en",
+      "viewport": "desktop",
+      "size": 266823,
+      "timestamp": 1773845954608
+    },
+    {
+      "name": "en-tablet.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-tablet.png",
+      "url": "http://localhost:5175/en",
+      "viewport": "tablet",
+      "size": 166354,
+      "timestamp": 1773845955855
+    },
+    {
+      "name": "en-mobile.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-mobile.png",
+      "url": "http://localhost:5175/en",
+      "viewport": "mobile",
+      "size": 96442,
+      "timestamp": 1773845957099
+    },
+    {
+      "name": "en-cart-desktop.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-cart-desktop.png",
+      "url": "http://localhost:5175/en/cart",
+      "viewport": "desktop",
+      "size": 80709,
+      "timestamp": 1773845958479
+    },
+    {
+      "name": "en-cart-tablet.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-cart-tablet.png",
+      "url": "http://localhost:5175/en/cart",
+      "viewport": "tablet",
+      "size": 71531,
+      "timestamp": 1773845959840
+    },
+    {
+      "name": "en-cart-mobile.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-cart-mobile.png",
+      "url": "http://localhost:5175/en/cart",
+      "viewport": "mobile",
+      "size": 59113,
+      "timestamp": 1773845961224
+    },
+    {
+      "name": "en-products-desktop.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-products-desktop.png",
+      "url": "http://localhost:5175/en/products",
+      "viewport": "desktop",
+      "size": 106508,
+      "timestamp": 1773845964741
+    },
+    {
+      "name": "en-products-tablet.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-products-tablet.png",
+      "url": "http://localhost:5175/en/products",
+      "viewport": "tablet",
+      "size": 80339,
+      "timestamp": 1773845970497
+    },
+    {
+      "name": "en-products-mobile.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-products-mobile.png",
+      "url": "http://localhost:5175/en/products",
+      "viewport": "mobile",
+      "size": 58120,
+      "timestamp": 1773845972964
+    },
+    {
+      "name": "en-categories-desktop.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-categories-desktop.png",
+      "url": "http://localhost:5175/en/categories",
+      "viewport": "desktop",
+      "size": 27713,
+      "timestamp": 1773845974210
+    },
+    {
+      "name": "en-categories-tablet.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-categories-tablet.png",
+      "url": "http://localhost:5175/en/categories",
+      "viewport": "tablet",
+      "size": 23405,
+      "timestamp": 1773845975425
+    },
+    {
+      "name": "en-categories-mobile.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-categories-mobile.png",
+      "url": "http://localhost:5175/en/categories",
+      "viewport": "mobile",
+      "size": 20143,
+      "timestamp": 1773845976640
+    },
+    {
+      "name": "en-about-desktop.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-about-desktop.png",
+      "url": "http://localhost:5175/en/about",
+      "viewport": "desktop",
+      "size": 27713,
+      "timestamp": 1773845977870
+    },
+    {
+      "name": "en-about-tablet.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-about-tablet.png",
+      "url": "http://localhost:5175/en/about",
+      "viewport": "tablet",
+      "size": 23405,
+      "timestamp": 1773845979098
+    },
+    {
+      "name": "en-about-mobile.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-about-mobile.png",
+      "url": "http://localhost:5175/en/about",
+      "viewport": "mobile",
+      "size": 20143,
+      "timestamp": 1773845980315
+    },
+    {
+      "name": "en-branches-desktop.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-branches-desktop.png",
+      "url": "http://localhost:5175/en/branches",
+      "viewport": "desktop",
+      "size": 27713,
+      "timestamp": 1773845981559
+    },
+    {
+      "name": "en-branches-tablet.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-branches-tablet.png",
+      "url": "http://localhost:5175/en/branches",
+      "viewport": "tablet",
+      "size": 23405,
+      "timestamp": 1773845982780
+    },
+    {
+      "name": "en-branches-mobile.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-branches-mobile.png",
+      "url": "http://localhost:5175/en/branches",
+      "viewport": "mobile",
+      "size": 20143,
+      "timestamp": 1773845984008
+    },
+    {
+      "name": "en-contact-desktop.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-contact-desktop.png",
+      "url": "http://localhost:5175/en/contact",
+      "viewport": "desktop",
+      "size": 27713,
+      "timestamp": 1773845985246
+    },
+    {
+      "name": "en-contact-tablet.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-contact-tablet.png",
+      "url": "http://localhost:5175/en/contact",
+      "viewport": "tablet",
+      "size": 23405,
+      "timestamp": 1773845986455
+    },
+    {
+      "name": "en-contact-mobile.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-contact-mobile.png",
+      "url": "http://localhost:5175/en/contact",
+      "viewport": "mobile",
+      "size": 20143,
+      "timestamp": 1773845987679
+    },
+    {
+      "name": "en-careers-desktop.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-careers-desktop.png",
+      "url": "http://localhost:5175/en/careers",
+      "viewport": "desktop",
+      "size": 27713,
+      "timestamp": 1773845988903
+    },
+    {
+      "name": "en-careers-tablet.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-careers-tablet.png",
+      "url": "http://localhost:5175/en/careers",
+      "viewport": "tablet",
+      "size": 23405,
+      "timestamp": 1773845990122
+    },
+    {
+      "name": "en-careers-mobile.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-careers-mobile.png",
+      "url": "http://localhost:5175/en/careers",
+      "viewport": "mobile",
+      "size": 20143,
+      "timestamp": 1773845991334
+    },
+    {
+      "name": "en-faq-desktop.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-faq-desktop.png",
+      "url": "http://localhost:5175/en/faq",
+      "viewport": "desktop",
+      "size": 27713,
+      "timestamp": 1773845992598
+    },
+    {
+      "name": "en-faq-tablet.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-faq-tablet.png",
+      "url": "http://localhost:5175/en/faq",
+      "viewport": "tablet",
+      "size": 23405,
+      "timestamp": 1773845993815
+    },
+    {
+      "name": "en-faq-mobile.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-faq-mobile.png",
+      "url": "http://localhost:5175/en/faq",
+      "viewport": "mobile",
+      "size": 20143,
+      "timestamp": 1773845995032
+    },
+    {
+      "name": "en-shipping-desktop.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-shipping-desktop.png",
+      "url": "http://localhost:5175/en/shipping",
+      "viewport": "desktop",
+      "size": 27713,
+      "timestamp": 1773845996244
+    },
+    {
+      "name": "en-shipping-tablet.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-shipping-tablet.png",
+      "url": "http://localhost:5175/en/shipping",
+      "viewport": "tablet",
+      "size": 23405,
+      "timestamp": 1773845997461
+    },
+    {
+      "name": "en-shipping-mobile.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-shipping-mobile.png",
+      "url": "http://localhost:5175/en/shipping",
+      "viewport": "mobile",
+      "size": 20143,
+      "timestamp": 1773845998676
+    },
+    {
+      "name": "en-returns-desktop.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-returns-desktop.png",
+      "url": "http://localhost:5175/en/returns",
+      "viewport": "desktop",
+      "size": 27713,
+      "timestamp": 1773845999919
+    },
+    {
+      "name": "en-returns-tablet.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-returns-tablet.png",
+      "url": "http://localhost:5175/en/returns",
+      "viewport": "tablet",
+      "size": 23405,
+      "timestamp": 1773846001144
+    },
+    {
+      "name": "en-returns-mobile.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-returns-mobile.png",
+      "url": "http://localhost:5175/en/returns",
+      "viewport": "mobile",
+      "size": 20143,
+      "timestamp": 1773846002355
+    },
+    {
+      "name": "en-track-order-desktop.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-track-order-desktop.png",
+      "url": "http://localhost:5175/en/track-order",
+      "viewport": "desktop",
+      "size": 27713,
+      "timestamp": 1773846003594
+    },
+    {
+      "name": "en-track-order-tablet.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-track-order-tablet.png",
+      "url": "http://localhost:5175/en/track-order",
+      "viewport": "tablet",
+      "size": 23405,
+      "timestamp": 1773846004807
+    },
+    {
+      "name": "en-track-order-mobile.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-track-order-mobile.png",
+      "url": "http://localhost:5175/en/track-order",
+      "viewport": "mobile",
+      "size": 20143,
+      "timestamp": 1773846006016
+    },
+    {
+      "name": "en-privacy-desktop.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-privacy-desktop.png",
+      "url": "http://localhost:5175/en/privacy",
+      "viewport": "desktop",
+      "size": 27713,
+      "timestamp": 1773846007245
+    },
+    {
+      "name": "en-privacy-tablet.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-privacy-tablet.png",
+      "url": "http://localhost:5175/en/privacy",
+      "viewport": "tablet",
+      "size": 23405,
+      "timestamp": 1773846008466
+    },
+    {
+      "name": "en-privacy-mobile.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-privacy-mobile.png",
+      "url": "http://localhost:5175/en/privacy",
+      "viewport": "mobile",
+      "size": 20143,
+      "timestamp": 1773846009669
+    },
+    {
+      "name": "en-terms-desktop.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-terms-desktop.png",
+      "url": "http://localhost:5175/en/terms",
+      "viewport": "desktop",
+      "size": 27713,
+      "timestamp": 1773846010895
+    },
+    {
+      "name": "en-terms-tablet.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-terms-tablet.png",
+      "url": "http://localhost:5175/en/terms",
+      "viewport": "tablet",
+      "size": 23405,
+      "timestamp": 1773846012123
+    },
+    {
+      "name": "en-terms-mobile.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/en-terms-mobile.png",
+      "url": "http://localhost:5175/en/terms",
+      "viewport": "mobile",
+      "size": 20143,
+      "timestamp": 1773846013339
+    },
+    {
+      "name": "home-desktop.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/home-desktop.png",
+      "url": "http://localhost:5175/",
+      "viewport": "desktop",
+      "size": 266823,
+      "timestamp": 1773846014654
+    },
+    {
+      "name": "home-tablet.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/home-tablet.png",
+      "url": "http://localhost:5175/",
+      "viewport": "tablet",
+      "size": 166354,
+      "timestamp": 1773846015946
+    },
+    {
+      "name": "home-mobile.png",
+      "path": "/Users/beqolozi/Desktop/clinic-shop/.specta/test-screenshots/home-mobile.png",
+      "url": "http://localhost:5175/",
+      "viewport": "mobile",
+      "size": 96442,
+      "timestamp": 1773846017210
+    }
+  ],
+  "errors": []
+}
