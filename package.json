@@ -2,6 +2,14 @@
   "name": "medpharma-plus",
   "version": "0.1.0",
   "private": true,
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@prisma/engines",
+      "prisma",
+      "sharp",
+      "unrs-resolver"
+    ]
+  },
   "prisma": {
     "seed": "npx tsx prisma/seed.ts"
   },
