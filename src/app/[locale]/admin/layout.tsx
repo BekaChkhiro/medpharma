@@ -10,6 +10,9 @@ import { auth } from '@/lib/auth';
 
 import { AdminLayoutWrapper } from './admin-layout-wrapper';
 
+// Force dynamic rendering for admin pages (auth requires cookies)
+export const dynamic = 'force-dynamic';
+
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;

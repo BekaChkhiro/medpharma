@@ -261,7 +261,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
 
   // Output configuration for deployment
-  output: 'standalone',
+  // output: 'standalone', // Disabled for Railway compatibility
 
   // Environment variables that should be available on the client
   env: {
