@@ -1,84 +1,272 @@
-// Prisma schema for MedPharma Plus - Online Pharmacy
-// Full e-commerce platform with bilingual support (Georgian + English)
-
 generator client {
   provider        = "prisma-client-js"
   output          = "../src/generated/prisma"
-  previewFeatures = ["fullTextSearchPostgres"]
+  previewFeatures = ["fullTextSearchPostgres", "partialIndexes"]
 }
 
 datasource db {
   provider = "postgresql"
 }
 
-// ============================================================================
-// ADMIN USERS
-// ============================================================================
-
-enum AdminRole {
-  SUPER_ADMIN
-  ADMIN
-  MANAGER
-}
-
 model AdminUser {
   id        String    @id @default(cuid())
   email     String    @unique
-  password  String    // bcrypt hashed
+  password  String
   name      String
   role      AdminRole @default(MANAGER)
   isActive  Boolean   @default(true)
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
 
-  @@map("admin_users")
   @@index([email])
   @@index([isActive])
+  @@map("admin_users")
 }
 
-// ============================================================================
-// CATEGORIES (Hierarchical)
-// ============================================================================
-
 model Category {
-  id          String   @id @default(cuid())
-  slug        String   @unique
-  nameKa      String   // Georgian name
-  nameEn      String   // English name
-  descKa      String?  @db.Text // Georgian description
-  descEn      String?  @db.Text // English description
-  image       String?
-  sortOrder   Int      @default(0)
-  isActive    Boolean  @default(true)
-  metaTitleKa String?
-  metaTitleEn String?
-  metaDescKa  String?  @db.Text
-  metaDescEn  String?  @db.Text
+  id            String                   @id @default(cuid())
+  slug          String                   @unique
+  nameKa        String
+  nameEn        String
+  descKa        String?
+  descEn        String?
+  image         String?
+  sortOrder     Int                      @default(0)
+  isActive      Boolean                  @default(true)
+  metaTitleKa   String?
+  metaTitleEn   String?
+  metaDescKa    String?
+  metaDescEn    String?
+  createdAt     DateTime                 @default(now())
+  updatedAt     DateTime                 @updatedAt
+  parentId      String?
+  searchVector  Unsupported("tsvector")?
+  search_vector Unsupported("tsvector")?
+  parent        Category?                @relation("CategoryHierarchy", fields: [parentId], references: [id])
+  children      Category[]               @relation("CategoryHierarchy")
+  products      Product[]
 
-  // Full-text search vector (auto-updated by trigger)
-  searchVector Unsupported("tsvector")?
-
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  // Hierarchical structure
-  parentId String?
-  parent   Category?  @relation("CategoryHierarchy", fields: [parentId], references: [id], onDelete: SetNull)
-  children Category[] @relation("CategoryHierarchy")
-
-  // Products in this category
-  products Product[]
-
-  @@map("categories")
   @@index([slug])
   @@index([parentId])
   @@index([isActive])
   @@index([sortOrder])
+  @@map("categories")
 }
 
-// ============================================================================
-// PRODUCTS
-// ============================================================================
+model Product {
+  id                   String                   @id @default(cuid())
+  sku                  String                   @unique
+  slug                 String                   @unique
+  nameKa               String
+  nameEn               String
+  descKa               String?
+  descEn               String?
+  shortDescKa          String?
+  shortDescEn          String?
+  price                Decimal                  @db.Decimal(10, 2)
+  salePrice            Decimal?                 @db.Decimal(10, 2)
+  costPrice            Decimal?                 @db.Decimal(10, 2)
+  stock                Int                      @default(0)
+  lowStockThreshold    Int                      @default(10)
+  brand                String?
+  manufacturer         String?
+  dosageForm           DosageForm?
+  dosage               String?
+  activeIngredient     String?
+  requiresPrescription Boolean                  @default(false)
+  isFeatured           Boolean                  @default(false)
+  isActive             Boolean                  @default(true)
+  weight               Decimal?                 @db.Decimal(10, 3)
+  barcode              String?
+  metaTitleKa          String?
+  metaTitleEn          String?
+  metaDescKa           String?
+  metaDescEn           String?
+  apexId               String?                  @unique
+  viewCount            Int                      @default(0)
+  orderCount           Int                      @default(0)
+  createdAt            DateTime                 @default(now())
+  updatedAt            DateTime                 @updatedAt
+  categoryId           String?
+  searchVector         Unsupported("tsvector")?
+  search_vector        Unsupported("tsvector")?
+  orderItems           OrderItem[]
+  images               ProductImage[]
+  category             Category?                @relation(fields: [categoryId], references: [id])
+
+  @@index([slug])
+  @@index([sku])
+  @@index([categoryId])
+  @@index([isActive])
+  @@index([isFeatured])
+  @@index([requiresPrescription])
+  @@index([brand])
+  @@index([manufacturer])
+  @@index([apexId])
+  @@index([price])
+  @@index([stock])
+  @@index([createdAt])
+  @@index([orderCount])
+  @@index([isActive], map: "products_isActive_salePrice_idx", where: raw("(\"salePrice\" IS NOT NULL)"))
+  @@map("products")
+}
+
+model ProductImage {
+  id        String   @id @default(cuid())
+  url       String
+  alt       String?
+  sortOrder Int      @default(0)
+  isPrimary Boolean  @default(false)
+  createdAt DateTime @default(now())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@index([productId])
+  @@index([isPrimary])
+  @@index([sortOrder])
+  @@map("product_images")
+}
+
+model DeliveryZone {
+  id        String   @id @default(cuid())
+  nameKa    String
+  nameEn    String
+  fee       Decimal  @db.Decimal(10, 2)
+  minOrder  Decimal? @db.Decimal(10, 2)
+  freeAbove Decimal? @db.Decimal(10, 2)
+  isActive  Boolean  @default(true)
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  orders    Order[]
+
+  @@index([isActive])
+  @@index([sortOrder])
+  @@map("delivery_zones")
+}
+
+model Order {
+  id               String        @id @default(cuid())
+  orderNumber      String        @unique
+  status           OrderStatus   @default(PENDING)
+  paymentStatus    PaymentStatus @default(PENDING)
+  paymentMethod    PaymentMethod
+  customerName     String
+  customerEmail    String
+  customerPhone    String
+  deliveryCity     String
+  deliveryAddress  String
+  deliveryNotes    String?
+  subtotal         Decimal       @db.Decimal(10, 2)
+  deliveryFee      Decimal       @db.Decimal(10, 2)
+  total            Decimal       @db.Decimal(10, 2)
+  paymentId        String?
+  idempotencyKey   String?       @unique
+  paidAt           DateTime?
+  paymentErrorCode String?
+  courierName      String?
+  courierPhone     String?
+  trackingCode     String?
+  shippedAt        DateTime?
+  deliveredAt      DateTime?
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+  deliveryZoneId   String?
+  items            OrderItem[]
+  deliveryZone     DeliveryZone? @relation(fields: [deliveryZoneId], references: [id])
+
+  @@index([orderNumber])
+  @@index([status])
+  @@index([paymentStatus])
+  @@index([customerEmail])
+  @@index([customerPhone])
+  @@index([createdAt])
+  @@index([idempotencyKey])
+  @@map("orders")
+}
+
+model OrderItem {
+  id            String   @id @default(cuid())
+  quantity      Int
+  unitPrice     Decimal  @db.Decimal(10, 2)
+  total         Decimal  @db.Decimal(10, 2)
+  productNameKa String
+  productNameEn String
+  productSku    String
+  productImage  String?
+  orderId       String
+  productId     String?
+  order         Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product       Product? @relation(fields: [productId], references: [id])
+
+  @@index([orderId])
+  @@index([productId])
+  @@map("order_items")
+}
+
+model Banner {
+  id           String    @id @default(cuid())
+  titleKa      String?
+  titleEn      String?
+  subtitleKa   String?
+  subtitleEn   String?
+  image        String
+  imageMobile  String?
+  link         String?
+  buttonTextKa String?
+  buttonTextEn String?
+  sortOrder    Int       @default(0)
+  isActive     Boolean   @default(true)
+  startsAt     DateTime?
+  endsAt       DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  @@index([isActive])
+  @@index([sortOrder])
+  @@index([startsAt])
+  @@index([endsAt])
+  @@map("banners")
+}
+
+model Page {
+  id            String                   @id @default(cuid())
+  slug          String                   @unique
+  titleKa       String
+  titleEn       String
+  contentKa     String
+  contentEn     String
+  metaTitleKa   String?
+  metaTitleEn   String?
+  metaDescKa    String?
+  metaDescEn    String?
+  isActive      Boolean                  @default(true)
+  createdAt     DateTime                 @default(now())
+  updatedAt     DateTime                 @updatedAt
+  searchVector  Unsupported("tsvector")?
+  search_vector Unsupported("tsvector")?
+
+  @@index([slug])
+  @@index([isActive])
+  @@map("pages")
+}
+
+model SiteSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([key])
+  @@map("site_settings")
+}
+
+enum AdminRole {
+  SUPER_ADMIN
+  ADMIN
+  MANAGER
+}
 
 enum DosageForm {
   TABLET
@@ -97,122 +285,6 @@ enum DosageForm {
   SUSPENSION
   OTHER
 }
-
-model Product {
-  id                   String      @id @default(cuid())
-  sku                  String      @unique
-  slug                 String      @unique
-  nameKa               String      // Georgian name
-  nameEn               String      // English name
-  descKa               String?     @db.Text // Georgian description
-  descEn               String?     @db.Text // English description
-  shortDescKa          String?     // Georgian short description
-  shortDescEn          String?     // English short description
-  price                Decimal     @db.Decimal(10, 2)
-  salePrice            Decimal?    @db.Decimal(10, 2)
-  costPrice            Decimal?    @db.Decimal(10, 2) // For internal tracking
-  stock                Int         @default(0)
-  lowStockThreshold    Int         @default(10)
-  brand                String?
-  manufacturer         String?
-  dosageForm           DosageForm?
-  dosage               String?     // e.g., "500mg", "10ml"
-  activeIngredient     String?
-  requiresPrescription Boolean     @default(false)
-  isFeatured           Boolean     @default(false)
-  isActive             Boolean     @default(true)
-  weight               Decimal?    @db.Decimal(10, 3) // in kg
-  barcode              String?
-
-  // SEO Meta fields
-  metaTitleKa String?
-  metaTitleEn String?
-  metaDescKa  String?  @db.Text
-  metaDescEn  String?  @db.Text
-
-  // APEX ERP integration
-  apexId String? @unique
-
-  // Stats
-  viewCount  Int @default(0)
-  orderCount Int @default(0)
-
-  // Full-text search vector (auto-updated by trigger)
-  searchVector Unsupported("tsvector")?
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  // Relations
-  categoryId String?
-  category   Category? @relation(fields: [categoryId], references: [id], onDelete: SetNull)
-
-  images     ProductImage[]
-  orderItems OrderItem[]
-
-  @@map("products")
-  @@index([slug])
-  @@index([sku])
-  @@index([categoryId])
-  @@index([isActive])
-  @@index([isFeatured])
-  @@index([requiresPrescription])
-  @@index([brand])
-  @@index([manufacturer])
-  @@index([apexId])
-  @@index([price])
-  @@index([stock])
-  @@index([createdAt])
-  @@index([orderCount])
-}
-
-// ============================================================================
-// PRODUCT IMAGES
-// ============================================================================
-
-model ProductImage {
-  id        String   @id @default(cuid())
-  url       String
-  alt       String?
-  sortOrder Int      @default(0)
-  isPrimary Boolean  @default(false)
-  createdAt DateTime @default(now())
-
-  productId String
-  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
-
-  @@map("product_images")
-  @@index([productId])
-  @@index([isPrimary])
-  @@index([sortOrder])
-}
-
-// ============================================================================
-// DELIVERY ZONES
-// ============================================================================
-
-model DeliveryZone {
-  id        String   @id @default(cuid())
-  nameKa    String   // Georgian name (e.g., "თბილისი")
-  nameEn    String   // English name (e.g., "Tbilisi")
-  fee       Decimal  @db.Decimal(10, 2)
-  minOrder  Decimal? @db.Decimal(10, 2) // Minimum order for delivery
-  freeAbove Decimal? @db.Decimal(10, 2) // Free delivery above this amount
-  isActive  Boolean  @default(true)
-  sortOrder Int      @default(0)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  orders Order[]
-
-  @@map("delivery_zones")
-  @@index([isActive])
-  @@index([sortOrder])
-}
-
-// ============================================================================
-// ORDERS
-// ============================================================================
 
 enum OrderStatus {
   PENDING
@@ -235,152 +307,4 @@ enum PaymentMethod {
   TBC_CARD
   BOG_IPAY
   CASH_ON_DELIVERY
-}
-
-model Order {
-  id            String        @id @default(cuid())
-  orderNumber   String        @unique // Format: MF-YYYYNNNN
-  status        OrderStatus   @default(PENDING)
-  paymentStatus PaymentStatus @default(PENDING)
-  paymentMethod PaymentMethod
-
-  // Customer info (guest checkout)
-  customerName  String
-  customerEmail String
-  customerPhone String
-
-  // Delivery info
-  deliveryCity    String
-  deliveryAddress String @db.Text
-  deliveryNotes   String? @db.Text
-
-  // Pricing
-  subtotal    Decimal @db.Decimal(10, 2)
-  deliveryFee Decimal @db.Decimal(10, 2)
-  total       Decimal @db.Decimal(10, 2)
-
-  // Payment tracking
-  paymentId        String? // External payment ID from TBC/BOG
-  idempotencyKey   String? @unique // Prevent double payments
-  paidAt           DateTime?
-  paymentErrorCode String?
-
-  // Courier info
-  courierName  String?
-  courierPhone String?
-  trackingCode String?
-  shippedAt    DateTime?
-  deliveredAt  DateTime?
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  // Relations
-  deliveryZoneId String?
-  deliveryZone   DeliveryZone? @relation(fields: [deliveryZoneId], references: [id], onDelete: SetNull)
-
-  items OrderItem[]
-
-  @@map("orders")
-  @@index([orderNumber])
-  @@index([status])
-  @@index([paymentStatus])
-  @@index([customerEmail])
-  @@index([customerPhone])
-  @@index([createdAt])
-  @@index([idempotencyKey])
-}
-
-model OrderItem {
-  id        String  @id @default(cuid())
-  quantity  Int
-  unitPrice Decimal @db.Decimal(10, 2)
-  total     Decimal @db.Decimal(10, 2)
-
-  // Snapshot of product info at time of order
-  productNameKa String
-  productNameEn String
-  productSku    String
-  productImage  String?
-
-  orderId   String
-  order     Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
-  productId String?
-  product   Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
-
-  @@map("order_items")
-  @@index([orderId])
-  @@index([productId])
-}
-
-// ============================================================================
-// BANNERS
-// ============================================================================
-
-model Banner {
-  id          String    @id @default(cuid())
-  titleKa     String?   // Georgian title
-  titleEn     String?   // English title
-  subtitleKa  String?   // Georgian subtitle
-  subtitleEn  String?   // English subtitle
-  image       String    // Desktop image
-  imageMobile String?   // Mobile image
-  link        String?
-  buttonTextKa String?
-  buttonTextEn String?
-  sortOrder   Int       @default(0)
-  isActive    Boolean   @default(true)
-  startsAt    DateTime?
-  endsAt      DateTime?
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
-
-  @@map("banners")
-  @@index([isActive])
-  @@index([sortOrder])
-  @@index([startsAt])
-  @@index([endsAt])
-}
-
-// ============================================================================
-// STATIC PAGES
-// ============================================================================
-
-model Page {
-  id          String   @id @default(cuid())
-  slug        String   @unique
-  titleKa     String   // Georgian title
-  titleEn     String   // English title
-  contentKa   String   @db.Text // Georgian content (HTML/Markdown)
-  contentEn   String   @db.Text // English content (HTML/Markdown)
-  metaTitleKa String?
-  metaTitleEn String?
-  metaDescKa  String?  @db.Text
-  metaDescEn  String?  @db.Text
-  isActive    Boolean  @default(true)
-
-  // Full-text search vector (auto-updated by trigger)
-  searchVector Unsupported("tsvector")?
-
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  @@map("pages")
-  @@index([slug])
-  @@index([isActive])
-}
-
-// ============================================================================
-// SITE SETTINGS (Key-Value Store)
-// ============================================================================
-
-model SiteSetting {
-  id        String   @id @default(cuid())
-  key       String   @unique
-  value     String   @db.Text
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@map("site_settings")
-  @@index([key])
 }
