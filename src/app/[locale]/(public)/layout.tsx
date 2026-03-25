@@ -3,6 +3,8 @@
  * Wraps all public-facing pages with Header and Footer
  */
 
+export const dynamic = 'force-dynamic';
+
 import { Header, Footer } from '@/components/layout';
 
 type Props = {

@@ -3,6 +3,8 @@
  * MedPharma Plus - Online Pharmacy
  */
 
+export const dynamic = 'force-dynamic';
+
 import { setRequestLocale } from 'next-intl/server';
 
 import { Container } from '@/components/ui';
