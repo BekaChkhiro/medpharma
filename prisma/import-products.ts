@@ -917,7 +917,7 @@ async function main() {
         images: {
           create: [
             {
-              url: `/images/products/${sku.toLowerCase()}.jpg`,
+              url: '/images/placeholder-product.svg',
               alt: product.nameKa,
               sortOrder: 0,
               isPrimary: true,
