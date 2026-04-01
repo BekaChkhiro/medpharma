@@ -58,7 +58,7 @@
     "fastDelivery": "2-hour delivery"
   },
   "footer": {
-    "company": "MedPharma Plus LLC",
+    "company": "Company",
     "about": "About Us",
     "branches": "Pharmacy",
     "careers": "Careers",
@@ -426,6 +426,77 @@
   },
   "admin": {
     "title": "Admin Panel",
+    "import": {
+      "title": "Product Import",
+      "subtitle": "Upload a CSV or Excel file to import products",
+      "steps": {
+        "upload": "File Upload",
+        "mapping": "Column Mapping",
+        "preview": "Preview",
+        "import": "Import"
+      },
+      "uploadStep": {
+        "title": "File Upload",
+        "description": "Upload a CSV or Excel file with product data",
+        "dropzone": "Drag and drop file here",
+        "dropzoneHint": "or click to select a file",
+        "supportedFormats": "Supported formats: CSV, Excel (.xlsx, .xls)",
+        "downloadTemplate": "Download Template",
+        "downloadCSV": "CSV Template",
+        "downloadExcel": "Excel Template"
+      },
+      "mappingStep": {
+        "title": "Column Mapping",
+        "description": "Specify which field each column in your file corresponds to",
+        "fileColumn": "File Column",
+        "mapsTo": "Maps To",
+        "selectField": "Select Field",
+        "ignore": "Ignore",
+        "required": "(required)",
+        "preview": "Example"
+      },
+      "previewStep": {
+        "title": "Preview and Validation",
+        "description": "Review data before import",
+        "validating": "Validating...",
+        "summary": "Summary",
+        "totalRows": "Total Rows",
+        "validRows": "Valid",
+        "invalidRows": "Errors",
+        "toCreate": "Will be created",
+        "toUpdate": "Will be updated",
+        "errors": "Errors",
+        "warnings": "Warnings",
+        "row": "Row",
+        "noErrors": "No errors found"
+      },
+      "importStep": {
+        "title": "Import Progress",
+        "importing": "Importing...",
+        "complete": "Import complete!",
+        "created": "Created",
+        "updated": "Updated",
+        "failed": "Failed",
+        "errors": "Errors"
+      },
+      "buttons": {
+        "upload": "Upload",
+        "next": "Next",
+        "back": "Back",
+        "validate": "Validate",
+        "import": "Import",
+        "close": "Close",
+        "done": "Done"
+      },
+      "errors": {
+        "fileRequired": "Please select a file",
+        "invalidFormat": "Invalid format. Use CSV or Excel",
+        "parseFailed": "Failed to process file",
+        "emptyFile": "File is empty",
+        "mappingRequired": "Please specify all required fields",
+        "importFailed": "Import failed"
+      }
+    },
     "dashboard": {
       "title": "Dashboard",
       "welcome": "Welcome back",

@@ -32,6 +32,7 @@
     "test:ui": "playwright test --ui",
     "test:headed": "playwright test --headed",
     "test:phase1": "playwright test tests/e2e/phase1/",
+    "test:phase2": "playwright test tests/e2e/phase2/",
     "test:report": "playwright show-report"
   },
   "dependencies": {

@@ -153,6 +153,7 @@ export function MiniCart() {
       {/* Cart Button */}
       <button
         ref={buttonRef}
+        data-testid="cart-button"
         onClick={toggleCart}
         className={cn(
           'relative inline-flex items-center justify-center p-2 rounded-full cursor-pointer',
