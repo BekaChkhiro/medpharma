@@ -55,21 +55,21 @@ export function ProductDeleteModal({ isOpen, onClose, product }: Props) {
     <Modal isOpen={isOpen} onClose={() => onClose()} size="md">
       <div className="p-6">
         <div className="flex items-start gap-4">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-red-100">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-red-600/10">
             <AlertTriangle className="h-6 w-6 text-red-600" />
           </div>
           <div className="flex-1">
-            <h3 className="text-lg font-semibold text-gray-900">
+            <h3 className="text-lg font-semibold text-slate-900">
               {t('title')}
             </h3>
             <div className="mt-2 space-y-1">
-              <p className="text-sm text-gray-600">{t('message')}</p>
-              <div className="mt-3 rounded-lg bg-gray-50 p-3">
-                <p className="text-sm font-medium text-gray-900">
+              <p className="text-sm text-slate-500">{t('message')}</p>
+              <div className="mt-3 rounded-xl bg-slate-100 p-3">
+                <p className="text-sm font-medium text-slate-900">
                   {product.nameEn}
                 </p>
-                <p className="text-sm text-gray-600">{product.nameKa}</p>
-                <p className="mt-1 text-xs text-gray-500">SKU: {product.sku}</p>
+                <p className="text-sm text-slate-500">{product.nameKa}</p>
+                <p className="mt-1 text-xs text-slate-500">SKU: {product.sku}</p>
               </div>
               <p className="text-sm font-medium text-red-600">{t('warning')}</p>
             </div>
@@ -85,7 +85,7 @@ export function ProductDeleteModal({ isOpen, onClose, product }: Props) {
             {t('cancel')}
           </Button>
           <Button
-            variant="danger"
+            variant="destructive"
             onClick={handleDelete}
             disabled={loading}
           >

@@ -27,7 +27,7 @@ export function EmptyCheckout() {
         </p>
         <Link
           href="/products"
-          className="inline-flex h-10 items-center justify-center rounded-md bg-[#df2b1b] px-4 py-2 font-medium text-white shadow-sm transition-colors hover:bg-[#c42418] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          className="inline-flex items-center justify-center gap-2 font-semibold transition-all duration-200 bg-[#df2b1b] text-white hover:bg-[#c42418] shadow-sm hover:shadow-md h-11 px-5 text-sm rounded-xl"
         >
           {t('continueShopping')}
         </Link>

@@ -93,11 +93,9 @@ export function AdminSidebar({
   ];
 
   const isActive = (href: string) => {
-    // Exact match for dashboard
     if (href === '/admin') {
       return pathname.endsWith('/admin') || pathname.endsWith('/admin/');
     }
-    // Prefix match for other routes
     return pathname.includes(href);
   };
 
@@ -106,7 +104,7 @@ export function AdminSidebar({
       {/* Mobile Backdrop */}
       {isOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden"
+          className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm lg:hidden"
           onClick={onClose}
           aria-hidden="true"
         />
@@ -115,37 +113,33 @@ export function AdminSidebar({
       {/* Sidebar */}
       <aside
         className={cn(
-          'fixed inset-y-0 left-0 z-50 flex flex-col bg-[var(--background)] border-r border-[var(--border)] transition-all duration-300 ease-in-out',
-          // Mobile: slide in/out
+          'fixed inset-y-0 left-0 z-50 flex flex-col bg-[#FDFBF7] border-r border-slate-200 transition-all duration-300 ease-in-out',
           isOpen ? 'translate-x-0' : '-translate-x-full',
-          // Desktop: always visible, collapsible width
           'lg:translate-x-0',
           isCollapsed ? 'lg:w-[72px]' : 'lg:w-64',
-          // Mobile width
           'w-64'
         )}
       >
         {/* Header */}
-        <div className="flex h-16 items-center justify-between border-b border-[var(--border)] px-4">
+        <div className="flex h-16 items-center justify-between px-4 border-b border-slate-100">
           {!isCollapsed && (
-            <Link href="/admin" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--primary)] text-white font-bold text-sm">
+            <Link href="/admin" className="flex items-center gap-3">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#df2b1b] text-white font-bold text-sm shadow-sm">
                 MP
               </div>
-              <span className="font-semibold text-[var(--foreground)]">
+              <span className="text-base font-bold text-slate-900 tracking-tight">
                 {t('title')}
               </span>
             </Link>
           )}
           {isCollapsed && (
             <Link href="/admin" className="mx-auto">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--primary)] text-white font-bold text-sm">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#df2b1b] text-white font-bold text-sm shadow-sm">
                 MP
               </div>
             </Link>
           )}
 
-          {/* Mobile close button */}
           <IconButton
             variant="ghost"
             size="sm"
@@ -158,18 +152,18 @@ export function AdminSidebar({
         </div>
 
         {/* Navigation */}
-        <nav className="flex-1 overflow-y-auto p-3">
+        <nav className="flex-1 overflow-y-auto px-3 py-4">
           {navSections.map((section, sectionIndex) => (
-            <div key={sectionIndex} className="mb-4">
+            <div key={sectionIndex} className="mb-5">
               {section.title && !isCollapsed && (
-                <h3 className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-[var(--muted-foreground)]">
+                <h3 className="mb-2 px-3 text-[11px] font-semibold uppercase tracking-widest text-slate-400">
                   {section.title}
                 </h3>
               )}
               {section.title && isCollapsed && (
-                <div className="mb-2 border-t border-[var(--border)]" />
+                <div className="mx-2 mb-2 border-t border-slate-200" />
               )}
-              <ul className="space-y-1">
+              <ul className="space-y-0.5">
                 {section.items.map((item) => {
                   const Icon = item.icon;
                   const active = isActive(item.href);
@@ -180,18 +174,21 @@ export function AdminSidebar({
                         href={item.href}
                         onClick={onClose}
                         className={cn(
-                          'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors',
+                          'group flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all duration-200',
                           active
-                            ? 'bg-[var(--primary)] text-white'
-                            : 'text-[var(--muted-foreground)] hover:bg-[var(--secondary)] hover:text-[var(--foreground)]',
+                            ? 'bg-[#df2b1b]/10 text-[#df2b1b] font-semibold'
+                            : 'text-slate-500 hover:bg-slate-100 hover:text-slate-900',
                           isCollapsed && 'justify-center px-2'
                         )}
                         title={isCollapsed ? item.label : undefined}
                       >
-                        <Icon className="h-5 w-5 flex-shrink-0" />
+                        <Icon className={cn(
+                          'h-[18px] w-[18px] flex-shrink-0 transition-colors duration-200',
+                          active ? 'text-[#df2b1b]' : 'text-slate-400 group-hover:text-slate-700'
+                        )} />
                         {!isCollapsed && <span>{item.label}</span>}
                         {!isCollapsed && item.badge !== undefined && (
-                          <span className="ml-auto flex h-5 min-w-5 items-center justify-center rounded-full bg-[var(--destructive)] px-1.5 text-xs font-medium text-white">
+                          <span className="ml-auto flex h-5 min-w-5 items-center justify-center rounded-full bg-[#df2b1b] px-1.5 text-[10px] font-semibold text-white">
                             {item.badge}
                           </span>
                         )}
@@ -204,25 +201,27 @@ export function AdminSidebar({
           ))}
         </nav>
 
-        {/* Collapse Toggle (Desktop only) */}
-        <div className="hidden border-t border-[var(--border)] p-3 lg:block">
-          <button
-            onClick={onToggleCollapse}
-            className={cn(
-              'flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--muted-foreground)] transition-colors hover:bg-[var(--secondary)] hover:text-[var(--foreground)]',
-              isCollapsed && 'justify-center px-2'
-            )}
-            aria-label={isCollapsed ? t('expandSidebar') : t('collapseSidebar')}
-          >
-            {isCollapsed ? (
-              <ChevronRight className="h-5 w-5" />
-            ) : (
-              <>
-                <ChevronLeft className="h-5 w-5" />
-                <span>{t('collapse')}</span>
-              </>
-            )}
-          </button>
+        {/* Collapse Toggle */}
+        <div className="hidden px-3 pb-4 lg:block">
+          <div className="border-t border-slate-200 pt-3">
+            <button
+              onClick={onToggleCollapse}
+              className={cn(
+                'flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-500 transition-all duration-200 hover:bg-slate-100 hover:text-slate-900',
+                isCollapsed && 'justify-center px-2'
+              )}
+              aria-label={isCollapsed ? t('expandSidebar') : t('collapseSidebar')}
+            >
+              {isCollapsed ? (
+                <ChevronRight className="h-5 w-5" />
+              ) : (
+                <>
+                  <ChevronLeft className="h-5 w-5" />
+                  <span>{t('collapse')}</span>
+                </>
+              )}
+            </button>
+          </div>
         </div>
       </aside>
     </>

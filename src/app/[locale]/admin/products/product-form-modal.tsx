@@ -313,7 +313,7 @@ export function ProductFormModal({ isOpen, onClose, product }: Props) {
         </h2>
         <button
           onClick={() => onClose()}
-          className="text-gray-400 hover:text-gray-600"
+          className="text-slate-500 hover:text-slate-900"
         >
           <X className="h-5 w-5" />
         </button>
@@ -436,7 +436,7 @@ export function ProductFormModal({ isOpen, onClose, product }: Props) {
           {/* Images */}
           <TabsContent value="images" className="space-y-4">
             {!product?.id ? (
-              <div className="rounded-lg border border-dashed p-8 text-center">
+              <div className="rounded-xl border border-dashed p-8 text-center">
                 <p className="text-sm text-muted-foreground">
                   {tImages('saveFirst')}
                 </p>

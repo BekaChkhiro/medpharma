@@ -172,21 +172,21 @@ export function CategoryFormModal({
         <div className="space-y-6">
           {/* Error Message */}
           {error && (
-            <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800">
+            <div className="rounded-xl border border-red-600/20 bg-red-600/5 p-3 text-sm text-red-600">
               {error}
             </div>
           )}
 
           {/* Basic Info Section */}
           <div className="space-y-4">
-            <h3 className="text-sm font-medium text-[var(--foreground)]">
+            <h3 className="text-sm font-medium text-slate-900">
               {t('form.basicInfo')}
             </h3>
 
             {/* English Name */}
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-[var(--foreground)]">
-                {t('form.nameEn')} <span className="text-red-500">*</span>
+              <label className="mb-1.5 block text-sm font-medium text-slate-900">
+                {t('form.nameEn')} <span className="text-red-600">*</span>
               </label>
               <Input
                 value={formData.nameEn}
@@ -198,8 +198,8 @@ export function CategoryFormModal({
 
             {/* Georgian Name */}
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-[var(--foreground)]">
-                {t('form.nameKa')} <span className="text-red-500">*</span>
+              <label className="mb-1.5 block text-sm font-medium text-slate-900">
+                {t('form.nameKa')} <span className="text-red-600">*</span>
               </label>
               <Input
                 value={formData.nameKa}
@@ -211,8 +211,8 @@ export function CategoryFormModal({
 
             {/* Slug */}
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-[var(--foreground)]">
-                {t('form.slug')} <span className="text-red-500">*</span>
+              <label className="mb-1.5 block text-sm font-medium text-slate-900">
+                {t('form.slug')} <span className="text-red-600">*</span>
               </label>
               <Input
                 value={formData.slug}
@@ -220,20 +220,20 @@ export function CategoryFormModal({
                 required
                 placeholder="vitamins-supplements"
               />
-              <p className="mt-1 text-xs text-[var(--muted-foreground)]">
+              <p className="mt-1 text-xs text-slate-500">
                 {t('form.slugHint')}
               </p>
             </div>
 
             {/* Parent Category */}
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-[var(--foreground)]">
+              <label className="mb-1.5 block text-sm font-medium text-slate-900">
                 {t('form.parent')}
               </label>
               <select
                 value={formData.parentId || ''}
                 onChange={(e) => handleChange('parentId', e.target.value || null)}
-                className="w-full rounded-[var(--radius)] border border-[var(--border)] bg-[var(--background)] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--ring)]"
+                className="w-full rounded-xl border border-slate-200 bg-[#FDFBF7] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#df2b1b]/30"
               >
                 <option value="">{t('form.selectParent')}</option>
                 {flatCategories.map((cat) => (
@@ -248,35 +248,35 @@ export function CategoryFormModal({
 
             {/* English Description */}
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-[var(--foreground)]">
+              <label className="mb-1.5 block text-sm font-medium text-slate-900">
                 {t('form.descEn')}
               </label>
               <textarea
                 value={formData.descEn}
                 onChange={(e) => handleChange('descEn', e.target.value)}
                 rows={3}
-                className="w-full rounded-[var(--radius)] border border-[var(--border)] bg-[var(--background)] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--ring)]"
+                className="w-full rounded-xl border border-slate-200 bg-[#FDFBF7] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#df2b1b]/30"
                 placeholder="Category description in English"
               />
             </div>
 
             {/* Georgian Description */}
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-[var(--foreground)]">
+              <label className="mb-1.5 block text-sm font-medium text-slate-900">
                 {t('form.descKa')}
               </label>
               <textarea
                 value={formData.descKa}
                 onChange={(e) => handleChange('descKa', e.target.value)}
                 rows={3}
-                className="w-full rounded-[var(--radius)] border border-[var(--border)] bg-[var(--background)] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--ring)]"
+                className="w-full rounded-xl border border-slate-200 bg-[#FDFBF7] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#df2b1b]/30"
                 placeholder="კატეგორიის აღწერა ქართულად"
               />
             </div>
 
             {/* Image URL */}
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-[var(--foreground)]">
+              <label className="mb-1.5 block text-sm font-medium text-slate-900">
                 {t('form.image')}
               </label>
               <Input
@@ -294,23 +294,23 @@ export function CategoryFormModal({
                 id="isActive"
                 checked={formData.isActive}
                 onChange={(e) => handleChange('isActive', e.target.checked)}
-                className="h-4 w-4 rounded border-[var(--border)] text-[var(--primary)] focus:ring-2 focus:ring-[var(--ring)]"
+                className="h-4 w-4 rounded border-slate-200 text-[#df2b1b] focus:ring-2 focus:ring-[#df2b1b]/30"
               />
-              <label htmlFor="isActive" className="text-sm font-medium text-[var(--foreground)]">
+              <label htmlFor="isActive" className="text-sm font-medium text-slate-900">
                 {t('form.isActive')}
               </label>
             </div>
           </div>
 
           {/* SEO Section */}
-          <div className="space-y-4 border-t border-[var(--border)] pt-6">
-            <h3 className="text-sm font-medium text-[var(--foreground)]">
+          <div className="space-y-4 border-t border-slate-200 pt-6">
+            <h3 className="text-sm font-medium text-slate-900">
               {t('form.seoInfo')}
             </h3>
 
             {/* Meta Title English */}
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-[var(--foreground)]">
+              <label className="mb-1.5 block text-sm font-medium text-slate-900">
                 {t('form.metaTitleEn')}
               </label>
               <Input
@@ -322,7 +322,7 @@ export function CategoryFormModal({
 
             {/* Meta Title Georgian */}
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-[var(--foreground)]">
+              <label className="mb-1.5 block text-sm font-medium text-slate-900">
                 {t('form.metaTitleKa')}
               </label>
               <Input
@@ -334,28 +334,28 @@ export function CategoryFormModal({
 
             {/* Meta Description English */}
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-[var(--foreground)]">
+              <label className="mb-1.5 block text-sm font-medium text-slate-900">
                 {t('form.metaDescEn')}
               </label>
               <textarea
                 value={formData.metaDescEn}
                 onChange={(e) => handleChange('metaDescEn', e.target.value)}
                 rows={2}
-                className="w-full rounded-[var(--radius)] border border-[var(--border)] bg-[var(--background)] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--ring)]"
+                className="w-full rounded-xl border border-slate-200 bg-[#FDFBF7] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#df2b1b]/30"
                 placeholder="SEO description in English"
               />
             </div>
 
             {/* Meta Description Georgian */}
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-[var(--foreground)]">
+              <label className="mb-1.5 block text-sm font-medium text-slate-900">
                 {t('form.metaDescKa')}
               </label>
               <textarea
                 value={formData.metaDescKa}
                 onChange={(e) => handleChange('metaDescKa', e.target.value)}
                 rows={2}
-                className="w-full rounded-[var(--radius)] border border-[var(--border)] bg-[var(--background)] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--ring)]"
+                className="w-full rounded-xl border border-slate-200 bg-[#FDFBF7] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#df2b1b]/30"
                 placeholder="SEO აღწერა ქართულად"
               />
             </div>

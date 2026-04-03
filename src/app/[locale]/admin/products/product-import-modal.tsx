@@ -255,11 +255,11 @@ export function ProductImportModal({ isOpen, onClose }: Props) {
       <div className="flex items-center justify-between border-b p-6">
         <div>
           <h2 className="text-xl font-semibold">{t('title')}</h2>
-          <p className="text-sm text-gray-500">{t('subtitle')}</p>
+          <p className="text-sm text-slate-500">{t('subtitle')}</p>
         </div>
         <button
           onClick={() => handleClose()}
-          className="text-gray-400 hover:text-gray-600"
+          className="text-slate-500 hover:text-slate-900"
         >
           <X className="h-5 w-5" />
         </button>
@@ -278,16 +278,16 @@ export function ProductImportModal({ isOpen, onClose }: Props) {
                       : ['upload', 'mapping', 'preview', 'complete'].indexOf(step) >
                         index
                       ? 'bg-green-500 text-white'
-                      : 'bg-gray-200 text-gray-500'
+                      : 'bg-slate-100 text-slate-500'
                   }`}
                 >
                   {index + 1}
                 </div>
-                <span className="ml-2 text-sm font-medium text-gray-700">
+                <span className="ml-2 text-sm font-medium text-slate-900">
                   {t(`steps.${s}`)}
                 </span>
                 {index < 3 && (
-                  <ArrowRight className="mx-4 h-4 w-4 text-gray-400" />
+                  <ArrowRight className="mx-4 h-4 w-4 text-slate-500" />
                 )}
               </div>
             ))}
@@ -306,14 +306,14 @@ export function ProductImportModal({ isOpen, onClose }: Props) {
         {step === 'upload' && (
           <div className="space-y-6">
             <div
-              className="flex cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 p-12 transition hover:border-primary"
+              className="flex cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-slate-200 p-12 transition hover:border-[#df2b1b]"
               onClick={() => fileInputRef.current?.click()}
             >
-              <Upload className="mb-4 h-12 w-12 text-gray-400" />
-              <p className="mb-2 text-lg font-medium text-gray-700">
+              <Upload className="mb-4 h-12 w-12 text-slate-500" />
+              <p className="mb-2 text-lg font-medium text-slate-900">
                 {t('uploadArea.title')}
               </p>
-              <p className="text-sm text-gray-500">{t('uploadArea.subtitle')}</p>
+              <p className="text-sm text-slate-500">{t('uploadArea.subtitle')}</p>
               <input
                 ref={fileInputRef}
                 type="file"
@@ -324,7 +324,7 @@ export function ProductImportModal({ isOpen, onClose }: Props) {
             </div>
 
             <div className="flex items-center justify-center gap-4">
-              <span className="text-sm text-gray-500">{t('downloadTemplate')}</span>
+              <span className="text-sm text-slate-500">{t('downloadTemplate')}</span>
               <Button
                 variant="outline"
                 size="sm"
@@ -346,7 +346,7 @@ export function ProductImportModal({ isOpen, onClose }: Props) {
             {loading && (
               <div className="flex items-center justify-center py-8">
                 <Spinner size="lg" />
-                <span className="ml-3 text-gray-600">{t('parsing')}</span>
+                <span className="ml-3 text-slate-500">{t('parsing')}</span>
               </div>
             )}
           </div>
@@ -357,7 +357,7 @@ export function ProductImportModal({ isOpen, onClose }: Props) {
           <div className="space-y-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-slate-500">
                   <FileSpreadsheet className="mr-2 inline h-4 w-4" />
                   {file?.name} • {totalRows} {t('rows')}
                 </p>
@@ -369,24 +369,24 @@ export function ProductImportModal({ isOpen, onClose }: Props) {
               )}
             </div>
 
-            <div className="max-h-[400px] overflow-auto rounded-lg border">
+            <div className="max-h-[400px] overflow-auto rounded-xl border">
               <table className="w-full">
-                <thead className="sticky top-0 bg-gray-50">
+                <thead className="sticky top-0 bg-slate-100">
                   <tr>
-                    <th className="px-4 py-3 text-left text-xs font-medium uppercase text-gray-500">
+                    <th className="px-4 py-3 text-left text-xs font-medium uppercase text-slate-500">
                       {t('csvColumn')}
                     </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium uppercase text-gray-500">
+                    <th className="px-4 py-3 text-left text-xs font-medium uppercase text-slate-500">
                       {t('mapTo')}
                     </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium uppercase text-gray-500">
+                    <th className="px-4 py-3 text-left text-xs font-medium uppercase text-slate-500">
                       {t('sampleData')}
                     </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y">
                   {headers.map((header) => (
-                    <tr key={header} className="hover:bg-gray-50">
+                    <tr key={header} className="hover:bg-slate-100">
                       <td className="px-4 py-3">
                         <span className="font-medium">{header}</span>
                       </td>
@@ -407,7 +407,7 @@ export function ProductImportModal({ isOpen, onClose }: Props) {
                           ))}
                         </Select>
                       </td>
-                      <td className="px-4 py-3 text-sm text-gray-500">
+                      <td className="px-4 py-3 text-sm text-slate-500">
                         {previewRows[0]?.data[header] || '—'}
                       </td>
                     </tr>
@@ -446,25 +446,25 @@ export function ProductImportModal({ isOpen, onClose }: Props) {
           <div className="space-y-6">
             {/* Stats */}
             <div className="grid grid-cols-4 gap-4">
-              <div className="rounded-lg bg-blue-50 p-4 text-center">
+              <div className="rounded-xl bg-blue-50 p-4 text-center">
                 <p className="text-2xl font-bold text-blue-700">
                   {validationResult.stats.total}
                 </p>
                 <p className="text-sm text-blue-600">{t('stats.total')}</p>
               </div>
-              <div className="rounded-lg bg-green-50 p-4 text-center">
+              <div className="rounded-xl bg-green-50 p-4 text-center">
                 <p className="text-2xl font-bold text-green-700">
                   {validationResult.stats.valid}
                 </p>
                 <p className="text-sm text-green-600">{t('stats.valid')}</p>
               </div>
-              <div className="rounded-lg bg-red-50 p-4 text-center">
-                <p className="text-2xl font-bold text-red-700">
+              <div className="rounded-xl bg-red-600/5 p-4 text-center">
+                <p className="text-2xl font-bold text-red-600">
                   {validationResult.stats.invalid}
                 </p>
                 <p className="text-sm text-red-600">{t('stats.invalid')}</p>
               </div>
-              <div className="rounded-lg bg-yellow-50 p-4 text-center">
+              <div className="rounded-xl bg-yellow-50 p-4 text-center">
                 <p className="text-2xl font-bold text-yellow-700">
                   {validationResult.stats.warnings}
                 </p>
@@ -473,7 +473,7 @@ export function ProductImportModal({ isOpen, onClose }: Props) {
             </div>
 
             {/* Action summary */}
-            <div className="flex items-center gap-4 rounded-lg bg-gray-50 p-4">
+            <div className="flex items-center gap-4 rounded-xl bg-slate-100 p-4">
               <Badge variant="success">
                 {validationResult.createCount} {t('toCreate')}
               </Badge>
@@ -485,20 +485,20 @@ export function ProductImportModal({ isOpen, onClose }: Props) {
             {/* Invalid rows */}
             {validationResult.invalidRows.length > 0 && (
               <div>
-                <h4 className="mb-2 font-medium text-red-700">
+                <h4 className="mb-2 font-medium text-red-600">
                   <AlertCircle className="mr-2 inline h-4 w-4" />
                   {t('invalidRows')} ({validationResult.invalidRows.length})
                 </h4>
-                <div className="max-h-48 overflow-auto rounded-lg border border-red-200">
+                <div className="max-h-48 overflow-auto rounded-xl border border-red-600/20">
                   <table className="w-full text-sm">
-                    <thead className="bg-red-50">
+                    <thead className="bg-red-600/5">
                       <tr>
                         <th className="px-3 py-2 text-left">{t('table.row')}</th>
                         <th className="px-3 py-2 text-left">{t('table.sku')}</th>
                         <th className="px-3 py-2 text-left">{t('table.errors')}</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-red-100">
+                    <tbody className="divide-y divide-red-600/10">
                       {validationResult.invalidRows.map((row) => (
                         <tr key={row.rowNumber}>
                           <td className="px-3 py-2">{row.rowNumber}</td>
@@ -521,7 +521,7 @@ export function ProductImportModal({ isOpen, onClose }: Props) {
                   <CheckCircle className="mr-2 inline h-4 w-4" />
                   {t('validRows')} ({validationResult.validRows.length})
                 </h4>
-                <div className="max-h-48 overflow-auto rounded-lg border border-green-200">
+                <div className="max-h-48 overflow-auto rounded-xl border border-green-200">
                   <table className="w-full text-sm">
                     <thead className="bg-green-50">
                       <tr>
@@ -572,7 +572,7 @@ export function ProductImportModal({ isOpen, onClose }: Props) {
           <div className="flex flex-col items-center justify-center py-12">
             <RefreshCw className="mb-4 h-12 w-12 animate-spin text-primary" />
             <p className="text-lg font-medium">{t('importing')}</p>
-            <p className="text-sm text-gray-500">{t('pleaseWait')}</p>
+            <p className="text-sm text-slate-500">{t('pleaseWait')}</p>
           </div>
         )}
 
@@ -587,20 +587,20 @@ export function ProductImportModal({ isOpen, onClose }: Props) {
             </div>
 
             <div className="grid grid-cols-3 gap-4">
-              <div className="rounded-lg bg-green-50 p-4 text-center">
+              <div className="rounded-xl bg-green-50 p-4 text-center">
                 <p className="text-2xl font-bold text-green-700">
                   {importResult.created}
                 </p>
                 <p className="text-sm text-green-600">{t('result.created')}</p>
               </div>
-              <div className="rounded-lg bg-blue-50 p-4 text-center">
+              <div className="rounded-xl bg-blue-50 p-4 text-center">
                 <p className="text-2xl font-bold text-blue-700">
                   {importResult.updated}
                 </p>
                 <p className="text-sm text-blue-600">{t('result.updated')}</p>
               </div>
-              <div className="rounded-lg bg-red-50 p-4 text-center">
-                <p className="text-2xl font-bold text-red-700">
+              <div className="rounded-xl bg-red-600/5 p-4 text-center">
+                <p className="text-2xl font-bold text-red-600">
                   {importResult.failed}
                 </p>
                 <p className="text-sm text-red-600">{t('result.failed')}</p>
@@ -609,14 +609,14 @@ export function ProductImportModal({ isOpen, onClose }: Props) {
 
             {importResult.errors.length > 0 && (
               <div>
-                <h4 className="mb-2 font-medium text-red-700">
+                <h4 className="mb-2 font-medium text-red-600">
                   {t('failedRows')}
                 </h4>
-                <div className="max-h-32 overflow-auto rounded-lg border border-red-200 text-sm">
+                <div className="max-h-32 overflow-auto rounded-xl border border-red-600/20 text-sm">
                   {importResult.errors.map((err) => (
                     <div
                       key={err.rowNumber}
-                      className="border-b border-red-100 px-3 py-2 last:border-0"
+                      className="border-b border-red-600/10 px-3 py-2 last:border-0"
                     >
                       Row {err.rowNumber} ({err.sku}): {err.error}
                     </div>

@@ -185,7 +185,7 @@ export function CategoryTree({
       <SortableContext items={allIds} strategy={verticalListSortingStrategy}>
         <div className="space-y-2">
           {categories.length === 0 ? (
-            <div className="rounded-lg border border-dashed border-[var(--border)] p-8 text-center text-[var(--muted-foreground)]">
+            <div className="rounded-xl border border-dashed border-slate-200 p-8 text-center text-slate-500">
               {t('noCategories')}
             </div>
           ) : (
@@ -205,11 +205,11 @@ export function CategoryTree({
       {/* Drag Overlay */}
       <DragOverlay>
         {activeCategory ? (
-          <div className="rounded-lg border border-[var(--border)] bg-card p-3 shadow-lg">
-            <div className="font-medium text-[var(--foreground)]">
+          <div className="rounded-xl border border-slate-200 bg-[#FDFBF7] p-3 shadow-lg">
+            <div className="font-medium text-slate-900">
               {activeCategory.nameEn}
             </div>
-            <div className="text-xs text-[var(--muted-foreground)]">
+            <div className="text-xs text-slate-500">
               /{activeCategory.slug}
             </div>
           </div>

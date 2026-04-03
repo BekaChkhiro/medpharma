@@ -32,7 +32,7 @@ export const FormField = forwardRef<HTMLDivElement, FormFieldProps>(
         )}
         {children}
         {hint && !error && (
-          <p className="text-sm text-muted-foreground">{hint}</p>
+          <p className="text-sm text-slate-500">{hint}</p>
         )}
         {error && <FormError>{error}</FormError>}
       </div>
@@ -52,7 +52,7 @@ export const FormError = forwardRef<HTMLParagraphElement, FormErrorProps>(
     return (
       <p
         ref={ref}
-        className={cn('text-sm text-destructive', className)}
+        className={cn('text-sm text-red-600', className)}
         role="alert"
         {...props}
       >

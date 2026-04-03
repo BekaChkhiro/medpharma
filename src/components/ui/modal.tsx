@@ -103,7 +103,7 @@ export const Modal = forwardRef<HTMLDivElement, ModalProps>(
           ref={ref}
           className={cn(
             'relative z-50 w-full max-h-[90vh] overflow-auto',
-            'rounded-[var(--radius-lg)] bg-card p-6 shadow-lg',
+            'rounded-xl bg-[#FDFBF7] p-6 shadow-lg',
             'animate-scaleIn',
             sizeClasses[size],
             className
@@ -160,7 +160,7 @@ export const ModalDescription = forwardRef<
   return (
     <p
       ref={ref}
-      className={cn('text-sm text-muted-foreground', className)}
+      className={cn('text-sm text-slate-500', className)}
       {...props}
     />
   );
@@ -199,7 +199,7 @@ export const ModalCloseButton = forwardRef<
       onClick={onClose}
       className={cn(
         'absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100',
-        'focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2',
+        'focus:outline-none focus:ring-2 focus:ring-[#df2b1b]/30 focus:ring-offset-2',
         'disabled:pointer-events-none',
         className
       )}

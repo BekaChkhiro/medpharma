@@ -52,7 +52,7 @@ export function ProductGrid({ products, loading = false }: ProductGridProps) {
 
 function ProductCardSkeleton() {
   return (
-    <div className="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+    <div className="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-[#FDFBF7]">
       <Skeleton className="aspect-square w-full" />
       <div className="p-3">
         <Skeleton className="mb-2 h-3 w-1/3" />

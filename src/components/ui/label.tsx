@@ -16,14 +16,14 @@ export const Label = forwardRef<HTMLLabelElement, LabelProps>(
         ref={ref}
         className={cn(
           'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
-          error && 'text-destructive',
+          error && 'text-red-600',
           className
         )}
         {...props}
       >
         {children}
         {required && (
-          <span className="ml-1 text-destructive" aria-hidden="true">
+          <span className="ml-1 text-red-600" aria-hidden="true">
             *
           </span>
         )}

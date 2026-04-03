@@ -310,7 +310,7 @@ export function ProductFilters({
                   value={localMinPrice}
                   onChange={(e) => setLocalMinPrice(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handlePriceApply()}
-                  className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 pr-8 text-sm transition-colors focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/30"
+                  className="w-full rounded-lg border border-gray-200 bg-[#FDFBF7] px-3 py-2 pr-8 text-sm transition-colors focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/30"
                   min={0}
                 />
                 <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-400">
@@ -325,7 +325,7 @@ export function ProductFilters({
                   value={localMaxPrice}
                   onChange={(e) => setLocalMaxPrice(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handlePriceApply()}
-                  className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 pr-8 text-sm transition-colors focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/30"
+                  className="w-full rounded-lg border border-gray-200 bg-[#FDFBF7] px-3 py-2 pr-8 text-sm transition-colors focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/30"
                   min={0}
                 />
                 <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-400">
@@ -390,7 +390,7 @@ export function ProductFilters({
                         'flex h-4 w-4 items-center justify-center rounded border transition-all',
                         isSelected
                           ? 'border-slate-800 bg-slate-800 text-white'
-                          : 'border-gray-300 bg-white'
+                          : 'border-gray-300 bg-[#FDFBF7]'
                       )}
                     >
                       {isSelected && <Check className="h-3 w-3" />}
@@ -453,7 +453,7 @@ export function ProductFilters({
                         'flex h-4 w-4 items-center justify-center rounded border transition-all',
                         isSelected
                           ? 'border-slate-800 bg-slate-800 text-white'
-                          : 'border-gray-300 bg-white'
+                          : 'border-gray-300 bg-[#FDFBF7]'
                       )}
                     >
                       {isSelected && <Check className="h-3 w-3" />}
@@ -515,7 +515,7 @@ export function ProductFilters({
               'flex w-full items-center gap-3 rounded-lg border px-3 py-2.5 transition-all',
               filters.inStockOnly
                 ? 'border-green-200 bg-green-50'
-                : 'border-gray-200 bg-white hover:border-gray-300'
+                : 'border-gray-200 bg-[#FDFBF7] hover:border-gray-300'
             )}
           >
             <div
@@ -565,7 +565,7 @@ export function ProductFilters({
                 'flex w-full items-center gap-3 rounded-lg border px-3 py-2.5 transition-all',
                 filters.requiresPrescription === false
                   ? 'border-slate-200 bg-slate-50'
-                  : 'border-gray-200 bg-white hover:border-gray-300'
+                  : 'border-gray-200 bg-[#FDFBF7] hover:border-gray-300'
               )}
             >
               <div
@@ -601,7 +601,7 @@ export function ProductFilters({
                 'flex w-full items-center gap-3 rounded-lg border px-3 py-2.5 transition-all',
                 filters.requiresPrescription === true
                   ? 'border-orange-200 bg-orange-50'
-                  : 'border-gray-200 bg-white hover:border-gray-300'
+                  : 'border-gray-200 bg-[#FDFBF7] hover:border-gray-300'
               )}
             >
               <div
@@ -628,13 +628,13 @@ export function ProductFilters({
       </div>
 
       {/* Sticky Footer */}
-      <div className="sticky bottom-0 left-0 right-0 border-t border-gray-100 bg-white p-3">
+      <div className="sticky bottom-0 left-0 right-0 border-t border-gray-100 bg-[#FDFBF7] p-3">
         <div className="flex gap-2">
           {activeFilterCount > 0 && (
             <button
               type="button"
               onClick={onClearFilters}
-              className="flex flex-1 items-center justify-center gap-1.5 rounded-full border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 transition-all hover:border-gray-400 hover:bg-gray-50"
+              className="flex flex-1 items-center justify-center gap-1.5 rounded-full border border-gray-300 bg-[#FDFBF7] px-4 py-2.5 text-sm font-medium text-gray-700 transition-all hover:border-gray-400 hover:bg-gray-50"
             >
               <RotateCcw className="h-4 w-4" />
               {t('products.filters.clearAll')}
@@ -673,7 +673,7 @@ function FilterSection({
   count = 0,
 }: FilterSectionProps) {
   return (
-    <div className="overflow-hidden rounded-lg border border-gray-100 bg-white">
+    <div className="overflow-hidden rounded-lg border border-gray-100 bg-[#FDFBF7]">
       <button
         type="button"
         onClick={onToggle}
@@ -746,7 +746,7 @@ export function MobileFilters({
       {/* Panel */}
       <div
         className={cn(
-          'fixed bottom-0 right-0 top-0 z-50 flex w-full max-w-sm flex-col bg-white shadow-2xl transition-transform duration-300 lg:hidden',
+          'fixed bottom-0 right-0 top-0 z-50 flex w-full max-w-sm flex-col bg-[#FDFBF7] shadow-2xl transition-transform duration-300 lg:hidden',
           isOpen ? 'translate-x-0' : 'translate-x-full'
         )}
       >

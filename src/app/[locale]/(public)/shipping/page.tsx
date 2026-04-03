@@ -75,7 +75,7 @@ export default async function ShippingPage({
           {deliveryFeatures.map((feature, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm text-center"
+              className="bg-[#FDFBF7] rounded-xl p-6 border border-gray-100 shadow-sm text-center"
             >
               <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <feature.icon className="w-7 h-7 text-primary" />
@@ -156,7 +156,7 @@ export default async function ShippingPage({
           </div>
 
           {/* Payment Methods */}
-          <div className="mt-12 bg-white rounded-2xl border border-gray-100 p-8">
+          <div className="mt-12 bg-[#FDFBF7] rounded-2xl border border-gray-100 p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               {locale === 'ka' ? 'გადახდის მეთოდები' : 'Payment Methods'}
             </h2>

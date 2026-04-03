@@ -154,8 +154,8 @@ export function CategoriesContent() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-[var(--foreground)]">{t('title')}</h1>
-          <p className="mt-1 text-[var(--muted-foreground)]">
+          <h1 className="text-2xl font-bold text-slate-900">{t('title')}</h1>
+          <p className="mt-1 text-slate-500">
             Manage your product categories hierarchy
           </p>
         </div>
@@ -168,25 +168,25 @@ export function CategoriesContent() {
       {/* Loading State */}
       {loading && (
         <div className="flex items-center justify-center py-12">
-          <Loader2 className="h-8 w-8 animate-spin text-[var(--primary)]" />
+          <Loader2 className="h-8 w-8 animate-spin text-[#df2b1b]" />
         </div>
       )}
 
       {/* Error State */}
       {error && (
-        <div className="rounded-lg border border-red-200 bg-red-50 p-4 text-red-800">
+        <div className="rounded-xl border border-red-600/20 bg-red-600/5 p-4 text-red-600">
           {error}
         </div>
       )}
 
       {/* Empty State */}
       {!loading && !error && categories.length === 0 && (
-        <div className="rounded-lg border border-dashed border-[var(--border)] p-12 text-center">
+        <div className="rounded-xl border border-dashed border-slate-200 p-12 text-center">
           <div className="mx-auto max-w-md">
-            <h3 className="text-lg font-medium text-[var(--foreground)]">
+            <h3 className="text-lg font-medium text-slate-900">
               {t('noCategories')}
             </h3>
-            <p className="mt-2 text-sm text-[var(--muted-foreground)]">
+            <p className="mt-2 text-sm text-slate-500">
               Get started by creating your first category
             </p>
             <Button onClick={handleCreate} className="mt-4">

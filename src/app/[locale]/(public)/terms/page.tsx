@@ -108,7 +108,7 @@ export default async function TermsPage({
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-12">
+          <div className="bg-[#FDFBF7] rounded-2xl border border-gray-100 shadow-sm p-8 md:p-12">
             <div className="prose prose-gray max-w-none">
               {sections.map((section, index) => (
                 <div key={index} className="mb-8 last:mb-0">

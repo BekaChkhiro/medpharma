@@ -9,17 +9,17 @@ export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const variantStyles: Record<AlertVariant, string> = {
-  default: 'bg-muted text-foreground border-border',
-  success: 'bg-success/10 text-success border-success/20',
-  warning: 'bg-warning/10 text-warning border-warning/20',
-  destructive: 'bg-destructive/10 text-destructive border-destructive/20',
+  default: 'bg-slate-50 text-slate-900 border-slate-200',
+  success: 'bg-emerald-600/10 text-emerald-600 border-emerald-600/20',
+  warning: 'bg-amber-500/10 text-amber-500 border-amber-500/20',
+  destructive: 'bg-red-600/10 text-red-600 border-red-600/20',
 };
 
 const iconStyles: Record<AlertVariant, string> = {
-  default: 'text-foreground',
-  success: 'text-success',
-  warning: 'text-warning',
-  destructive: 'text-destructive',
+  default: 'text-slate-900',
+  success: 'text-emerald-600',
+  warning: 'text-amber-500',
+  destructive: 'text-red-600',
 };
 
 export const Alert = forwardRef<HTMLDivElement, AlertProps>(
@@ -29,7 +29,7 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
         ref={ref}
         role="alert"
         className={cn(
-          'relative w-full rounded-[var(--radius-md)] border p-4',
+          'relative w-full rounded-lg border p-4',
           variantStyles[variant],
           className
         )}

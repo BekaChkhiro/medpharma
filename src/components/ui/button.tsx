@@ -28,26 +28,28 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-[#df2b1b] text-white hover:bg-[#c42418] shadow-sm',
-  default:
-    'bg-[#df2b1b] text-white hover:bg-[#c42418] shadow-sm',
+    'bg-[#df2b1b] text-white hover:bg-[#c42418] shadow-sm hover:shadow-md',
   secondary:
-    'bg-slate-100 text-slate-700 hover:bg-slate-200',
+    'bg-[#FDFBF7] text-slate-800 border border-slate-200 hover:bg-slate-100 hover:border-slate-300',
   outline:
-    'border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 hover:border-slate-300',
-  ghost: 'text-slate-600 hover:bg-slate-100 hover:text-slate-900',
+    'bg-[#FDFBF7] text-slate-800 border border-slate-200 hover:bg-slate-100 hover:border-slate-300',
+  ghost:
+    'bg-[#FDFBF7] text-slate-800 border border-slate-200 hover:bg-slate-100 hover:border-slate-300',
   destructive:
     'bg-red-600 text-white hover:bg-red-700 shadow-sm',
   danger:
     'bg-red-600 text-white hover:bg-red-700 shadow-sm',
-  link: 'text-slate-700 underline-offset-4 hover:underline hover:text-slate-900',
+  default:
+    'bg-[#df2b1b] text-white hover:bg-[#c42418] shadow-sm hover:shadow-md',
+  link:
+    'text-[#df2b1b] underline-offset-4 hover:underline',
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
-  sm: 'h-8 px-3 text-sm rounded-[var(--radius-sm)]',
-  md: 'h-10 px-4 py-2 rounded-[var(--radius-md)]',
-  lg: 'h-12 px-6 text-lg rounded-[var(--radius-lg)]',
-  icon: 'h-10 w-10 rounded-[var(--radius-md)]',
+  sm: 'h-9 px-3.5 text-sm rounded-lg',
+  md: 'h-11 px-5 text-sm rounded-xl',
+  lg: 'h-12 px-7 text-base rounded-xl',
+  icon: 'h-10 w-10 rounded-xl',
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -71,8 +73,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         className={cn(
-          'inline-flex items-center justify-center gap-2 font-medium transition-colors',
-          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+          'inline-flex items-center justify-center gap-2 font-semibold transition-all duration-200',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#df2b1b]/30 focus-visible:ring-offset-2',
           'disabled:pointer-events-none disabled:opacity-50',
           variantStyles[variant],
           sizeStyles[size],

@@ -223,8 +223,8 @@ export function DeliveryZonesContent() {
       {/* Header */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-[var(--foreground)]">{t('title')}</h1>
-          <p className="mt-1 text-[var(--muted-foreground)]">
+          <h1 className="text-2xl font-bold text-slate-900">{t('title')}</h1>
+          <p className="mt-1 text-slate-500">
             {t('description')}
           </p>
         </div>
@@ -238,7 +238,7 @@ export function DeliveryZonesContent() {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
         {/* Search */}
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--muted-foreground)]" />
+          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" />
           <Input
             placeholder={t('searchPlaceholder')}
             value={searchQuery}
@@ -276,26 +276,26 @@ export function DeliveryZonesContent() {
       {/* Loading State */}
       {loading && (
         <div className="flex items-center justify-center py-12">
-          <Loader2 className="h-8 w-8 animate-spin text-[var(--primary)]" />
+          <Loader2 className="h-8 w-8 animate-spin text-[#df2b1b]" />
         </div>
       )}
 
       {/* Error State */}
       {error && (
-        <div className="rounded-lg border border-red-200 bg-red-50 p-4 text-red-800">
+        <div className="rounded-xl border border-red-600/20 bg-red-600/5 p-4 text-red-600">
           {error}
         </div>
       )}
 
       {/* Empty State */}
       {!loading && !error && zones.length === 0 && (
-        <div className="rounded-lg border border-dashed border-[var(--border)] p-12 text-center">
+        <div className="rounded-xl border border-dashed border-slate-200 p-12 text-center">
           <div className="mx-auto max-w-md">
-            <MapPin className="mx-auto h-12 w-12 text-[var(--muted-foreground)]" />
-            <h3 className="mt-4 text-lg font-medium text-[var(--foreground)]">
+            <MapPin className="mx-auto h-12 w-12 text-slate-500" />
+            <h3 className="mt-4 text-lg font-medium text-slate-900">
               {t('noZones')}
             </h3>
-            <p className="mt-2 text-sm text-[var(--muted-foreground)]">
+            <p className="mt-2 text-sm text-slate-500">
               {t('noZonesDescription')}
             </p>
             <Button onClick={handleCreate} className="mt-4">
@@ -308,70 +308,70 @@ export function DeliveryZonesContent() {
 
       {/* No Results State */}
       {!loading && !error && zones.length > 0 && filteredZones.length === 0 && (
-        <div className="rounded-lg border border-dashed border-[var(--border)] p-12 text-center">
-          <p className="text-[var(--muted-foreground)]">{t('noResults')}</p>
+        <div className="rounded-xl border border-dashed border-slate-200 p-12 text-center">
+          <p className="text-slate-500">{t('noResults')}</p>
         </div>
       )}
 
       {/* Zones Table */}
       {!loading && !error && filteredZones.length > 0 && (
-        <div className="overflow-hidden rounded-lg border border-[var(--border)] bg-[var(--card)]">
+        <div className="overflow-hidden rounded-xl border border-slate-200 bg-[#FDFBF7]">
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="border-b border-[var(--border)] bg-[var(--muted)]">
+              <thead className="border-b border-slate-200 bg-slate-100">
                 <tr>
-                  <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--muted-foreground)]">
+                  <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500">
                     <GripVertical className="h-4 w-4" />
                   </th>
-                  <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--muted-foreground)]">
+                  <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500">
                     {t('table.name')}
                   </th>
-                  <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--muted-foreground)]">
+                  <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500">
                     {t('table.fee')}
                   </th>
-                  <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--muted-foreground)]">
+                  <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500">
                     {t('table.minOrder')}
                   </th>
-                  <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--muted-foreground)]">
+                  <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500">
                     {t('table.freeAbove')}
                   </th>
-                  <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--muted-foreground)]">
+                  <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500">
                     {t('table.orders')}
                   </th>
-                  <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--muted-foreground)]">
+                  <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500">
                     {t('table.status')}
                   </th>
-                  <th className="px-4 py-3 text-right text-xs font-medium uppercase tracking-wider text-[var(--muted-foreground)]">
+                  <th className="px-4 py-3 text-right text-xs font-medium uppercase tracking-wider text-slate-500">
                     {tCommon('actions')}
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[var(--border)]">
+              <tbody className="divide-y divide-slate-200">
                 {filteredZones.map((zone) => (
-                  <tr key={zone.id} className="hover:bg-[var(--muted)]/50">
+                  <tr key={zone.id} className="hover:bg-slate-100/50">
                     <td className="whitespace-nowrap px-4 py-4">
-                      <GripVertical className="h-4 w-4 cursor-grab text-[var(--muted-foreground)]" />
+                      <GripVertical className="h-4 w-4 cursor-grab text-slate-500" />
                     </td>
                     <td className="whitespace-nowrap px-4 py-4">
                       <div>
-                        <div className="font-medium text-[var(--foreground)]">
+                        <div className="font-medium text-slate-900">
                           {getZoneName(zone)}
                         </div>
-                        <div className="text-xs text-[var(--muted-foreground)]">
+                        <div className="text-xs text-slate-500">
                           {locale === 'ka' ? zone.nameEn : zone.nameKa}
                         </div>
                       </div>
                     </td>
-                    <td className="whitespace-nowrap px-4 py-4 font-medium text-[var(--foreground)]">
+                    <td className="whitespace-nowrap px-4 py-4 font-medium text-slate-900">
                       {formatCurrency(zone.fee)}
                     </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-[var(--muted-foreground)]">
+                    <td className="whitespace-nowrap px-4 py-4 text-slate-500">
                       {zone.minOrder ? formatCurrency(zone.minOrder) : '—'}
                     </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-[var(--muted-foreground)]">
+                    <td className="whitespace-nowrap px-4 py-4 text-slate-500">
                       {zone.freeAbove ? formatCurrency(zone.freeAbove) : '—'}
                     </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-[var(--muted-foreground)]">
+                    <td className="whitespace-nowrap px-4 py-4 text-slate-500">
                       {zone._count?.orders || 0}
                     </td>
                     <td className="whitespace-nowrap px-4 py-4">
@@ -407,7 +407,7 @@ export function DeliveryZonesContent() {
                           size="icon"
                           onClick={() => handleDelete(zone)}
                           title={tCommon('delete')}
-                          className="text-red-600 hover:bg-red-50 hover:text-red-700"
+                          className="text-red-600 hover:bg-red-600/5 hover:text-red-600"
                         >
                           <Trash2 className="h-4 w-4" />
                         </Button>

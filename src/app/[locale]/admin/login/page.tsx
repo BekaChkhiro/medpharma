@@ -1,10 +1,5 @@
 'use client';
 
-/**
- * Admin Login Page
- * Handles admin authentication with email/password
- */
-
 import { useState, useTransition } from 'react';
 
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -47,7 +42,6 @@ export default function AdminLoginPage() {
           return;
         }
 
-        // Redirect to callback URL or admin dashboard
         router.push(callbackUrl);
         router.refresh();
       } catch {
@@ -57,29 +51,27 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[var(--secondary)] px-4">
+    <div className="flex min-h-screen items-center justify-center bg-[#F5F0E8] px-4">
       <div className="w-full max-w-md">
-        {/* Logo / Brand */}
+        {/* Logo */}
         <div className="mb-8 text-center">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--primary)] text-white font-bold text-lg">
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#df2b1b] text-white font-bold text-xl shadow-lg">
             MP
           </div>
-          <h1 className="text-2xl font-bold text-[var(--foreground)]">MedPharma Plus</h1>
-          <p className="mt-1 text-[var(--muted-foreground)]">Admin Panel</p>
+          <h1 className="text-2xl font-bold text-slate-900">MedPharma Plus</h1>
+          <p className="mt-1 text-slate-500">Admin Panel</p>
         </div>
 
         {/* Login Card */}
-        <div className="rounded-xl border border-[var(--border)] bg-[var(--background)] p-8 shadow-lg">
-          <h2 className="mb-6 text-xl font-semibold text-[var(--foreground)]">{t('title')}</h2>
+        <div className="rounded-2xl border border-slate-200 bg-[#FDFBF7] p-8 shadow-lg">
+          <h2 className="mb-6 text-xl font-bold text-slate-900">{t('title')}</h2>
 
-          {/* Error Message */}
           {error && (
             <Alert variant="destructive" className="mb-4">
               {error}
             </Alert>
           )}
 
-          {/* URL Error (from NextAuth) */}
           {searchParams.get('error') && !error && (
             <Alert variant="destructive" className="mb-4">
               {searchParams.get('error') === 'CredentialsSignin'
@@ -88,9 +80,7 @@ export default function AdminLoginPage() {
             </Alert>
           )}
 
-          {/* Login Form */}
-          <form action={handleSubmit} className="space-y-4">
-            {/* Email Field */}
+          <form action={handleSubmit} className="space-y-5">
             <div className="space-y-2">
               <Label htmlFor="email">{t('email')}</Label>
               <Input
@@ -104,7 +94,6 @@ export default function AdminLoginPage() {
               />
             </div>
 
-            {/* Password Field */}
             <div className="space-y-2">
               <Label htmlFor="password">{t('password')}</Label>
               <Input
@@ -118,9 +107,9 @@ export default function AdminLoginPage() {
               />
             </div>
 
-            {/* Submit Button */}
             <Button
               type="submit"
+              variant="primary"
               disabled={isPending}
               className="w-full"
               size="lg"
@@ -137,8 +126,7 @@ export default function AdminLoginPage() {
           </form>
         </div>
 
-        {/* Footer */}
-        <p className="mt-6 text-center text-sm text-[var(--muted-foreground)]">
+        <p className="mt-6 text-center text-sm text-slate-400">
           © {new Date().getFullYear()} MedPharma Plus. All rights reserved.
         </p>
       </div>

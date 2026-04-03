@@ -7,13 +7,12 @@ export const dynamic = 'force-dynamic';
 
 import { setRequestLocale } from 'next-intl/server';
 
-import { Container } from '@/components/ui';
-import { getSaleProducts, getNewProducts } from '@/services/products';
-
 import { HeroSlider } from '@/components/home/hero-slider';
-import { ProductCarousel } from '@/components/home/product-carousel';
-import { ProductGrid } from '@/components/home/product-grid';
+import { ServicesSection } from '@/components/home/services-section';
+import { StatsSection } from '@/components/home/stats-section';
 import { AboutSection } from '@/components/home/about-section';
+import { WhyUsSection } from '@/components/home/why-us-section';
+import { CtaSection } from '@/components/home/cta-section';
 import { ContactSection } from '@/components/home/contact-section';
 
 type Props = {
@@ -24,50 +23,27 @@ export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  // Fetch data in parallel
-  const [saleProducts, newProducts] = await Promise.all([
-    getSaleProducts({ limit: 12 }),
-    getNewProducts({ limit: 8, daysAgo: 60 }),
-  ]);
-
   return (
     <>
-      {/* Hero Slider - Only Images with Arrows */}
+      {/* Hero - Main Banner */}
       <HeroSlider />
 
-      {/* Sale Products Carousel */}
-      {saleProducts.length > 0 && (
-        <section className="py-12 lg:py-16">
-          <Container>
-            <ProductCarousel
-              products={saleProducts}
-              titleKey="home.sale.title"
-              subtitleKey="home.sale.subtitle"
-              viewAllHref="/products?onSale=true"
-              variant="sale"
-            />
-          </Container>
-        </section>
-      )}
+      {/* Services - Specialization Areas */}
+      <ServicesSection />
 
-      {/* New Products Grid */}
-      {newProducts.length > 0 && (
-        <section className="py-12 lg:py-16">
-          <Container>
-            <ProductGrid
-              products={newProducts}
-              titleKey="home.new.title"
-              subtitleKey="home.new.subtitle"
-              viewAllHref="/products?sort=date_desc"
-            />
-          </Container>
-        </section>
-      )}
+      {/* Stats - Numbers */}
+      <StatsSection />
 
-      {/* About Section */}
+      {/* About - Company Info */}
       <AboutSection />
 
-      {/* Contact Section */}
+      {/* Why Us - Advantages */}
+      <WhyUsSection />
+
+      {/* CTA - Call to Action */}
+      <CtaSection />
+
+      {/* Contact - Form & Info */}
       <ContactSection />
     </>
   );

@@ -241,10 +241,9 @@ export function MiniCart() {
                   <Link
                     href="/products"
                     onClick={handleLinkClick}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#df2b1b] hover:bg-[#c42418] text-white text-sm font-medium rounded-lg transition-all group shadow-sm hover:shadow-md"
+                    className="inline-flex items-center justify-center gap-2 font-semibold transition-all duration-200 bg-[#df2b1b] text-white hover:bg-[#c42418] shadow-sm hover:shadow-md h-11 px-5 text-sm rounded-xl"
                   >
-                    <span>{t('cart.continueShopping')}</span>
-                    <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+                    {t('cart.continueShopping')}
                   </Link>
                 </div>
               ) : (
@@ -288,7 +287,7 @@ export function MiniCart() {
                         </Button>
                       </Link>
                       <Link href="/checkout" onClick={handleLinkClick} className="flex-1">
-                        <Button variant="default" className="w-full">
+                        <Button variant="primary" className="w-full">
                           {t('cart.checkout')}
                         </Button>
                       </Link>

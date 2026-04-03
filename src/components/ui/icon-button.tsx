@@ -19,10 +19,10 @@ export interface IconButtonProps
 
 const variantStyles: Record<IconButtonVariant, string> = {
   primary:
-    'bg-red-700 text-white hover:bg-red-800 shadow-sm',
+    'bg-[#df2b1b] text-white hover:bg-[#c42418] shadow-sm',
   secondary:
-    'bg-slate-100 text-slate-700 hover:bg-slate-200',
-  ghost: 'text-slate-600 hover:bg-slate-100',
+    'bg-slate-100 text-slate-900 hover:bg-slate-200',
+  ghost: 'bg-[#FDFBF7] text-slate-700 border border-slate-200 hover:bg-slate-100 hover:border-slate-300',
   destructive:
     'bg-red-600 text-white hover:bg-red-700 shadow-sm',
 };
@@ -52,8 +52,8 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       <button
         ref={ref}
         className={cn(
-          'inline-flex items-center justify-center rounded-[var(--radius-md)] transition-colors',
-          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+          'inline-flex items-center justify-center rounded-lg transition-colors',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#df2b1b]/30 focus-visible:ring-offset-2',
           'disabled:pointer-events-none disabled:opacity-50',
           variantStyles[variant],
           sizeStyles[size],

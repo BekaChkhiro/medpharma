@@ -122,7 +122,7 @@ function ProductsCatalogSkeleton() {
         </div>
         <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
           {Array.from({ length: 8 }).map((_, i) => (
-            <div key={i} className="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+            <div key={i} className="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-[#FDFBF7]">
               <Skeleton className="aspect-square w-full" />
               <div className="p-3">
                 <Skeleton className="mb-2 h-3 w-1/3" />

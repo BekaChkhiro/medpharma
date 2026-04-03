@@ -306,8 +306,8 @@ export function ProductsContent() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">{t('title')}</h1>
-          <p className="mt-1 text-sm text-gray-600">{t('subtitle')}</p>
+          <h1 className="text-3xl font-bold text-slate-900">{t('title')}</h1>
+          <p className="mt-1 text-sm text-slate-500">{t('subtitle')}</p>
         </div>
         <div className="flex gap-2">
           {/* Export Button with Dropdown */}
@@ -326,42 +326,42 @@ export function ProductsContent() {
                   className="fixed inset-0 z-10"
                   onClick={() => setShowExportMenu(false)}
                 />
-                <div className="absolute right-0 z-20 mt-2 w-56 rounded-md border bg-white shadow-lg">
+                <div className="absolute right-0 z-20 mt-2 w-56 rounded-md border border-slate-200 bg-[#FDFBF7] shadow-lg">
                   <div className="p-2">
-                    <p className="px-2 py-1.5 text-xs font-semibold text-gray-500">
+                    <p className="px-2 py-1.5 text-xs font-semibold text-slate-500">
                       {t('export.format')}
                     </p>
                     <button
-                      className="flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-gray-100"
+                      className="flex w-full items-center rounded-md px-2 py-2 text-sm text-slate-900 hover:bg-slate-100"
                       onClick={() => handleExport('csv')}
                     >
                       <span className="mr-2">📄</span>
                       {t('export.csvBasic')}
                     </button>
                     <button
-                      className="flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-gray-100"
+                      className="flex w-full items-center rounded-md px-2 py-2 text-sm text-slate-900 hover:bg-slate-100"
                       onClick={() => handleExport('csv', true)}
                     >
                       <span className="mr-2">📄</span>
                       {t('export.csvFull')}
                     </button>
                     <button
-                      className="flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-gray-100"
+                      className="flex w-full items-center rounded-md px-2 py-2 text-sm text-slate-900 hover:bg-slate-100"
                       onClick={() => handleExport('xlsx')}
                     >
                       <span className="mr-2">📊</span>
                       {t('export.excelBasic')}
                     </button>
                     <button
-                      className="flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-gray-100"
+                      className="flex w-full items-center rounded-md px-2 py-2 text-sm text-slate-900 hover:bg-slate-100"
                       onClick={() => handleExport('xlsx', true)}
                     >
                       <span className="mr-2">📊</span>
                       {t('export.excelFull')}
                     </button>
                   </div>
-                  <div className="border-t p-2">
-                    <p className="px-2 text-xs text-gray-400">
+                  <div className="border-t border-slate-200 p-2">
+                    <p className="px-2 text-xs text-slate-500">
                       {t('export.hint')}
                     </p>
                   </div>
@@ -386,7 +386,7 @@ export function ProductsContent() {
           {/* Search Bar and Filter Toggle */}
           <div className="flex items-center gap-4">
             <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" />
               <Input
                 placeholder={t('searchPlaceholder')}
                 value={search}
@@ -419,7 +419,7 @@ export function ProductsContent() {
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
                 {/* Category Filter */}
                 <div>
-                  <label className="mb-1.5 block text-sm font-medium text-gray-700">
+                  <label className="mb-1.5 block text-sm font-medium text-slate-900">
                     {tFilters('category')}
                   </label>
                   <Select
@@ -437,7 +437,7 @@ export function ProductsContent() {
 
                 {/* Stock Status Filter */}
                 <div>
-                  <label className="mb-1.5 block text-sm font-medium text-gray-700">
+                  <label className="mb-1.5 block text-sm font-medium text-slate-900">
                     {tFilters('stockStatus')}
                   </label>
                   <Select
@@ -453,7 +453,7 @@ export function ProductsContent() {
 
                 {/* Active Status Filter */}
                 <div>
-                  <label className="mb-1.5 block text-sm font-medium text-gray-700">
+                  <label className="mb-1.5 block text-sm font-medium text-slate-900">
                     {tFilters('status')}
                   </label>
                   <Select
@@ -468,7 +468,7 @@ export function ProductsContent() {
 
                 {/* Sort By */}
                 <div>
-                  <label className="mb-1.5 block text-sm font-medium text-gray-700">
+                  <label className="mb-1.5 block text-sm font-medium text-slate-900">
                     {tFilters('sortBy')}
                   </label>
                   <Select
@@ -505,7 +505,7 @@ export function ProductsContent() {
               </div>
 
               {/* Results count */}
-              <div className="mt-4 text-sm text-gray-500">
+              <div className="mt-4 text-sm text-slate-500">
                 {tFilters('showing', { count: totalProducts })}
               </div>
             </div>
@@ -520,11 +520,11 @@ export function ProductsContent() {
             <div className="flex items-center gap-4">
               <button
                 onClick={clearSelection}
-                className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900"
+                className="flex items-center gap-2 text-sm text-slate-500 hover:text-slate-900"
               >
                 <X className="h-4 w-4" />
               </button>
-              <span className="font-medium text-gray-900">
+              <span className="font-medium text-slate-900">
                 {t('bulk.selected', { count: selectedIds.size })}
               </span>
             </div>
@@ -551,12 +551,12 @@ export function ProductsContent() {
         <Card>
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="border-b bg-gray-50">
+              <thead className="border-b border-slate-200 bg-slate-100">
                 <tr>
                   <th className="w-12 px-4 py-3">
                     <button
                       onClick={toggleSelectAll}
-                      className="flex items-center justify-center text-gray-400 hover:text-gray-600"
+                      className="flex items-center justify-center text-slate-500 hover:text-slate-900"
                       title={isAllSelected ? 'Deselect all' : 'Select all'}
                     >
                       {isAllSelected ? (
@@ -568,37 +568,37 @@ export function ProductsContent() {
                       )}
                     </button>
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500">
                     {t('table.image')}
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500">
                     {t('table.product')}
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500">
                     {t('table.sku')}
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500">
                     {t('table.category')}
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500">
                     {t('table.price')}
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500">
                     {t('table.stock')}
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-slate-500">
                     {t('table.status')}
                   </th>
-                  <th className="px-6 py-3 text-right text-xs font-medium uppercase tracking-wider text-gray-500">
+                  <th className="px-6 py-3 text-right text-xs font-medium uppercase tracking-wider text-slate-500">
                     {t('table.actions')}
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-200 bg-white">
+              <tbody className="divide-y divide-slate-200 bg-[#FDFBF7]">
                 {products.length === 0 ? (
                   <tr>
                     <td colSpan={9} className="px-6 py-12 text-center">
-                      <p className="text-gray-500">{t('noProducts')}</p>
+                      <p className="text-slate-500">{t('noProducts')}</p>
                     </td>
                   </tr>
                 ) : (
@@ -607,14 +607,14 @@ export function ProductsContent() {
                     return (
                       <tr
                         key={product.id}
-                        className={`hover:bg-gray-50 ${
+                        className={`hover:bg-slate-100/50 ${
                           isSelected ? 'bg-primary/5' : ''
                         }`}
                       >
                         <td className="w-12 px-4 py-4">
                           <button
                             onClick={() => toggleSelectProduct(product.id)}
-                            className="flex items-center justify-center text-gray-400 hover:text-gray-600"
+                            className="flex items-center justify-center text-slate-500 hover:text-slate-900"
                           >
                             {isSelected ? (
                               <CheckSquare className="h-5 w-5 text-primary" />
@@ -631,48 +631,48 @@ export function ProductsContent() {
                               className="h-12 w-12 rounded object-cover"
                             />
                           ) : (
-                            <div className="flex h-12 w-12 items-center justify-center rounded bg-gray-200 text-gray-400">
+                            <div className="flex h-12 w-12 items-center justify-center rounded bg-slate-100 text-slate-500">
                               <span className="text-xs">No img</span>
                             </div>
                           )}
                         </td>
                         <td className="px-6 py-4">
                           <div className="flex flex-col">
-                            <span className="font-medium text-gray-900">
+                            <span className="font-medium text-slate-900">
                               {product.nameEn}
                             </span>
-                            <span className="text-sm text-gray-500">
+                            <span className="text-sm text-slate-500">
                               {product.nameKa}
                             </span>
                           </div>
                         </td>
                         <td className="px-6 py-4">
-                          <span className="text-sm text-gray-900">
+                          <span className="text-sm text-slate-900">
                             {product.sku}
                           </span>
                         </td>
                         <td className="px-6 py-4">
                           {product.category ? (
-                            <span className="text-sm text-gray-600">
+                            <span className="text-sm text-slate-500">
                               {product.category.nameEn}
                             </span>
                           ) : (
-                            <span className="text-sm text-gray-400">—</span>
+                            <span className="text-sm text-slate-500">—</span>
                           )}
                         </td>
                         <td className="px-6 py-4">
                           <div className="flex flex-col">
                             {product.salePrice ? (
                               <>
-                                <span className="text-sm font-medium text-green-600">
+                                <span className="text-sm font-medium text-emerald-600">
                                   {formatPrice(Number(product.salePrice))}
                                 </span>
-                                <span className="text-xs text-gray-400 line-through">
+                                <span className="text-xs text-slate-500 line-through">
                                   {formatPrice(Number(product.price))}
                                 </span>
                               </>
                             ) : (
-                              <span className="text-sm font-medium text-gray-900">
+                              <span className="text-sm font-medium text-slate-900">
                                 {formatPrice(Number(product.price))}
                               </span>
                             )}
@@ -685,8 +685,8 @@ export function ProductsContent() {
                                 product.stock === 0
                                   ? 'text-red-600'
                                   : product.stock <= 10
-                                    ? 'text-amber-600'
-                                    : 'text-gray-900'
+                                    ? 'text-amber-500'
+                                    : 'text-slate-900'
                               }`}
                             >
                               {product.stock}
@@ -766,11 +766,11 @@ export function ProductsContent() {
                 </Button>
               </div>
               <div className="flex items-center gap-4">
-                <span className="text-sm text-gray-600">
+                <span className="text-sm text-slate-500">
                   {tFilters('pageOf', { page, totalPages })}
                 </span>
-                <span className="text-sm text-gray-400">|</span>
-                <span className="text-sm text-gray-600">
+                <span className="text-sm text-slate-500">|</span>
+                <span className="text-sm text-slate-500">
                   {tFilters('showingRange', {
                     from: (page - 1) * 20 + 1,
                     to: Math.min(page * 20, totalProducts),

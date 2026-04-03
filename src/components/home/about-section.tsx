@@ -3,8 +3,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { Award, Users, Truck, Shield, ChevronRight } from 'lucide-react';
 
-import { Container } from '@/components/ui';
-import { Link } from '@/i18n/navigation';
+import { Container, ButtonLink } from '@/components/ui';
 import { cn } from '@/lib/utils';
 
 const features = [
@@ -89,13 +88,14 @@ export function AboutSection() {
             </p>
 
             {/* CTA */}
-            <Link
+            <ButtonLink
               href="/about"
-              className="group inline-flex items-center gap-2.5 px-6 py-3 bg-[#df2b1b] rounded-xl font-semibold text-sm text-white hover:bg-[#c42418] transition-all duration-200 shadow-md hover:shadow-lg"
+              variant="primary"
+              size="lg"
+              rightIcon={<ChevronRight className="w-5 h-5" />}
             >
-              <span className="text-white">{t('home.hero.learnMore')}</span>
-              <ChevronRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
-            </Link>
+              {t('home.hero.learnMore')}
+            </ButtonLink>
           </div>
 
           {/* Features Grid */}

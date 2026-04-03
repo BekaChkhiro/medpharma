@@ -140,7 +140,7 @@ export default function FAQPage() {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8">
+        <div className="max-w-3xl mx-auto bg-[#FDFBF7] rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8">
           {faqData.map((item, index) => (
             <FAQAccordion key={index} item={item} locale={locale} />
           ))}

@@ -14,10 +14,10 @@ export function Skeleton({
   return (
     <div
       className={cn(
-        'animate-pulse bg-muted',
+        'animate-pulse bg-slate-50',
         variant === 'circular' && 'rounded-full',
         variant === 'text' && 'h-4 rounded',
-        variant === 'default' && 'rounded-[var(--radius-md)]',
+        variant === 'default' && 'rounded-lg',
         className
       )}
       {...props}
@@ -27,7 +27,7 @@ export function Skeleton({
 
 export function SkeletonCard() {
   return (
-    <div className="rounded-[var(--radius-lg)] border bg-card p-4 space-y-4">
+    <div className="rounded-xl border bg-[#FDFBF7] p-4 space-y-4">
       <Skeleton className="h-40 w-full" />
       <div className="space-y-2">
         <Skeleton variant="text" className="w-3/4" />
@@ -40,7 +40,7 @@ export function SkeletonCard() {
 
 export function SkeletonProduct() {
   return (
-    <div className="rounded-[var(--radius-lg)] border bg-card p-4 space-y-3">
+    <div className="rounded-xl border bg-[#FDFBF7] p-4 space-y-3">
       <Skeleton className="aspect-square w-full" />
       <Skeleton variant="text" className="w-full" />
       <Skeleton variant="text" className="w-2/3" />

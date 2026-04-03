@@ -124,21 +124,21 @@ export function DeliveryZoneFormModal({
         <div className="space-y-6">
           {/* Error Message */}
           {error && (
-            <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800">
+            <div className="rounded-xl border border-red-600/20 bg-red-600/5 p-3 text-sm text-red-600">
               {error}
             </div>
           )}
 
           {/* Names Section */}
           <div className="space-y-4">
-            <h3 className="text-sm font-medium text-[var(--foreground)]">
+            <h3 className="text-sm font-medium text-slate-900">
               {t('form.zoneInfo')}
             </h3>
 
             {/* English Name */}
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-[var(--foreground)]">
-                {t('form.nameEn')} <span className="text-red-500">*</span>
+              <label className="mb-1.5 block text-sm font-medium text-slate-900">
+                {t('form.nameEn')} <span className="text-red-600">*</span>
               </label>
               <Input
                 value={formData.nameEn}
@@ -150,8 +150,8 @@ export function DeliveryZoneFormModal({
 
             {/* Georgian Name */}
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-[var(--foreground)]">
-                {t('form.nameKa')} <span className="text-red-500">*</span>
+              <label className="mb-1.5 block text-sm font-medium text-slate-900">
+                {t('form.nameKa')} <span className="text-red-600">*</span>
               </label>
               <Input
                 value={formData.nameKa}
@@ -163,15 +163,15 @@ export function DeliveryZoneFormModal({
           </div>
 
           {/* Pricing Section */}
-          <div className="space-y-4 border-t border-[var(--border)] pt-6">
-            <h3 className="text-sm font-medium text-[var(--foreground)]">
+          <div className="space-y-4 border-t border-slate-200 pt-6">
+            <h3 className="text-sm font-medium text-slate-900">
               {t('form.pricingInfo')}
             </h3>
 
             {/* Delivery Fee */}
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-[var(--foreground)]">
-                {t('form.fee')} <span className="text-red-500">*</span>
+              <label className="mb-1.5 block text-sm font-medium text-slate-900">
+                {t('form.fee')} <span className="text-red-600">*</span>
               </label>
               <div className="relative">
                 <Input
@@ -183,18 +183,18 @@ export function DeliveryZoneFormModal({
                   required
                   className="pr-10"
                 />
-                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-[var(--muted-foreground)]">
+                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-slate-500">
                   ₾
                 </span>
               </div>
-              <p className="mt-1 text-xs text-[var(--muted-foreground)]">
+              <p className="mt-1 text-xs text-slate-500">
                 {t('form.feeHint')}
               </p>
             </div>
 
             {/* Minimum Order */}
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-[var(--foreground)]">
+              <label className="mb-1.5 block text-sm font-medium text-slate-900">
                 {t('form.minOrder')}
               </label>
               <div className="relative">
@@ -207,18 +207,18 @@ export function DeliveryZoneFormModal({
                   className="pr-10"
                   placeholder={t('form.optional')}
                 />
-                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-[var(--muted-foreground)]">
+                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-slate-500">
                   ₾
                 </span>
               </div>
-              <p className="mt-1 text-xs text-[var(--muted-foreground)]">
+              <p className="mt-1 text-xs text-slate-500">
                 {t('form.minOrderHint')}
               </p>
             </div>
 
             {/* Free Delivery Above */}
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-[var(--foreground)]">
+              <label className="mb-1.5 block text-sm font-medium text-slate-900">
                 {t('form.freeAbove')}
               </label>
               <div className="relative">
@@ -231,31 +231,31 @@ export function DeliveryZoneFormModal({
                   className="pr-10"
                   placeholder={t('form.optional')}
                 />
-                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-[var(--muted-foreground)]">
+                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-slate-500">
                   ₾
                 </span>
               </div>
-              <p className="mt-1 text-xs text-[var(--muted-foreground)]">
+              <p className="mt-1 text-xs text-slate-500">
                 {t('form.freeAboveHint')}
               </p>
             </div>
           </div>
 
           {/* Status Section */}
-          <div className="border-t border-[var(--border)] pt-6">
+          <div className="border-t border-slate-200 pt-6">
             <div className="flex items-center gap-2">
               <input
                 type="checkbox"
                 id="isActive"
                 checked={formData.isActive}
                 onChange={(e) => handleChange('isActive', e.target.checked)}
-                className="h-4 w-4 rounded border-[var(--border)] text-[var(--primary)] focus:ring-2 focus:ring-[var(--ring)]"
+                className="h-4 w-4 rounded border-slate-200 text-[#df2b1b] focus:ring-2 focus:ring-[#df2b1b]/30"
               />
-              <label htmlFor="isActive" className="text-sm font-medium text-[var(--foreground)]">
+              <label htmlFor="isActive" className="text-sm font-medium text-slate-900">
                 {t('form.isActive')}
               </label>
             </div>
-            <p className="mt-1 text-xs text-[var(--muted-foreground)]">
+            <p className="mt-1 text-xs text-slate-500">
               {t('form.isActiveHint')}
             </p>
           </div>

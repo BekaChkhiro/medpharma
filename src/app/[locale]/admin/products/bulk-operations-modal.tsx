@@ -151,7 +151,7 @@ export function BulkOperationsModal({
             </div>
           </div>
           <div className="text-center">
-            <p className="text-lg font-medium text-gray-900">
+            <p className="text-lg font-medium text-slate-900">
               {t('success.updated', { count: result.success })}
             </p>
             {result.failed > 0 && (
@@ -184,10 +184,10 @@ export function BulkOperationsModal({
           <button
             type="button"
             onClick={() => setOperationType('price')}
-            className={`flex flex-1 items-center justify-center gap-2 rounded-lg border-2 p-4 transition-colors ${
+            className={`flex flex-1 items-center justify-center gap-2 rounded-xl border-2 p-4 transition-colors ${
               operationType === 'price'
                 ? 'border-primary bg-primary/5 text-primary'
-                : 'border-gray-200 hover:border-gray-300'
+                : 'border-slate-200 hover:border-slate-200'
             }`}
           >
             <DollarSign className="h-5 w-5" />
@@ -196,10 +196,10 @@ export function BulkOperationsModal({
           <button
             type="button"
             onClick={() => setOperationType('status')}
-            className={`flex flex-1 items-center justify-center gap-2 rounded-lg border-2 p-4 transition-colors ${
+            className={`flex flex-1 items-center justify-center gap-2 rounded-xl border-2 p-4 transition-colors ${
               operationType === 'status'
                 ? 'border-primary bg-primary/5 text-primary'
-                : 'border-gray-200 hover:border-gray-300'
+                : 'border-slate-200 hover:border-slate-200'
             }`}
           >
             <ToggleLeft className="h-5 w-5" />
@@ -211,7 +211,7 @@ export function BulkOperationsModal({
         {operationType === 'price' && (
           <div className="space-y-4">
             <div>
-              <label className="mb-2 block text-sm font-medium text-gray-700">
+              <label className="mb-2 block text-sm font-medium text-slate-900">
                 {t('price.operationType')}
               </label>
               <Select
@@ -225,7 +225,7 @@ export function BulkOperationsModal({
             </div>
 
             <div>
-              <label className="mb-2 block text-sm font-medium text-gray-700">
+              <label className="mb-2 block text-sm font-medium text-slate-900">
                 {priceOperation === 'percentage'
                   ? t('price.percentageValue')
                   : priceOperation === 'fixed'
@@ -234,9 +234,9 @@ export function BulkOperationsModal({
               </label>
               <div className="relative">
                 {priceOperation === 'percentage' ? (
-                  <Percent className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+                  <Percent className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" />
                 ) : (
-                  <Hash className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+                  <Hash className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" />
                 )}
                 <Input
                   type="number"
@@ -251,7 +251,7 @@ export function BulkOperationsModal({
                   }
                 />
               </div>
-              <p className="mt-1 text-xs text-gray-500">
+              <p className="mt-1 text-xs text-slate-500">
                 {priceOperation === 'percentage' && t('price.percentageHint')}
                 {priceOperation === 'fixed' && t('price.fixedHint')}
                 {priceOperation === 'set' && t('price.setHint')}
@@ -260,8 +260,8 @@ export function BulkOperationsModal({
 
             {/* Price Preview */}
             {pricePreview && pricePreview.length > 0 && (
-              <div className="rounded-lg border bg-gray-50 p-4">
-                <p className="mb-2 text-sm font-medium text-gray-700">
+              <div className="rounded-xl border bg-slate-100 p-4">
+                <p className="mb-2 text-sm font-medium text-slate-900">
                   {t('price.preview')}
                 </p>
                 <div className="space-y-2">
@@ -270,9 +270,9 @@ export function BulkOperationsModal({
                       key={idx}
                       className="flex items-center justify-between text-sm"
                     >
-                      <span className="truncate text-gray-600">{item.name}</span>
+                      <span className="truncate text-slate-500">{item.name}</span>
                       <div className="flex items-center gap-2">
-                        <span className="text-gray-400 line-through">
+                        <span className="text-slate-500 line-through">
                           ₾{item.oldPrice.toFixed(2)}
                         </span>
                         <span className="font-medium text-green-600">
@@ -282,7 +282,7 @@ export function BulkOperationsModal({
                     </div>
                   ))}
                   {selectedProducts.length > 3 && (
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-slate-500">
                       {t('price.andMore', { count: selectedProducts.length - 3 })}
                     </p>
                   )}
@@ -296,11 +296,11 @@ export function BulkOperationsModal({
         {operationType === 'status' && (
           <div className="space-y-4">
             <div>
-              <label className="mb-2 block text-sm font-medium text-gray-700">
+              <label className="mb-2 block text-sm font-medium text-slate-900">
                 {t('status.operationType')}
               </label>
               <div className="space-y-2">
-                <label className="flex cursor-pointer items-center gap-3 rounded-lg border p-3 hover:bg-gray-50">
+                <label className="flex cursor-pointer items-center gap-3 rounded-xl border p-3 hover:bg-slate-100">
                   <input
                     type="radio"
                     name="statusOperation"
@@ -310,11 +310,11 @@ export function BulkOperationsModal({
                     className="h-4 w-4 text-primary"
                   />
                   <div>
-                    <p className="font-medium text-gray-900">{t('status.activate')}</p>
-                    <p className="text-sm text-gray-500">{t('status.activateDesc')}</p>
+                    <p className="font-medium text-slate-900">{t('status.activate')}</p>
+                    <p className="text-sm text-slate-500">{t('status.activateDesc')}</p>
                   </div>
                 </label>
-                <label className="flex cursor-pointer items-center gap-3 rounded-lg border p-3 hover:bg-gray-50">
+                <label className="flex cursor-pointer items-center gap-3 rounded-xl border p-3 hover:bg-slate-100">
                   <input
                     type="radio"
                     name="statusOperation"
@@ -324,11 +324,11 @@ export function BulkOperationsModal({
                     className="h-4 w-4 text-primary"
                   />
                   <div>
-                    <p className="font-medium text-gray-900">{t('status.deactivate')}</p>
-                    <p className="text-sm text-gray-500">{t('status.deactivateDesc')}</p>
+                    <p className="font-medium text-slate-900">{t('status.deactivate')}</p>
+                    <p className="text-sm text-slate-500">{t('status.deactivateDesc')}</p>
                   </div>
                 </label>
-                <label className="flex cursor-pointer items-center gap-3 rounded-lg border p-3 hover:bg-gray-50">
+                <label className="flex cursor-pointer items-center gap-3 rounded-xl border p-3 hover:bg-slate-100">
                   <input
                     type="radio"
                     name="statusOperation"
@@ -338,8 +338,8 @@ export function BulkOperationsModal({
                     className="h-4 w-4 text-primary"
                   />
                   <div>
-                    <p className="font-medium text-gray-900">{t('status.toggleFeatured')}</p>
-                    <p className="text-sm text-gray-500">{t('status.toggleFeaturedDesc')}</p>
+                    <p className="font-medium text-slate-900">{t('status.toggleFeatured')}</p>
+                    <p className="text-sm text-slate-500">{t('status.toggleFeaturedDesc')}</p>
                   </div>
                 </label>
               </div>
@@ -349,7 +349,7 @@ export function BulkOperationsModal({
 
         {/* Error Display */}
         {error && (
-          <div className="flex items-center gap-2 rounded-lg bg-red-50 p-3 text-sm text-red-600">
+          <div className="flex items-center gap-2 rounded-xl bg-red-600/5 p-3 text-sm text-red-600">
             <AlertCircle className="h-4 w-4 flex-shrink-0" />
             <span>{error}</span>
           </div>

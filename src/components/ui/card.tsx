@@ -13,9 +13,9 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
       <div
         ref={ref}
         className={cn(
-          'rounded-[var(--radius-lg)] border text-card-foreground shadow-sm',
-          variant === 'default' && 'bg-card',
-          variant === 'glass' && 'bg-white/70 backdrop-blur-md border-white/30',
+          'rounded-xl border text-slate-900 shadow-sm',
+          variant === 'default' && 'bg-[#FDFBF7]',
+          variant === 'glass' && 'bg-[#FDFBF7]/70 backdrop-blur-md border-white/30',
           hover && 'transition-shadow hover:shadow-md',
           className
         )}
@@ -64,7 +64,7 @@ export const CardDescription = forwardRef<
   return (
     <p
       ref={ref}
-      className={cn('text-sm text-muted-foreground', className)}
+      className={cn('text-sm text-slate-500', className)}
       {...props}
     />
   );

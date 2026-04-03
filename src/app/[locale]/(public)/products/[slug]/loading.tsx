@@ -18,7 +18,7 @@ export default function ProductDetailLoading() {
         </div>
 
         {/* Main Product Card */}
-        <div className="overflow-hidden rounded-xl bg-white shadow-sm sm:rounded-2xl">
+        <div className="overflow-hidden rounded-xl bg-[#FDFBF7] shadow-sm sm:rounded-2xl">
           <div className="grid grid-cols-1 gap-0 md:grid-cols-2 lg:grid-cols-[55%,45%]">
             {/* Left Column - Image */}
             <div className="border-b border-gray-100 p-4 sm:p-6 md:border-b-0 md:border-r lg:p-8">
@@ -106,7 +106,7 @@ export default function ProductDetailLoading() {
           </div>
 
           {/* Tab content */}
-          <div className="mt-4 rounded-xl border border-gray-200 bg-white p-4 sm:p-5">
+          <div className="mt-4 rounded-xl border border-gray-200 bg-[#FDFBF7] p-4 sm:p-5">
             <div className="space-y-3">
               <Skeleton className="h-4 w-full" />
               <Skeleton className="h-4 w-5/6" />
@@ -116,7 +116,7 @@ export default function ProductDetailLoading() {
         </div>
 
         {/* Disclaimer Skeleton */}
-        <div className="mt-6 rounded-xl border border-gray-200 bg-white p-4 sm:mt-8">
+        <div className="mt-6 rounded-xl border border-gray-200 bg-[#FDFBF7] p-4 sm:mt-8">
           <div className="flex gap-3">
             <Skeleton className="h-8 w-8 rounded-full" />
             <div className="flex-1 space-y-2">
@@ -139,7 +139,7 @@ export default function ProductDetailLoading() {
           <div className="flex gap-4 overflow-hidden">
             {[...Array(5)].map((_, i) => (
               <div key={i} className="w-[160px] flex-shrink-0 sm:w-[220px] lg:w-[260px]">
-                <div className="overflow-hidden rounded-lg border border-gray-200 bg-white">
+                <div className="overflow-hidden rounded-lg border border-gray-200 bg-[#FDFBF7]">
                   <Skeleton className="aspect-square w-full" />
                   <div className="p-3">
                     <Skeleton className="mb-2 h-3 w-1/3" />

@@ -75,7 +75,7 @@ export default async function CareersPage({
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm text-center hover:shadow-md transition-shadow"
+              className="bg-[#FDFBF7] rounded-xl p-6 border border-gray-100 shadow-sm text-center hover:shadow-md transition-shadow"
             >
               <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <benefit.icon className="w-7 h-7 text-primary" />

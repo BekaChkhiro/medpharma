@@ -56,15 +56,15 @@ export function CategoryTreeItem({
       {/* Category Row */}
       <div
         className={cn(
-          'group flex items-center gap-2 rounded-lg border border-[var(--border)] bg-card p-3 transition-colors hover:bg-[var(--muted)]',
-          isDragging && 'bg-[var(--muted)]'
+          'group flex items-center gap-2 rounded-xl border border-slate-200 bg-[#FDFBF7] p-3 transition-colors hover:bg-slate-50',
+          isDragging && 'bg-slate-50'
         )}
         style={{ marginLeft: `${depth * 24}px` }}
       >
         {/* Drag Handle */}
         <button
           type="button"
-          className="cursor-grab touch-none text-[var(--muted-foreground)] hover:text-[var(--foreground)] active:cursor-grabbing"
+          className="cursor-grab touch-none text-slate-500 hover:text-slate-900 active:cursor-grabbing"
           {...attributes}
           {...listeners}
         >
@@ -76,7 +76,7 @@ export function CategoryTreeItem({
           <button
             type="button"
             onClick={() => setIsExpanded(!isExpanded)}
-            className="text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
+            className="text-slate-500 hover:text-slate-900"
           >
             {isExpanded ? (
               <ChevronDown className="h-4 w-4" />
@@ -91,16 +91,16 @@ export function CategoryTreeItem({
         {/* Category Info */}
         <div className="flex-1">
           <div className="flex items-center gap-2">
-            <span className="font-medium text-[var(--foreground)]">
+            <span className="font-medium text-slate-900">
               {category.nameEn}
             </span>
-            <span className="text-sm text-[var(--muted-foreground)]">
+            <span className="text-sm text-slate-500">
               / {category.nameKa}
             </span>
 
             {/* Product Count Badge */}
             {productCount > 0 && (
-              <div className="flex items-center gap-1 rounded-full bg-[var(--muted)] px-2 py-0.5 text-xs text-[var(--muted-foreground)]">
+              <div className="flex items-center gap-1 rounded-full bg-slate-50 px-2 py-0.5 text-xs text-slate-500">
                 <Package className="h-3 w-3" />
                 {productCount}
               </div>
@@ -108,7 +108,7 @@ export function CategoryTreeItem({
 
             {/* Active Status Badge */}
             {!category.isActive && (
-              <span className="rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-700">
+              <span className="rounded-full bg-red-600/10 px-2 py-0.5 text-xs font-medium text-red-600">
                 {t('inactive')}
               </span>
             )}
@@ -120,7 +120,7 @@ export function CategoryTreeItem({
           </div>
 
           {/* Slug */}
-          <div className="mt-0.5 text-xs text-[var(--muted-foreground)]">
+          <div className="mt-0.5 text-xs text-slate-500">
             /{category.slug}
           </div>
         </div>
@@ -140,7 +140,7 @@ export function CategoryTreeItem({
             variant="ghost"
             onClick={() => onDelete(category)}
             title={t('deleteCategory')}
-            className="text-red-600 hover:bg-red-50 hover:text-red-700"
+            className="text-red-600 hover:bg-red-600/5 hover:text-red-600"
           >
             <Trash2 className="h-4 w-4" />
           </Button>

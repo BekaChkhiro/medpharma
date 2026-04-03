@@ -1,5 +1,10 @@
 export { HeroSlider } from './hero-slider';
+export { ServicesSection } from './services-section';
+export { StatsSection } from './stats-section';
+export { WhyUsSection } from './why-us-section';
+export { CtaSection } from './cta-section';
+export { AboutSection } from './about-section';
+export { ContactSection } from './contact-section';
 export { ProductCarousel } from './product-carousel';
 export { ProductGrid } from './product-grid';
-export { ContactSection } from './contact-section';
-export { AboutSection } from './about-section';
+export { CategoriesSection } from './categories-section';

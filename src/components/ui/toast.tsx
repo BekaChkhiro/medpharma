@@ -31,10 +31,10 @@ interface ToastContextType {
 const ToastContext = createContext<ToastContextType | undefined>(undefined);
 
 const variantStyles: Record<ToastVariant, string> = {
-  default: 'bg-card border-border',
-  success: 'bg-success text-white border-success',
-  warning: 'bg-warning text-white border-warning',
-  destructive: 'bg-destructive text-white border-destructive',
+  default: 'bg-[#FDFBF7] border-slate-200',
+  success: 'bg-emerald-600 text-white border-emerald-600',
+  warning: 'bg-amber-500 text-white border-amber-500',
+  destructive: 'bg-red-600 text-white border-red-600',
 };
 
 export function ToastProvider({ children }: { children: ReactNode }) {
@@ -105,7 +105,7 @@ function ToastItem({ toast, onClose }: ToastItemProps) {
   return (
     <div
       className={cn(
-        'flex items-start gap-3 rounded-[var(--radius-md)] border p-4 shadow-lg',
+        'flex items-start gap-3 rounded-lg border p-4 shadow-lg',
         'min-w-[300px] max-w-[400px]',
         'animate-slideIn',
         variantStyles[variant]
@@ -120,7 +120,7 @@ function ToastItem({ toast, onClose }: ToastItemProps) {
         onClick={() => onClose(id)}
         className={cn(
           'shrink-0 rounded-sm opacity-70 transition-opacity hover:opacity-100',
-          'focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2'
+          'focus:outline-none focus:ring-2 focus:ring-[#df2b1b]/30 focus:ring-offset-2'
         )}
         aria-label="Dismiss"
       >

@@ -15,12 +15,12 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
       <textarea
         ref={ref}
         className={cn(
-          'flex min-h-[100px] w-full rounded-[var(--radius-md)] border border-input bg-background px-3 py-2 text-sm',
-          'placeholder:text-muted-foreground',
-          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+          'flex min-h-[100px] w-full rounded-lg border border-slate-200 bg-[#FDFBF7] px-3 py-2 text-sm',
+          'placeholder:text-slate-500',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#df2b1b]/30 focus-visible:ring-offset-2',
           'disabled:cursor-not-allowed disabled:opacity-50',
           'resize-y',
-          error && 'border-destructive focus-visible:ring-destructive',
+          error && 'border-red-600 focus-visible:ring-red-600',
           className
         )}
         {...props}

@@ -120,7 +120,7 @@ export default async function AboutPage({
               {exclusiveBrands.map((brand) => (
                 <span
                   key={brand}
-                  className="px-4 py-2 bg-white rounded-full text-sm font-medium text-gray-700 border border-gray-200"
+                  className="px-4 py-2 bg-[#FDFBF7] rounded-full text-sm font-medium text-gray-700 border border-gray-200"
                 >
                   {brand}
                 </span>
@@ -138,7 +138,7 @@ export default async function AboutPage({
             {values.map((value, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-[#FDFBF7] rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <value.icon className="w-6 h-6 text-primary" />
@@ -164,7 +164,7 @@ export default async function AboutPage({
               locale === 'ka' ? 'ევროპული საკვები დანამატები' : 'European Supplements',
               locale === 'ka' ? 'ქირურგიული მასალები' : 'Surgical Materials',
             ].map((item, index) => (
-              <div key={index} className="flex items-center gap-3 bg-white rounded-lg p-4">
+              <div key={index} className="flex items-center gap-3 bg-[#FDFBF7] rounded-lg p-4">
                 <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
                 <span className="text-gray-700">{item}</span>
               </div>

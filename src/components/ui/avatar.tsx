@@ -29,7 +29,7 @@ export const Avatar = forwardRef<HTMLSpanElement, AvatarProps>(
         <span
           ref={ref}
           className={cn(
-            'inline-flex items-center justify-center rounded-full bg-muted font-medium text-muted-foreground',
+            'inline-flex items-center justify-center rounded-full bg-slate-50 font-medium text-slate-500',
             sizeStyles[size],
             className
           )}
@@ -44,7 +44,7 @@ export const Avatar = forwardRef<HTMLSpanElement, AvatarProps>(
       <span
         ref={ref}
         className={cn(
-          'inline-block overflow-hidden rounded-full bg-muted',
+          'inline-block overflow-hidden rounded-full bg-slate-50',
           sizeStyles[size],
           className
         )}

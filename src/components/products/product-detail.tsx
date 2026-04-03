@@ -168,7 +168,7 @@ export function ProductDetailContent({
         />
 
         {/* Main Product Section */}
-        <div className="overflow-hidden rounded-xl bg-white shadow-sm sm:rounded-2xl">
+        <div className="overflow-hidden rounded-xl bg-[#FDFBF7] shadow-sm sm:rounded-2xl">
           <div className="grid grid-cols-1 gap-0 md:grid-cols-2 lg:grid-cols-[55%,45%]">
             {/* Left Column - Images */}
             <div className="relative border-b border-gray-100 bg-gradient-to-br from-gray-50/50 to-white p-4 sm:p-6 md:border-b-0 md:border-r md:p-6 lg:p-8">
@@ -390,7 +390,7 @@ export function ProductDetailContent({
                 </TabsTrigger>
               </TabsList>
 
-              <div className="mt-4 rounded-xl border border-gray-200 bg-white p-4 sm:p-5">
+              <div className="mt-4 rounded-xl border border-gray-200 bg-[#FDFBF7] p-4 sm:p-5">
                 <TabsContent value="description" className="m-0">
                   <div
                     className="prose prose-sm prose-gray max-w-none"
@@ -448,7 +448,7 @@ export function ProductDetailContent({
       </Container>
 
       {/* Mobile sticky add to cart bar */}
-      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-gray-200 bg-white p-3 shadow-lg sm:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-gray-200 bg-[#FDFBF7] p-3 shadow-lg sm:hidden">
         <div className="flex items-center gap-3">
           <div className="flex-1">
             <div className="text-xs text-gray-500">{locale === 'ka' ? 'ფასი' : 'Price'}</div>

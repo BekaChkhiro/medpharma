@@ -42,13 +42,13 @@ const AlertDialogContent = React.forwardRef<
       ref={ref}
       className={cn(
         'fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%]',
-        'gap-4 border bg-background p-6 shadow-lg duration-200',
+        'gap-4 border bg-[#FDFBF7] p-6 shadow-lg duration-200',
         'data-[state=open]:animate-in data-[state=closed]:animate-out',
         'data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
         'data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95',
         'data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%]',
         'data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%]',
-        'rounded-lg sm:rounded-lg',
+        'rounded-xl sm:rounded-xl',
         className
       )}
       {...props}
@@ -100,7 +100,7 @@ const AlertDialogDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Description
     ref={ref}
-    className={cn('text-sm text-muted-foreground', className)}
+    className={cn('text-sm text-slate-500', className)}
     {...props}
   />
 ));
@@ -113,9 +113,9 @@ const AlertDialogAction = React.forwardRef<
   <AlertDialogPrimitive.Action
     ref={ref}
     className={cn(
-      'inline-flex h-10 items-center justify-center rounded-md bg-red-700 px-4 py-2',
+      'inline-flex h-10 items-center justify-center rounded-md bg-[#df2b1b] px-4 py-2',
       'text-sm font-medium text-white transition-colors',
-      'hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2',
+      'hover:bg-[#c42418] focus:outline-none focus:ring-2 focus:ring-[#df2b1b]/30 focus:ring-offset-2',
       'disabled:pointer-events-none disabled:opacity-50',
       className
     )}
@@ -131,9 +131,9 @@ const AlertDialogCancel = React.forwardRef<
   <AlertDialogPrimitive.Cancel
     ref={ref}
     className={cn(
-      'mt-2 inline-flex h-10 items-center justify-center rounded-md border border-slate-300 bg-transparent px-4 py-2',
-      'text-sm font-medium text-slate-700 transition-colors',
-      'hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2',
+      'mt-2 inline-flex h-10 items-center justify-center rounded-md border border-slate-200 bg-transparent px-4 py-2',
+      'text-sm font-medium text-slate-900 transition-colors',
+      'hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-[#df2b1b]/30 focus:ring-offset-2',
       'disabled:pointer-events-none disabled:opacity-50',
       'sm:mt-0',
       className

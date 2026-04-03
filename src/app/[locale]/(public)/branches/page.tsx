@@ -40,7 +40,7 @@ export default async function BranchesPage({
         </div>
 
         <div className="max-w-2xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+          <div className="bg-[#FDFBF7] rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
             {/* Map placeholder */}
             <div className="h-64 bg-gray-200 flex items-center justify-center">
               <div className="text-center text-gray-500">

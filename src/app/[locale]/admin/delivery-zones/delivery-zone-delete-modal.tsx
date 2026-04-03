@@ -41,7 +41,7 @@ export function DeliveryZoneDeleteModal({
       <ModalCloseButton onClose={onClose} />
       <ModalHeader>
         <div className="flex items-start gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-red-100">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-red-600/10">
             <AlertTriangle className="h-5 w-5 text-red-600" />
           </div>
           <div className="flex-1">
@@ -55,20 +55,20 @@ export function DeliveryZoneDeleteModal({
 
       <div className="space-y-3">
         {/* Zone Info */}
-        <div className="rounded-lg border border-[var(--border)] bg-[var(--muted)] p-3">
-          <div className="text-sm font-medium text-[var(--foreground)]">
+        <div className="rounded-xl border border-slate-200 bg-slate-100 p-3">
+          <div className="text-sm font-medium text-slate-900">
             {zoneName}
           </div>
-          <div className="text-xs text-[var(--muted-foreground)]">
+          <div className="text-xs text-slate-500">
             {locale === 'ka' ? zone.nameEn : zone.nameKa}
           </div>
-          <div className="mt-1 text-xs text-[var(--muted-foreground)]">
+          <div className="mt-1 text-xs text-slate-500">
             {t('delete.fee')}: {zone.fee.toFixed(2)} ₾
           </div>
         </div>
 
         {/* Warning */}
-        <div className="rounded-lg border border-amber-200 bg-amber-50 p-3">
+        <div className="rounded-xl border border-amber-200 bg-amber-50 p-3">
           <p className="text-sm text-amber-800">
             {t('delete.warning')}
           </p>
@@ -76,8 +76,8 @@ export function DeliveryZoneDeleteModal({
 
         {/* Order Count Warning */}
         {orderCount > 0 && (
-          <div className="rounded-lg border border-red-200 bg-red-50 p-3">
-            <p className="text-sm text-red-800">
+          <div className="rounded-xl border border-red-600/20 bg-red-600/5 p-3">
+            <p className="text-sm text-red-600">
               {t('delete.hasOrders', { count: orderCount })}
             </p>
           </div>

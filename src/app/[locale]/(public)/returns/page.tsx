@@ -41,7 +41,7 @@ export default async function ReturnsPage({
 
         <div className="max-w-4xl mx-auto">
           {/* General Policy */}
-          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 mb-8">
+          <div className="bg-[#FDFBF7] rounded-2xl border border-gray-100 shadow-sm p-8 mb-8">
             <div className="flex items-start gap-4 mb-6">
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                 <RotateCcw className="w-6 h-6 text-primary" />

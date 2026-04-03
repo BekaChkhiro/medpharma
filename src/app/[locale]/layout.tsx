@@ -10,6 +10,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 
 import { locales, type Locale } from '@/i18n/config';
+import { ScrollToTop } from '@/components/scroll-to-top';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -85,9 +86,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className="light" style={{ colorScheme: 'light' }} suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-white text-slate-800 font-sans antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-[#FDFBF7] text-slate-800 font-sans antialiased`}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <ScrollToTop />
           {children}
         </NextIntlClientProvider>
       </body>

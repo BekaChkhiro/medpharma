@@ -283,7 +283,7 @@ export function SearchBar({ className, variant = 'default', onSearch, onResultCl
         <div
           className={cn(
             'absolute left-0 right-0 top-full z-50',
-            'bg-white border border-t-0 border-slate-200/80',
+            'bg-[#FDFBF7] border border-t-0 border-slate-200/80',
             'rounded-b-2xl shadow-lg shadow-black/8',
             'overflow-hidden'
           )}
