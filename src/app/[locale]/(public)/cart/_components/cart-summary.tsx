@@ -57,7 +57,7 @@ export function CartSummary({
           {/* Delivery row */}
           <div className="flex items-center justify-between">
             <span className="text-muted-foreground">{t('delivery')}</span>
-            <span className={isFreeDelivery ? 'font-medium text-red-700' : 'font-medium'}>
+            <span className={isFreeDelivery ? 'font-medium text-emerald-600' : 'font-medium'}>
               {isFreeDelivery ? t('deliveryFree') : formatPrice(deliveryFee)}
             </span>
           </div>
@@ -87,8 +87,8 @@ export function CartSummary({
 
           {/* Free delivery achieved */}
           {isFreeDelivery && (
-            <div className="rounded-lg bg-red-50 p-3 text-sm">
-              <div className="flex items-center gap-2 text-red-800">
+            <div className="rounded-lg bg-emerald-50 p-3 text-sm">
+              <div className="flex items-center gap-2 text-emerald-700">
                 <Truck className="h-4 w-4" />
                 <span>{t('deliveryFree')}!</span>
               </div>
@@ -125,7 +125,7 @@ export function CartSummary({
       <Card className="bg-slate-50">
         <CardContent className="py-4">
           <div className="flex items-center gap-3 text-sm text-muted-foreground">
-            <ShieldCheck className="h-5 w-5 text-red-700" />
+            <ShieldCheck className="h-5 w-5 text-slate-600" />
             <div>
               <p className="font-medium text-slate-900">Secure Checkout</p>
               <p className="text-xs">Your data is protected</p>

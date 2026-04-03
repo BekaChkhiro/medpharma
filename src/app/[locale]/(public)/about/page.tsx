@@ -112,7 +112,7 @@ export default async function AboutPage({
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-2xl p-8">
+          <div className="rounded-2xl p-8">
             <h3 className="text-xl font-bold text-gray-900 mb-6">
               {locale === 'ka' ? 'ექსკლუზიური ბრენდები' : 'Exclusive Brands'}
             </h3>

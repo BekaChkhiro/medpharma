@@ -28,19 +28,19 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-red-700 text-white hover:bg-red-800 shadow-sm',
+    'bg-[#df2b1b] text-white hover:bg-[#c42418] shadow-sm',
   default:
-    'bg-red-700 text-white hover:bg-red-800 shadow-sm',
+    'bg-[#df2b1b] text-white hover:bg-[#c42418] shadow-sm',
   secondary:
-    'bg-slate-100 text-slate-800 hover:bg-slate-200',
+    'bg-slate-100 text-slate-700 hover:bg-slate-200',
   outline:
-    'border border-slate-300 bg-transparent text-slate-700 hover:bg-slate-50',
-  ghost: 'text-slate-700 hover:bg-slate-100',
+    'border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 hover:border-slate-300',
+  ghost: 'text-slate-600 hover:bg-slate-100 hover:text-slate-900',
   destructive:
     'bg-red-600 text-white hover:bg-red-700 shadow-sm',
   danger:
     'bg-red-600 text-white hover:bg-red-700 shadow-sm',
-  link: 'text-red-700 underline-offset-4 hover:underline',
+  link: 'text-slate-700 underline-offset-4 hover:underline hover:text-slate-900',
 };
 
 const sizeStyles: Record<ButtonSize, string> = {

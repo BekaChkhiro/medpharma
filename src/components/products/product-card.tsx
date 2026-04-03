@@ -122,7 +122,7 @@ export function ProductCard({ product }: ProductCardProps) {
         {/* Name */}
         <Link
           href={`/products/${product.slug}`}
-          className="line-clamp-2 min-h-[2.75rem] text-sm font-semibold leading-snug text-gray-900 transition-colors hover:text-primary"
+          className="line-clamp-2 min-h-[2.75rem] text-sm font-semibold leading-snug text-gray-900 transition-colors hover:text-slate-600"
         >
           {name}
         </Link>
@@ -139,7 +139,7 @@ export function ProductCard({ product }: ProductCardProps) {
               <span className="price-gradient text-xl font-bold">
                 {formatPrice(salePrice!, { locale: formatLocale })}
               </span>
-              <span className="text-sm text-gray-300 line-through">
+              <span className="text-sm text-gray-400 line-through">
                 {formatPrice(price, { locale: formatLocale })}
               </span>
             </div>

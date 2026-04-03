@@ -88,7 +88,7 @@ export default async function ShippingPage({
 
         {/* Delivery Info */}
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
+          <div className="rounded-2xl p-8 md:p-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-8">
               {locale === 'ka' ? 'მიწოდების პირობები' : 'Delivery Terms'}
             </h2>
@@ -121,8 +121,8 @@ export default async function ShippingPage({
 
               {/* Off Hours */}
               <div className="flex gap-4">
-                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-5 h-5 text-blue-600" />
+                <div className="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-5 h-5 text-slate-600" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">

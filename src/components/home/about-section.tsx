@@ -14,9 +14,9 @@ const features = [
     titleEn: 'International Standards',
     descKa: 'ISO სერტიფიცირებული ხარისხი და ევროპული სტანდარტები',
     descEn: 'ISO certified quality and European standards',
-    bgColor: 'bg-red-50',
-    iconBg: 'bg-red-100',
-    iconColor: 'text-red-600',
+    bgColor: 'bg-amber-50',
+    iconBg: 'bg-amber-100',
+    iconColor: 'text-amber-600',
   },
   {
     icon: Truck,
@@ -34,9 +34,9 @@ const features = [
     titleEn: 'Professional Team',
     descKa: 'გამოცდილი ფარმაცევტები თქვენს სამსახურში',
     descEn: 'Experienced pharmacists at your service',
-    bgColor: 'bg-blue-50',
-    iconBg: 'bg-blue-100',
-    iconColor: 'text-blue-600',
+    bgColor: 'bg-sky-50',
+    iconBg: 'bg-sky-100',
+    iconColor: 'text-sky-600',
   },
   {
     icon: Shield,
@@ -55,13 +55,13 @@ export function AboutSection() {
   const t = useTranslations();
 
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="py-16 lg:py-24">
       <Container>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div>
             {/* Badge */}
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-red-100 text-red-700 rounded-full text-sm font-medium mb-5">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100 text-slate-700 rounded-full text-sm font-medium mb-5">
               {t('nav.about')}
             </span>
 
@@ -71,7 +71,7 @@ export function AboutSection() {
             </h2>
 
             {/* Subtitle */}
-            <p className="text-lg text-red-600 font-medium mb-5">
+            <p className="text-lg text-slate-500 font-medium mb-5">
               {t('home.hero.subtitle')}
             </p>
 
@@ -91,7 +91,7 @@ export function AboutSection() {
             {/* CTA */}
             <Link
               href="/about"
-              className="group inline-flex items-center gap-2.5 px-6 py-3 bg-red-600 rounded-xl font-semibold text-sm text-white hover:bg-red-700 transition-all duration-200 shadow-md hover:shadow-lg"
+              className="group inline-flex items-center gap-2.5 px-6 py-3 bg-[#df2b1b] rounded-xl font-semibold text-sm text-white hover:bg-[#c42418] transition-all duration-200 shadow-md hover:shadow-lg"
             >
               <span className="text-white">{t('home.hero.learnMore')}</span>
               <ChevronRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />

@@ -153,7 +153,7 @@ export default async function ReturnsPage({
           </div>
 
           {/* Refund Process */}
-          <div className="bg-gray-50 rounded-2xl p-8 mb-8">
+          <div className="rounded-2xl p-8 mb-8">
             <h2 className="text-xl font-bold text-gray-900 mb-4">
               {locale === 'ka' ? 'თანხის დაბრუნების პროცესი' : 'Refund Process'}
             </h2>

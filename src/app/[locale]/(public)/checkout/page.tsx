@@ -37,7 +37,7 @@ export default function CheckoutPage() {
   // Show empty state if cart is empty
   if (isEmpty) {
     return (
-      <Container size="lg" className="py-8 md:py-12">
+      <Container size="xl" className="py-8 md:py-12">
         <EmptyCheckout />
       </Container>
     );
@@ -60,7 +60,7 @@ export default function CheckoutPage() {
   };
 
   return (
-    <Container size="lg" className="py-8 md:py-12">
+    <Container size="xl" className="py-8 md:py-12">
       {/* Page Title */}
       <h1 className="mb-8 text-2xl font-bold md:text-3xl">{t('title')}</h1>
 

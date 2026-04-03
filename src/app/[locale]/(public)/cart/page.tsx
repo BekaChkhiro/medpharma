@@ -88,7 +88,7 @@ export default function CartPage() {
   // Show skeleton while hydrating to prevent hydration mismatch
   if (!isHydrated) {
     return (
-      <Container size="lg" className="py-8 md:py-12">
+      <Container size="xl" className="py-8 md:py-12">
         <h1 className="mb-8 text-2xl font-bold md:text-3xl">
           {t('title')}
         </h1>
@@ -99,14 +99,14 @@ export default function CartPage() {
 
   if (isEmpty) {
     return (
-      <Container size="lg" className="py-8 md:py-12">
+      <Container size="xl" className="py-8 md:py-12">
         <EmptyCart />
       </Container>
     );
   }
 
   return (
-    <Container size="lg" className="py-8 md:py-12">
+    <Container size="xl" className="py-8 md:py-12">
       {/* Page Title */}
       <h1 className="mb-8 text-2xl font-bold md:text-3xl">
         {t('title')}

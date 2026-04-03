@@ -45,7 +45,7 @@ export function CartButton({ itemCount = 0, className }: CartButtonProps) {
           className={cn(
             'absolute -top-0.5 -right-0.5 flex items-center justify-center',
             'min-w-[18px] h-[18px] px-1',
-            'text-xs font-medium text-white bg-red-700 rounded-full',
+            'text-xs font-medium text-white bg-slate-900 rounded-full',
             'animate-scaleIn'
           )}
         >

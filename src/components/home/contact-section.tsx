@@ -28,9 +28,9 @@ export function ContactSection() {
       titleEn: 'Address',
       valueKa: 'თბილისი, საქართველო',
       valueEn: 'Tbilisi, Georgia',
-      bgColor: 'bg-red-50',
-      iconBg: 'bg-red-100',
-      iconColor: 'text-red-600',
+      bgColor: 'bg-slate-50',
+      iconBg: 'bg-slate-100',
+      iconColor: 'text-slate-600',
     },
     {
       icon: Phone,
@@ -50,9 +50,9 @@ export function ContactSection() {
       valueKa: 'info@medpharma.ge',
       valueEn: 'info@medpharma.ge',
       href: 'mailto:info@medpharma.ge',
-      bgColor: 'bg-blue-50',
-      iconBg: 'bg-blue-100',
-      iconColor: 'text-blue-600',
+      bgColor: 'bg-sky-50',
+      iconBg: 'bg-sky-100',
+      iconColor: 'text-sky-600',
     },
     {
       icon: Clock,
@@ -99,11 +99,11 @@ export function ContactSection() {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-slate-50">
+    <section className="py-16 lg:py-24">
       <Container>
         {/* Section Header */}
         <div className="text-center mb-12">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-red-100 text-red-700 rounded-full text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-200 text-slate-700 rounded-full text-sm font-medium mb-4">
             <Phone className="w-4 h-4" />
             {locale === 'ka' ? 'დაგვიკავშირდით' : 'Get in Touch'}
           </span>
@@ -172,7 +172,7 @@ export function ContactSection() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-11 h-11 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-red-600 hover:text-white transition-all duration-200"
+                    className="w-11 h-11 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white transition-all duration-200"
                     aria-label={social.name}
                   >
                     {social.icon}
@@ -203,7 +203,7 @@ export function ContactSection() {
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="inline-flex items-center gap-2 text-red-600 font-semibold hover:text-red-700 transition-colors"
+                  className="inline-flex items-center gap-2 text-slate-700 font-semibold hover:text-slate-900 transition-colors"
                 >
                   {locale === 'ka' ? 'ახალი შეტყობინება' : 'Send another message'}
                   <ChevronRight className="w-4 h-4" />
@@ -220,7 +220,7 @@ export function ContactSection() {
                       id="contact-name"
                       type="text"
                       required
-                      className="w-full h-12 px-4 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:bg-white focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/20 transition-all"
+                      className="w-full h-12 px-4 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:bg-white focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/30 transition-all"
                       placeholder={locale === 'ka' ? 'თქვენი სახელი' : 'Your name'}
                     />
                   </div>
@@ -231,7 +231,7 @@ export function ContactSection() {
                     <input
                       id="contact-phone"
                       type="tel"
-                      className="w-full h-12 px-4 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:bg-white focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/20 transition-all"
+                      className="w-full h-12 px-4 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:bg-white focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/30 transition-all"
                       placeholder="+995 5XX XXX XXX"
                     />
                   </div>
@@ -245,7 +245,7 @@ export function ContactSection() {
                     id="contact-email"
                     type="email"
                     required
-                    className="w-full h-12 px-4 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:bg-white focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/20 transition-all"
+                    className="w-full h-12 px-4 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:bg-white focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/30 transition-all"
                     placeholder={locale === 'ka' ? 'თქვენი ელ-ფოსტა' : 'Your email'}
                   />
                 </div>
@@ -257,7 +257,7 @@ export function ContactSection() {
                   <input
                     id="contact-subject"
                     type="text"
-                    className="w-full h-12 px-4 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:bg-white focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/20 transition-all"
+                    className="w-full h-12 px-4 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:bg-white focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/30 transition-all"
                     placeholder={locale === 'ka' ? 'შეტყობინების თემა' : 'Message subject'}
                   />
                 </div>
@@ -270,7 +270,7 @@ export function ContactSection() {
                     id="contact-message"
                     rows={4}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:bg-white focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/20 resize-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:bg-white focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/30 resize-none transition-all"
                     placeholder={locale === 'ka' ? 'თქვენი შეტყობინება...' : 'Your message...'}
                   />
                 </div>
@@ -278,7 +278,7 @@ export function ContactSection() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="group w-full h-14 rounded-xl font-semibold text-base bg-red-600 hover:bg-red-700 transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="group w-full h-14 rounded-xl font-semibold text-base bg-[#df2b1b] text-white hover:bg-[#c42418] transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {isSubmitting ? (
                     <>

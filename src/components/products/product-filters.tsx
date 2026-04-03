@@ -213,7 +213,7 @@ export function ProductFilters({
               className={cn(
                 'group flex flex-1 items-center justify-between rounded-md px-2 py-1.5 text-left text-sm transition-all',
                 isSelected
-                  ? 'bg-red-50 font-medium text-red-700'
+                  ? 'bg-slate-100 font-medium text-slate-900'
                   : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
                 !hasChildren && 'ml-6'
               )}
@@ -227,7 +227,7 @@ export function ProductFilters({
                   className={cn(
                     'rounded-full px-1.5 py-0.5 text-xs',
                     isSelected
-                      ? 'bg-red-100 text-red-700'
+                      ? 'bg-slate-200 text-slate-700'
                       : 'bg-gray-100 text-gray-500 group-hover:bg-gray-200'
                   )}
                 >
@@ -273,7 +273,7 @@ export function ProductFilters({
           <h3 className="text-base font-semibold text-gray-900">
             {t('products.filters.title')}
             {activeFilterCount > 0 && (
-              <Badge variant="default" className="ml-2 bg-red-600">
+              <Badge variant="default" className="ml-2 bg-slate-800">
                 {activeFilterCount}
               </Badge>
             )}
@@ -310,7 +310,7 @@ export function ProductFilters({
                   value={localMinPrice}
                   onChange={(e) => setLocalMinPrice(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handlePriceApply()}
-                  className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 pr-8 text-sm transition-colors focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/20"
+                  className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 pr-8 text-sm transition-colors focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/30"
                   min={0}
                 />
                 <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-400">
@@ -325,7 +325,7 @@ export function ProductFilters({
                   value={localMaxPrice}
                   onChange={(e) => setLocalMaxPrice(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handlePriceApply()}
-                  className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 pr-8 text-sm transition-colors focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/20"
+                  className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 pr-8 text-sm transition-colors focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/30"
                   min={0}
                 />
                 <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-400">
@@ -364,7 +364,7 @@ export function ProductFilters({
                   placeholder={t('products.filters.searchBrand')}
                   value={brandSearch}
                   onChange={(e) => setBrandSearch(e.target.value)}
-                  className="w-full rounded-lg border border-gray-200 bg-gray-50 py-2 pl-9 pr-3 text-sm transition-colors focus:border-red-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-red-500/20"
+                  className="w-full rounded-lg border border-gray-200 bg-gray-50 py-2 pl-9 pr-3 text-sm transition-colors focus:border-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-300/30"
                 />
               </div>
             )}
@@ -381,7 +381,7 @@ export function ProductFilters({
                     className={cn(
                       'flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-left text-sm transition-all',
                       isSelected
-                        ? 'bg-red-50 text-red-700'
+                        ? 'bg-slate-100 text-slate-900'
                         : 'text-gray-600 hover:bg-gray-50'
                     )}
                   >
@@ -389,7 +389,7 @@ export function ProductFilters({
                       className={cn(
                         'flex h-4 w-4 items-center justify-center rounded border transition-all',
                         isSelected
-                          ? 'border-red-600 bg-red-600 text-white'
+                          ? 'border-slate-800 bg-slate-800 text-white'
                           : 'border-gray-300 bg-white'
                       )}
                     >
@@ -427,7 +427,7 @@ export function ProductFilters({
                   placeholder={t('products.filters.searchManufacturer')}
                   value={manufacturerSearch}
                   onChange={(e) => setManufacturerSearch(e.target.value)}
-                  className="w-full rounded-lg border border-gray-200 bg-gray-50 py-2 pl-9 pr-3 text-sm transition-colors focus:border-red-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-red-500/20"
+                  className="w-full rounded-lg border border-gray-200 bg-gray-50 py-2 pl-9 pr-3 text-sm transition-colors focus:border-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-300/30"
                 />
               </div>
             )}
@@ -444,7 +444,7 @@ export function ProductFilters({
                     className={cn(
                       'flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-left text-sm transition-all',
                       isSelected
-                        ? 'bg-red-50 text-red-700'
+                        ? 'bg-slate-100 text-slate-900'
                         : 'text-gray-600 hover:bg-gray-50'
                     )}
                   >
@@ -452,7 +452,7 @@ export function ProductFilters({
                       className={cn(
                         'flex h-4 w-4 items-center justify-center rounded border transition-all',
                         isSelected
-                          ? 'border-red-600 bg-red-600 text-white'
+                          ? 'border-slate-800 bg-slate-800 text-white'
                           : 'border-gray-300 bg-white'
                       )}
                     >
@@ -490,7 +490,7 @@ export function ProductFilters({
                   className={cn(
                     'rounded-full px-3 py-1.5 text-xs font-medium transition-all',
                     isSelected
-                      ? 'bg-red-600 text-white shadow-sm'
+                      ? 'bg-slate-800 text-white shadow-sm'
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   )}
                 >
@@ -564,7 +564,7 @@ export function ProductFilters({
               className={cn(
                 'flex w-full items-center gap-3 rounded-lg border px-3 py-2.5 transition-all',
                 filters.requiresPrescription === false
-                  ? 'border-blue-200 bg-blue-50'
+                  ? 'border-slate-200 bg-slate-50'
                   : 'border-gray-200 bg-white hover:border-gray-300'
               )}
             >
@@ -572,7 +572,7 @@ export function ProductFilters({
                 className={cn(
                   'flex h-5 w-5 items-center justify-center rounded-full transition-all',
                   filters.requiresPrescription === false
-                    ? 'bg-blue-500 text-white'
+                    ? 'bg-slate-700 text-white'
                     : 'border-2 border-gray-300'
                 )}
               >
@@ -581,7 +581,7 @@ export function ProductFilters({
               <span
                 className={cn(
                   'text-sm font-medium',
-                  filters.requiresPrescription === false ? 'text-blue-700' : 'text-gray-700'
+                  filters.requiresPrescription === false ? 'text-slate-800' : 'text-gray-700'
                 )}
               >
                 {t('products.filters.otcOnly')}
@@ -682,7 +682,7 @@ function FilterSection({
         <span className="flex items-center gap-2 text-sm font-medium text-gray-900">
           {title}
           {count > 0 && (
-            <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-red-600 px-1.5 text-xs font-medium text-white">
+            <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-slate-800 px-1.5 text-xs font-medium text-white">
               {count}
             </span>
           )}
@@ -779,7 +779,7 @@ export function MobileFilters({
                 {t('clearAll')}
               </Button>
             )}
-            <Button onClick={onClose} className="flex-1 bg-red-600 hover:bg-red-700">
+            <Button onClick={onClose} className="flex-1">
               {t('showResults')}
             </Button>
           </div>

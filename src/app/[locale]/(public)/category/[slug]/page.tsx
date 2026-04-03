@@ -217,7 +217,7 @@ export default async function CategoryPage({
                   <Link
                     key={child.id}
                     href={`/category/${child.slug}`}
-                    className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-red-700 hover:text-white transition-colors"
+                    className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-[#df2b1b] hover:text-white transition-colors"
                   >
                     {locale === 'ka' ? child.nameKa : child.nameEn}
                     {child._count?.products !== undefined && (

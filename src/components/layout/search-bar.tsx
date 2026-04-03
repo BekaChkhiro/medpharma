@@ -4,7 +4,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 
 import Image from 'next/image';
 
-import { Search, X, Loader2, ArrowRight, Package, Clock, Sparkles } from 'lucide-react';
+import { Search, X, Loader2, Package, Clock } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 
 import { Link, useRouter } from '@/i18n/navigation';
@@ -47,9 +47,8 @@ export function SearchBar({ className, variant = 'default', onSearch, onResultCl
 
     setIsLoading(true);
     try {
-      // Use lightweight search endpoint for autocomplete
       const response = await fetch(
-        `/api/products/search?q=${encodeURIComponent(searchQuery)}&limit=5&locale=${locale}`
+        `/api/products/search?q=${encodeURIComponent(searchQuery)}&limit=6&locale=${locale}`
       );
       const data = await response.json();
 
@@ -212,20 +211,16 @@ export function SearchBar({ className, variant = 'default', onSearch, onResultCl
   return (
     <div ref={containerRef} className={cn('relative', className)}>
       <form onSubmit={handleSubmit}>
-        <div
-          className={cn(
-            'relative flex items-center w-full'
-          )}
-        >
-          {/* Search Icon / Loading Spinner */}
+        <div className="relative flex items-center w-full">
+          {/* Search Icon / Loading */}
           <div className="absolute left-3.5 flex items-center pointer-events-none z-10">
             {isLoading ? (
-              <Loader2 className="w-5 h-5 text-red-600 animate-spin" />
+              <Loader2 className="w-[18px] h-[18px] text-slate-400 animate-spin" />
             ) : (
               <Search
                 className={cn(
-                  'w-5 h-5 transition-colors duration-200',
-                  isFocused || showResults ? 'text-red-600' : 'text-slate-400'
+                  'w-[18px] h-[18px] transition-colors duration-200',
+                  isFocused ? 'text-slate-600' : 'text-slate-400'
                 )}
               />
             )}
@@ -248,14 +243,14 @@ export function SearchBar({ className, variant = 'default', onSearch, onResultCl
             placeholder={t('search')}
             autoComplete="off"
             className={cn(
-              'w-full pl-11 pr-11 py-3 text-[15px]',
-              'bg-white border-2 border-slate-200',
+              'w-full pl-10 pr-10 py-2.5 text-sm',
+              'bg-white/80 border border-slate-200/80',
               'placeholder:text-slate-400 text-slate-800',
-              'focus:outline-none focus:border-red-500 focus:ring-4 focus:ring-red-500/10',
+              'focus:outline-none focus:bg-white focus:border-slate-300 focus:shadow-sm',
               'transition-all duration-200',
-              'rounded-2xl',
-              variant === 'compact' && 'py-2.5 text-sm',
-              showResults && 'rounded-b-none border-b-slate-100'
+              'rounded-full',
+              variant === 'compact' && 'py-2 text-sm',
+              showResults && 'rounded-b-none border-b-transparent shadow-sm'
             )}
             aria-label={t('search')}
             aria-expanded={showResults}
@@ -263,25 +258,19 @@ export function SearchBar({ className, variant = 'default', onSearch, onResultCl
             role="combobox"
           />
 
-          {/* Clear Button */}
+          {/* Clear / Shortcut */}
           {query ? (
             <button
               type="button"
               onClick={handleClear}
-              className={cn(
-                'absolute right-3 p-1.5 rounded-full',
-                'text-slate-400 hover:text-slate-600',
-                'hover:bg-slate-100 active:bg-slate-200',
-                'transition-all duration-150'
-              )}
+              className="absolute right-3 p-1 rounded-full text-slate-400 hover:text-slate-600 transition-colors"
               aria-label="Clear search"
             >
               <X className="w-4 h-4" />
             </button>
           ) : !isFocused && variant === 'default' ? (
-            /* Keyboard Shortcut Hint */
-            <div className="absolute right-3 hidden sm:flex items-center gap-1">
-              <kbd className="px-1.5 py-1 text-[10px] font-medium bg-slate-100 text-slate-500 rounded-md border border-slate-200/80 shadow-sm">
+            <div className="absolute right-3 hidden sm:flex items-center">
+              <kbd className="px-1.5 py-0.5 text-[10px] font-medium text-slate-400 bg-slate-100/80 rounded border border-slate-200/60">
                 ⌘K
               </kbd>
             </div>
@@ -294,29 +283,16 @@ export function SearchBar({ className, variant = 'default', onSearch, onResultCl
         <div
           className={cn(
             'absolute left-0 right-0 top-full z-50',
-            'bg-white border-2 border-t-0 border-slate-200',
-            'rounded-b-2xl shadow-2xl shadow-slate-200/50',
-            'overflow-hidden',
-            'animate-in fade-in-0 slide-in-from-top-2 duration-200'
+            'bg-white border border-t-0 border-slate-200/80',
+            'rounded-b-2xl shadow-lg shadow-black/8',
+            'overflow-hidden'
           )}
           role="listbox"
         >
           {results.length > 0 ? (
             <>
-              {/* Results Header */}
-              <div className="px-4 py-2.5 bg-gradient-to-r from-slate-50 to-white border-b border-slate-100">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-medium text-slate-500 uppercase tracking-wide">
-                    {locale === 'ka' ? 'შედეგები' : 'Results'}
-                  </span>
-                  <span className="text-xs text-slate-400">
-                    {results.length} {locale === 'ka' ? 'პროდუქტი' : 'products'}
-                  </span>
-                </div>
-              </div>
-
               {/* Results List */}
-              <ul className="py-2">
+              <ul className="py-1.5 max-h-[400px] overflow-y-auto">
                 {results.map((product, index) => {
                   const discountPercent = getDiscountPercent(product);
                   const isOutOfStock = product.stock <= 0;
@@ -329,173 +305,111 @@ export function SearchBar({ className, variant = 'default', onSearch, onResultCl
                         href={`/products/${product.slug}`}
                         onClick={handleResultClick}
                         className={cn(
-                          'flex items-center gap-4 px-4 py-3 mx-2 rounded-xl',
-                          'transition-all duration-150',
+                          'flex items-center gap-3 px-3 py-2.5 mx-1.5 rounded-lg',
+                          'transition-colors duration-100',
                           'hover:bg-slate-50',
                           'group',
-                          selectedIndex === index && 'bg-red-50 hover:bg-red-50'
+                          selectedIndex === index && 'bg-slate-50'
                         )}
                         role="option"
                         aria-selected={selectedIndex === index}
                       >
                         {/* Product Image */}
                         <div className="relative shrink-0">
-                          <div
-                            className={cn(
-                              'relative w-16 h-16 rounded-xl overflow-hidden',
-                              'bg-gradient-to-br from-slate-100 to-slate-50',
-                              'ring-1 ring-slate-200/50',
-                              'group-hover:ring-slate-300 group-hover:shadow-md',
-                              'transition-all duration-200',
-                              selectedIndex === index && 'ring-red-200'
-                            )}
-                          >
+                          <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-slate-100">
                             <Image
                               src={getProductImage(product)}
                               alt={getProductName(product)}
                               fill
-                              className="object-cover"
-                              sizes="64px"
+                              className={cn(
+                                'object-cover',
+                                isOutOfStock && 'opacity-40 grayscale'
+                              )}
+                              sizes="48px"
                             />
                           </div>
-
-                          {/* Discount Badge */}
                           {discountPercent > 0 && (
-                            <div className="absolute -top-1.5 -right-1.5 px-1.5 py-0.5 bg-gradient-to-r from-red-500 to-red-600 text-white text-[10px] font-bold rounded-md shadow-sm">
+                            <div className="absolute -top-1 -right-1 px-1 py-px bg-[#df2b1b] text-white text-[9px] font-bold rounded">
                               -{discountPercent}%
                             </div>
                           )}
                         </div>
 
                         {/* Product Info */}
-                        <div className="flex-1 min-w-0 space-y-1">
-                          {/* Category */}
+                        <div className="flex-1 min-w-0">
                           {categoryName && (
-                            <p className="text-[10px] font-medium text-slate-400 uppercase tracking-wide">
+                            <p className="text-[10px] text-slate-400 uppercase tracking-wide mb-0.5">
                               {categoryName}
                             </p>
                           )}
-
-                          {/* Name */}
-                          <p
-                            className={cn(
-                              'text-sm font-semibold text-slate-800 leading-tight',
-                              'group-hover:text-slate-900',
-                              'line-clamp-2'
-                            )}
-                          >
+                          <p className="text-sm font-medium text-slate-800 leading-snug line-clamp-1 group-hover:text-slate-900">
                             {getProductName(product)}
                           </p>
-
-                          {/* Brand & Stock */}
-                          <div className="flex items-center gap-2 flex-wrap">
+                          <div className="flex items-center gap-1.5 mt-0.5">
                             {product.brand && (
-                              <span className="text-xs text-slate-500">{product.brand}</span>
+                              <span className="text-xs text-slate-400">{product.brand}</span>
                             )}
-                            {isOutOfStock ? (
-                              <span className="inline-flex items-center gap-1 px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] font-medium rounded">
+                            {isOutOfStock && (
+                              <span className="inline-flex items-center gap-0.5 text-[10px] text-slate-400">
                                 <Package className="w-3 h-3" />
-                                {locale === 'ka' ? 'არ არის მარაგში' : 'Out of stock'}
+                                {locale === 'ka' ? 'არ არის' : 'Out of stock'}
                               </span>
-                            ) : isLowStock ? (
-                              <span className="inline-flex items-center gap-1 px-1.5 py-0.5 bg-amber-50 text-amber-600 text-[10px] font-medium rounded">
+                            )}
+                            {isLowStock && !isOutOfStock && (
+                              <span className="inline-flex items-center gap-0.5 text-[10px] text-amber-500">
                                 <Clock className="w-3 h-3" />
-                                {locale === 'ka' ? 'მცირე მარაგი' : 'Low stock'}
+                                {locale === 'ka' ? 'მცირე' : 'Low stock'}
                               </span>
-                            ) : null}
+                            )}
                           </div>
                         </div>
 
                         {/* Price */}
                         <div className="text-right shrink-0">
-                          <p
-                            className={cn(
-                              'text-base font-bold',
-                              discountPercent > 0 ? 'text-red-600' : 'text-slate-800'
-                            )}
-                          >
+                          <p className={cn(
+                            'text-sm font-semibold',
+                            discountPercent > 0 ? 'text-[#df2b1b]' : 'text-slate-800'
+                          )}>
                             {formatPrice(getProductPrice(product), { locale: formatLocale })}
                           </p>
                           {discountPercent > 0 && (
-                            <p className="text-xs text-slate-400 line-through">
+                            <p className="text-[11px] text-slate-400 line-through">
                               {formatPrice(Number(product.price), { locale: formatLocale })}
                             </p>
                           )}
                         </div>
-
-                        {/* Arrow indicator */}
-                        <ArrowRight
-                          className={cn(
-                            'w-4 h-4 text-slate-300 shrink-0',
-                            'opacity-0 -translate-x-2',
-                            'group-hover:opacity-100 group-hover:translate-x-0',
-                            'transition-all duration-200',
-                            selectedIndex === index && 'opacity-100 translate-x-0 text-red-400'
-                          )}
-                        />
                       </Link>
                     </li>
                   );
                 })}
               </ul>
 
-              {/* View All Results Footer */}
-              <div className="px-4 py-3 bg-gradient-to-r from-slate-50 to-white border-t border-slate-100">
+              {/* View All */}
+              <div className="border-t border-slate-100 px-3 py-2.5">
                 <button
                   type="button"
                   onClick={handleSubmit}
-                  className={cn(
-                    'w-full py-2.5 px-4',
-                    'bg-gradient-to-r from-red-600 to-red-500',
-                    'hover:from-red-500 hover:to-red-600',
-                    'text-white text-sm font-semibold',
-                    'rounded-xl shadow-lg shadow-red-500/25',
-                    'hover:shadow-xl hover:shadow-red-500/30',
-                    'active:scale-[0.98]',
-                    'transition-all duration-200',
-                    'flex items-center justify-center gap-2'
-                  )}
+                  className="w-full py-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors flex items-center justify-center gap-1.5"
                 >
-                  <Sparkles className="w-4 h-4" />
-                  {tProducts('viewAllResults')}
-                  <ArrowRight className="w-4 h-4" />
+                  <Search className="w-3.5 h-3.5" />
+                  {tProducts('viewAllResults')} &quot;{query}&quot;
                 </button>
               </div>
             </>
           ) : query.length >= 2 && !isLoading ? (
-            /* No Results State */
-            <div className="py-12 px-6 text-center">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-slate-100 to-slate-50 flex items-center justify-center">
-                <Search className="w-8 h-8 text-slate-300" />
-              </div>
-              <h3 className="text-base font-semibold text-slate-700 mb-1">
+            /* No Results */
+            <div className="py-10 px-6 text-center">
+              <Search className="w-8 h-8 text-slate-300 mx-auto mb-3" />
+              <p className="text-sm font-medium text-slate-600 mb-1">
                 {locale === 'ka' ? 'ვერაფერი მოიძებნა' : 'No results found'}
-              </h3>
-              <p className="text-sm text-slate-500 max-w-[250px] mx-auto">
+              </p>
+              <p className="text-xs text-slate-400">
                 {locale === 'ka'
-                  ? `"${query}" - სცადეთ სხვა საძიებო სიტყვა`
-                  : `Try searching for something else instead of "${query}"`}
+                  ? 'სცადეთ სხვა საძიებო სიტყვა'
+                  : 'Try a different search term'}
               </p>
             </div>
           ) : null}
-
-          {/* Keyboard Hints */}
-          {results.length > 0 && (
-            <div className="px-4 py-2 bg-slate-50/50 border-t border-slate-100 hidden sm:flex items-center justify-center gap-4 text-[10px] text-slate-400">
-              <span className="flex items-center gap-1">
-                <kbd className="px-1 py-0.5 bg-white rounded border border-slate-200 font-mono">↑↓</kbd>
-                {locale === 'ka' ? 'ნავიგაცია' : 'Navigate'}
-              </span>
-              <span className="flex items-center gap-1">
-                <kbd className="px-1.5 py-0.5 bg-white rounded border border-slate-200 font-mono">↵</kbd>
-                {locale === 'ka' ? 'არჩევა' : 'Select'}
-              </span>
-              <span className="flex items-center gap-1">
-                <kbd className="px-1 py-0.5 bg-white rounded border border-slate-200 font-mono">esc</kbd>
-                {locale === 'ka' ? 'დახურვა' : 'Close'}
-              </span>
-            </div>
-          )}
         </div>
       )}
     </div>

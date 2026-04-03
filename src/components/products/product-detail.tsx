@@ -158,7 +158,7 @@ export function ProductDetailContent({
     : null;
 
   return (
-    <div className="min-h-screen bg-gray-50/50">
+    <div className="min-h-screen">
       <Container size="xl" className="py-4 sm:py-6">
         {/* Breadcrumb */}
         <ProductBreadcrumb
@@ -200,7 +200,7 @@ export function ProductDetailContent({
               {/* Header */}
               <div className="mb-4">
                 {product.requiresPrescription && (
-                  <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700">
+                  <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">
                     <FileText className="h-3.5 w-3.5" />
                     {t('product.prescription.required')}
                   </div>

@@ -58,7 +58,7 @@ function MiniCartItem({ item, locale, onRemove, onUpdateQuantity }: MiniCartItem
       <div className="flex-1 min-w-0">
         <Link
           href={`/products/${item.sku}`}
-          className="text-sm font-medium text-slate-900 hover:text-red-700 transition-colors line-clamp-2"
+          className="text-sm font-medium text-slate-900 hover:text-slate-600 transition-colors line-clamp-2"
         >
           {name}
         </Link>
@@ -89,7 +89,7 @@ function MiniCartItem({ item, locale, onRemove, onUpdateQuantity }: MiniCartItem
             </button>
             <button
               onClick={() => onRemove(item.productId)}
-              className="w-6 h-6 flex items-center justify-center rounded-full text-red-500 hover:bg-red-50 transition-colors ml-1 cursor-pointer"
+              className="w-6 h-6 flex items-center justify-center rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors ml-1 cursor-pointer"
               aria-label="Remove item"
             >
               <Trash2 className="w-3.5 h-3.5" />
@@ -174,7 +174,7 @@ export function MiniCart() {
             className={cn(
               'absolute -top-0.5 -right-0.5 flex items-center justify-center',
               'min-w-[18px] h-[18px] px-1',
-              'text-xs font-medium text-white bg-red-700 rounded-full',
+              'text-xs font-medium text-white bg-slate-900 rounded-full',
               'animate-scaleIn'
             )}
           >
@@ -201,7 +201,7 @@ export function MiniCart() {
               // Desktop: dropdown
               'sm:absolute sm:right-0 sm:top-full sm:mt-2 sm:h-auto sm:rounded-xl sm:w-96',
               // Common styles
-              'bg-white shadow-xl border border-slate-200',
+              'bg-[#FDFBF7] shadow-xl border border-slate-200',
               // Animation
               'mini-cart-panel'
             )}
@@ -241,7 +241,7 @@ export function MiniCart() {
                   <Link
                     href="/products"
                     onClick={handleLinkClick}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-red-700 hover:bg-red-800 text-white text-sm font-medium rounded-lg transition-all group shadow-sm hover:shadow-md"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#df2b1b] hover:bg-[#c42418] text-white text-sm font-medium rounded-lg transition-all group shadow-sm hover:shadow-md"
                   >
                     <span>{t('cart.continueShopping')}</span>
                     <span className="group-hover:translate-x-0.5 transition-transform">→</span>
@@ -268,7 +268,7 @@ export function MiniCart() {
                     <Link
                       href="/products"
                       onClick={handleLinkClick}
-                      className="flex items-center justify-center gap-2 text-sm text-slate-600 hover:text-red-700 transition-colors mb-3 group"
+                      className="flex items-center justify-center gap-2 text-sm text-slate-500 hover:text-slate-800 transition-colors mb-3 group"
                     >
                       <span className="group-hover:underline">{t('cart.continueShopping')}</span>
                       <span className="text-lg group-hover:translate-x-0.5 transition-transform">→</span>
@@ -288,7 +288,7 @@ export function MiniCart() {
                         </Button>
                       </Link>
                       <Link href="/checkout" onClick={handleLinkClick} className="flex-1">
-                        <Button variant="default" className="w-full bg-red-700 hover:bg-red-800">
+                        <Button variant="default" className="w-full">
                           {t('cart.checkout')}
                         </Button>
                       </Link>

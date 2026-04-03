@@ -37,7 +37,7 @@ export default async function HomePage({ params }: Props) {
 
       {/* Sale Products Carousel */}
       {saleProducts.length > 0 && (
-        <section className="py-12 lg:py-16 bg-gradient-to-b from-white to-slate-50">
+        <section className="py-12 lg:py-16">
           <Container>
             <ProductCarousel
               products={saleProducts}
@@ -52,7 +52,7 @@ export default async function HomePage({ params }: Props) {
 
       {/* New Products Grid */}
       {newProducts.length > 0 && (
-        <section className="py-12 lg:py-16 bg-slate-50">
+        <section className="py-12 lg:py-16">
           <Container>
             <ProductGrid
               products={newProducts}

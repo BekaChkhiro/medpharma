@@ -92,7 +92,7 @@ export default async function CareersPage({
             {locale === 'ka' ? 'აქტიური ვაკანსიები' : 'Current Openings'}
           </h2>
 
-          <div className="bg-gray-50 rounded-2xl p-8 text-center">
+          <div className="rounded-2xl p-8 text-center">
             <Briefcase className="w-16 h-16 text-gray-400 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
               {locale === 'ka'

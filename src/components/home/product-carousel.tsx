@@ -67,9 +67,9 @@ export function ProductCarousel({
       accentColor: 'text-slate-700',
     },
     sale: {
-      badge: 'bg-red-600 text-white',
+      badge: 'bg-emerald-600 text-white',
       icon: <Tag className="w-4 h-4" />,
-      accentColor: 'text-red-600',
+      accentColor: 'text-emerald-600',
     },
     featured: {
       badge: 'bg-amber-500 text-white',

@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 import { useTranslations } from 'next-intl';
 
 import { Container } from '@/components/ui';
@@ -69,41 +71,15 @@ export function Footer() {
             <div className="col-span-2 md:col-span-4 lg:col-span-1">
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 text-xl font-bold text-white hover:opacity-80 transition-opacity"
+                className="inline-flex items-center gap-2.5 text-xl font-bold text-white hover:opacity-80 transition-opacity"
               >
-                {/* Medpharma Plus Logo - Scale with "M" and Cross */}
-                <svg
-                  className="w-10 h-10 text-red-500"
-                  viewBox="0 0 100 100"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {/* Cross/Plus shape background */}
-                  <path
-                    d="M35 5 H65 V35 H95 V65 H65 V95 H35 V65 H5 V35 H35 Z"
-                    fill="currentColor"
-                  />
-                  {/* Scale balance */}
-                  <g stroke="white" strokeWidth="3" fill="none">
-                    {/* Center pole */}
-                    <line x1="50" y1="25" x2="50" y2="45" />
-                    {/* M circle at top */}
-                    <circle cx="50" cy="22" r="8" fill="currentColor" stroke="white" strokeWidth="2" />
-                    <text x="50" y="26" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold" fontFamily="Arial">M</text>
-                    {/* Balance beam */}
-                    <line x1="25" y1="45" x2="75" y2="45" />
-                    {/* Left scale strings */}
-                    <line x1="25" y1="45" x2="20" y2="60" />
-                    <line x1="25" y1="45" x2="30" y2="60" />
-                    {/* Right scale strings */}
-                    <line x1="75" y1="45" x2="70" y2="60" />
-                    <line x1="75" y1="45" x2="80" y2="60" />
-                    {/* Left scale pan (triangle) */}
-                    <path d="M15 60 L35 60 L25 75 Z" fill="white" stroke="white" />
-                    {/* Right scale pan (triangle) */}
-                    <path d="M65 60 L85 60 L75 75 Z" fill="white" stroke="white" />
-                  </g>
-                </svg>
+                <Image
+                  src="/images/medpharma-logo.png"
+                  alt="MedPharma Plus"
+                  width={44}
+                  height={44}
+                  className="w-11 h-11"
+                />
                 <span>მედფარმა პლუსი</span>
               </Link>
               <p className="mt-4 text-sm text-slate-400 max-w-xs">
@@ -123,7 +99,7 @@ export function Footer() {
                       className={cn(
                         'inline-flex items-center justify-center w-10 h-10 rounded-full',
                         'bg-slate-800 text-slate-400',
-                        'hover:bg-red-600 hover:text-white transition-colors'
+                        'hover:bg-slate-700 hover:text-white transition-colors'
                       )}
                       aria-label={social.name}
                     >
@@ -198,7 +174,7 @@ export function Footer() {
               </h3>
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 mt-0.5 flex-shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 mt-0.5 flex-shrink-0 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -215,7 +191,7 @@ export function Footer() {
                   <span>თბილისი, საქართველო</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 flex-shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 flex-shrink-0 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -228,7 +204,7 @@ export function Footer() {
                   </a>
                 </li>
                 <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 flex-shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 flex-shrink-0 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"

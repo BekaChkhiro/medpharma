@@ -86,7 +86,7 @@ export function CartItemRow({ item, locale }: CartItemRowProps) {
         <div className="mb-2">
           <Link
             href={`/products/${item.sku}`}
-            className="font-medium text-slate-900 hover:text-red-700 transition-colors line-clamp-2"
+            className="font-medium text-slate-900 hover:text-slate-600 transition-colors line-clamp-2"
           >
             {name}
           </Link>
@@ -140,7 +140,7 @@ export function CartItemRow({ item, locale }: CartItemRowProps) {
               variant="ghost"
               size="sm"
               onClick={remove}
-              className="text-red-600 hover:bg-red-50 hover:text-red-700"
+              className="text-slate-400 hover:bg-slate-100 hover:text-slate-600"
               aria-label={t('remove')}
             >
               <Trash2 className="h-4 w-4" />

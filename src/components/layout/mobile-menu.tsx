@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 
+import Image from 'next/image';
+
 import { useTranslations } from 'next-intl';
 
 import { Link, usePathname } from '@/i18n/navigation';
@@ -18,7 +20,6 @@ interface MobileMenuProps {
 const navLinks = [
   { href: '/', labelKey: 'home' },
   { href: '/products', labelKey: 'products' },
-  { href: '/categories', labelKey: 'categories' },
   { href: '/about', labelKey: 'about' },
   { href: '/branches', labelKey: 'branches' },
   { href: '/contact', labelKey: 'contact' },
@@ -78,7 +79,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       <div
         className={cn(
           'fixed inset-y-0 left-0 w-full max-w-sm z-50 lg:hidden',
-          'bg-white/85 backdrop-blur-xl',
+          'bg-[#FDFBF7]/90 backdrop-blur-xl',
           'flex flex-col shadow-xl',
           'animate-slideInLeft'
         )}
@@ -88,7 +89,16 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       >
         {/* Header */}
         <div className="flex items-center justify-between px-4 py-3 border-b border-slate-200">
-          <span className="text-lg font-semibold text-red-700">მედფარმა პლუსი</span>
+          <div className="flex items-center gap-2">
+            <Image
+              src="/images/medpharma-logo.png"
+              alt="MedPharma Plus"
+              width={36}
+              height={36}
+              className="w-9 h-9"
+            />
+            <span className="text-lg font-semibold text-slate-900">მედფარმა პლუსი</span>
+          </div>
           <button
             type="button"
             onClick={onClose}
@@ -114,7 +124,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         <nav className="flex-1 overflow-y-auto px-2 py-4">
           <ul className="space-y-1">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+              const isActive = link.href === '/' ? pathname === '/' : pathname.startsWith(link.href);
               return (
                 <li key={link.href}>
                   <Link
@@ -123,8 +133,8 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       'flex items-center gap-3 px-4 py-3 rounded-lg text-base font-medium',
                       'transition-colors',
                       isActive
-                        ? 'bg-red-50 text-red-700'
-                        : 'text-slate-700 hover:bg-slate-100'
+                        ? 'bg-red-50 text-red-600'
+                        : 'text-slate-600 hover:bg-slate-50'
                     )}
                   >
                     {t(link.labelKey)}
@@ -153,7 +163,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
               />
             </svg>
-            <a href="tel:+995322000000" className="hover:text-red-700 transition-colors">
+            <a href="tel:+995322000000" className="hover:text-slate-900 transition-colors">
               +995 32 200 00 00
             </a>
           </div>

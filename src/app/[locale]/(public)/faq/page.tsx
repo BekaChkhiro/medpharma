@@ -147,7 +147,7 @@ export default function FAQPage() {
         </div>
 
         {/* Contact CTA */}
-        <div className="max-w-3xl mx-auto mt-12 text-center bg-gray-50 rounded-2xl p-8">
+        <div className="max-w-3xl mx-auto mt-12 text-center rounded-2xl p-8">
           <h2 className="text-xl font-semibold text-gray-900 mb-2">
             {locale === 'ka' ? 'ვერ იპოვეთ პასუხი?' : "Didn't find your answer?"}
           </h2>

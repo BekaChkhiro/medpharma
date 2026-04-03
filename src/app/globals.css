@@ -3,7 +3,7 @@
 /* ============================================
    MedPharma Plus - Brand Theme
    Brand Colors:
-   - Primary Red: #A8191A (CMYK: 20, 100, 100, 17)
+   - Primary Red: #df2b1b (CMYK: 20, 100, 100, 17)
    - Secondary Gray: #CCCCCC (CMYK: 0, 0, 0, 20)
    Fonts: Georgian - Avaza Mtavruli, English - Arial
    ============================================ */
@@ -15,37 +15,37 @@ html {
 
 @theme {
   /* Colors */
-  --color-background: #ffffff;
+  --color-background: #FDFBF7;
   --color-foreground: #1e293b;
 
-  --color-card: #ffffff;
+  --color-card: #FFFFFF;
   --color-card-foreground: #1e293b;
 
-  --color-muted: #f8fafc;
+  --color-muted: #F7F5F0;
   --color-muted-foreground: #64748b;
 
-  --color-primary: #A8191A;
+  --color-primary: #df2b1b;
   --color-primary-foreground: #ffffff;
 
   --color-secondary: #f1f5f9;
   --color-secondary-foreground: #1e293b;
 
-  --color-accent: #FFF0F0;
-  --color-accent-foreground: #7D1213;
+  --color-accent: #fafafa;
+  --color-accent-foreground: #334155;
 
   --color-destructive: #dc2626;
   --color-destructive-foreground: #ffffff;
 
-  --color-success: #10b981;
-  --color-warning: #f59e0b;
-  --color-info: #3b82f6;
+  --color-success: #059669;
+  --color-warning: #d97706;
+  --color-info: #2563eb;
 
-  --color-border: #e2e8f0;
-  --color-input: #e2e8f0;
-  --color-ring: #A8191A;
+  --color-border: #e5e7eb;
+  --color-input: #e5e7eb;
+  --color-ring: #94a3b8;
 
   /* Radius */
-  --radius-sm: 0.25rem;
+  --radius-sm: 0.375rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
   --radius-xl: 1rem;
@@ -57,8 +57,8 @@ html {
 
 /* CSS Custom Properties for hover states */
 :root {
-  --primary-hover: #8B1516;
-  --secondary-hover: #e2e8f0;
+  --primary-hover: #c42418;
+  --secondary-hover: #e5e7eb;
   --destructive-hover: #b91c1c;
 }
 
@@ -75,7 +75,7 @@ html {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #FDFBF7;
   color: #1e293b;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -98,13 +98,13 @@ a {
 
 /* Selection */
 ::selection {
-  background-color: #FECACA;
-  color: #7D1213;
+  background-color: #fecaca;
+  color: #7f1d1d;
 }
 
 /* Focus styles */
 :focus-visible {
-  outline: 2px solid #A8191A;
+  outline: 2px solid #94a3b8;
   outline-offset: 2px;
 }
 
@@ -250,7 +250,7 @@ a {
 }
 
 .gradient-primary {
-  background: linear-gradient(135deg, #A8191A 0%, #C41E1F 100%);
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
 }
 
 /* ============================================
@@ -278,7 +278,7 @@ a {
 }
 
 .glass-primary {
-  background: rgba(168, 25, 26, 0.9);
+  background: rgba(30, 41, 59, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -297,8 +297,8 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: #A8191A;
-  box-shadow: 0 0 0 3px rgba(168, 25, 26, 0.15);
+  border-color: #94a3b8;
+  box-shadow: 0 0 0 3px rgba(148, 163, 184, 0.15);
 }
 
 /* Table */
@@ -312,24 +312,20 @@ table {
    ============================================ */
 
 .card-premium {
-  background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: #ffffff;
   box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.05),
-    0 10px 15px -3px rgba(0, 0, 0, 0.05),
-    0 20px 25px -5px rgba(0, 0, 0, 0.03);
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  transition: all 0.3s ease-out;
+    0 1px 3px rgba(0, 0, 0, 0.04),
+    0 4px 12px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: all 0.25s ease-out;
 }
 
 .card-premium:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow:
-    0 10px 15px -3px rgba(168, 25, 26, 0.08),
-    0 20px 25px -5px rgba(168, 25, 26, 0.05),
-    0 0 40px -10px rgba(168, 25, 26, 0.15);
-  border-color: rgba(168, 25, 26, 0.15);
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.08);
 }
 
 /* Premium Badge Gradients */
@@ -344,11 +340,11 @@ table {
 }
 
 .badge-glass-rx {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(168, 25, 26, 0.2);
-  color: #A8191A;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #475569;
 }
 
 .badge-glass-stock {
@@ -358,19 +354,20 @@ table {
   color: white;
 }
 
-/* Button Glow Effect */
+/* Button Premium */
 .btn-premium {
-  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-  transition: all 0.3s ease-out;
+  background: #df2b1b;
+  transition: all 0.2s ease-out;
 }
 
 .btn-premium:hover:not(:disabled) {
-  background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
-  box-shadow: 0 0 20px rgba(168, 25, 26, 0.4);
+  background: #c42418;
+  box-shadow: 0 4px 12px rgba(168, 25, 26, 0.2);
 }
 
 .btn-premium:disabled {
-  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+  background: #d1d5db;
+  color: #9ca3af;
 }
 
 /* Image Vignette Effect */
@@ -416,12 +413,9 @@ table {
   opacity: 1;
 }
 
-/* Price Gradient */
+/* Price Accent */
 .price-gradient {
-  background: linear-gradient(135deg, #dc2626 0%, #A8191A 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #df2b1b;
 }
 
 /* Cart Icon Animation */

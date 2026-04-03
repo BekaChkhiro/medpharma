@@ -105,7 +105,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gray-50 rounded-2xl p-8">
+          <div className="rounded-2xl p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               {locale === 'ka' ? 'მოგვწერეთ' : 'Send us a message'}
             </h2>
